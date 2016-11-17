@@ -1,0 +1,64 @@
+Il profilo di un utente è visibile da una persona sse il profilo è pubblico o fa parte di uno stesso gruppo di astrofili.
+
+Un gruppo è quindi un modo per definire le relazioni tra gli utenti REGISTRATI. Ovvero i contenuti che un astrofilo pubblica sono visibili dalle persone che hanno in comune almeno un gruppo (o se il profilo è pubblico).
+
+Cosa può fare l'utente registrato:
+   -upload foto;
+   -votarle e commentarle;
+   -inserire nella propria agenda degli eventi con conseguente(eventuale, a discrezione dell'utente) notifiche di imminente inizio dell'evento;
+Un'agenda è (per ora) una lista di eventi ai quali un astrofilo è interessato. Bisogna  fare un sistema di notifica.
+(se c'è tempo, fare un sistema di recensioni sulle strumentazioni degli astrofili. Sono gli astrofili a formare questa lista globale).
+-L'astrofilo può decidere il livello di privacy dei propri contenuti in base ad una politica di default(da lui decisa) oppure settandone una diversa al volo(valida solo per il contenuto che sta caricando).
+-Un astrofilo può caricare foto o studi(oppure uno studio con foto). Esisterà la galleria foto e la lista studi. Possono essere votati gli studi o le foto(in maniera distinta). In questo modo si potrà capire se un astrofilo è bravo con gli studi o con le foto. Quindi ogni astrofilo avrà due rank associati(reputazione foto e reputazione studi)
+-visualizzare cosa i suoi "amici" hanno caricato(filtrando per gruppi)
+
+Uno studio è formato da: 
+-Tipo di evento studiato
+-corpi coinvolti
+-magnitudo
+-coordinate celesti
+-periodo temporale
+-astrofilo
+-appunti
+-strumentazione
+
+HOME PAGE
+
+-SLIDESHOW 
+
+Contiene le foto pubbliche più votate nelle ultime 24h(decidibile dal master user,come il numero di foto presenti). Se non ci sono abbastanza "foto del giorno", si riempiono i "buchi" con le foto precedenti.
+
+-EVENTI
+
+breve lista degli eventi prossimi e recenti
+
+----- 
+AGGIUNTE AL DB
+
+Aggiungere entità immagine da mettere in relazione con l'entità "studia", in modo da riuscire a rispettare il vincolo d'integr. esterno su idastrofilo e idstudio.
+Aggiungere i seguenti campi all'entità astrofilo:
+ - password
+ - eventualmente località
+ - campo img_profilo, ogni volta teniamo conto solo dell'ultima img profilo caricata(sarà quindi un UPDATE)
+
+Aggiungere la relazione astrofilo-giudica-studio in modo da assegnare un rank studio ad ogni astrofilo. (astrofilox,astrofiloy,idstudio,voto).
+Aggiungere la relazione astrofilo-vota-foto in modo da assegnare un rank foto ad ogni astrofilo. (astrofilox,astrofiloy,idfoto,voto).
+Mettere in relazione "foto" con "studia" in modo da capire quali sono le foto relative a qualche studio.
+Aggiungere relazione(entità) astrofilo commenta studio. commenta(idstudio,idastrofilocommentante,commento).
+Distinguere gli astrofili tra coloro che hanno fondato gruppi e coloro che ne fanno solo parte.
+
+
+PAGINE DA FARE
+
+-Home
+-Calendario (eventi)
+-Migliori foto
+-Pagina singolo studio
+-Pagina Studi (tutti quelli del singolo utente)
+-Pagina di Profilo (gestire informazioni personali)
+-Ultime news (?)
+
+
+
+
+
