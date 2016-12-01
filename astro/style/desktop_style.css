@@ -1,0 +1,128 @@
+* {
+  padding: 0em;
+  margin: 0em;
+}
+
+body {
+  font-family: Verdana, Helvetica, Georgia, sans-serif;
+  max-width: 70%;                   /*    dimensione in larghezza della pagina con il contenuto        */
+  margin-left: auto;
+  margin-right: auto;
+  color: #000000;                   /*  colore del testo su tutta la pagina    */
+  background-image: url("images/as.png");  /*  immagine background ai lati     */
+}
+
+#content {        /*  contenuto della pagina, non riguarda i lati, viene escluso il menu fixed  */
+  background-color: #fff;  /*DA SCEGLIERE sfondo della pagina con i contenuti */
+}
+
+#logo {
+  float: left;
+  width: 70px;
+  height: 70px;
+}
+
+#menu {                       /* contenitore del menu fixed con gli elementi del menu più il logo a sinistra*/
+  background-color: #000;  /*DA SCEGLIERE sfondo del menu contenitore menu e logo */
+  position: fixed;
+  top: 0px;
+  width: 70%;
+  height: 75px;
+}
+
+#content_menu {        /* contenitore degli elementi del menu, ossia i bottoni per i link*/
+  margin-left: 10em;  /* distanzio il contenitore del menu dal logo */
+}
+
+#content_menu a {  /* bottoni del menu*/
+  float: left;
+  color: white;              /*colore del testo link*/
+  background-color: #000;  /* prende il colore del contenitore menu*/
+  padding: 1em 1em 1em 1em;
+  border: 1px solid yellow;
+  margin-top: 0.1em;
+  height: 20px;
+  width: 10%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5em;
+}
+
+#content_menu a:hover {
+  background-color: #b3b3b3;
+  color:black;
+}
+
+#header {
+  background-color: #000;   /*DA SCEGLIERE*/
+  clear: both;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5em;
+  width: 70%;
+  height: 100px;
+}
+
+#breadcrumb {
+  background-color: #000;  /*DA SCEGLIERE uguale all'header*/
+  border: 1px solid white;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: 30px;
+}
+
+#slideshow {
+  border: 1px solid white;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: 420px;
+}
+
+#slideshow img {
+  width: 100%;
+  height: 100%;
+}
+
+#eventi {               /* contenitore degli eventi prec e succ*/
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: 500px;
+}
+
+#eventi_pre, #eventi_next {     /*singolo contenitore degli eventi */
+    background-color: #fff;  /*DA SCEGLIERE */
+    border: 1px solid black;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    height: 450px;
+    float: left;
+    margin-left: 5%;
+}
+
+#footer {
+  background-color: #000; /*DA SCEGLIERE */
+  margin-top: 2em;
+  margin-bottom: 0em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 150px;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+
+}
