@@ -119,9 +119,10 @@ body {
     background-color: #fff;  /*DA SCEGLIERE */
     border: 1px solid black;
     height: 430px;
-    width:99%;
+    max-width:99%;
     overflow-y:auto;
     padding-right: 2px;
+    color:black;
 }
 
 #footer {
