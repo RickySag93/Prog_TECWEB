@@ -100,16 +100,17 @@ body {
   height: 500px;
 }
 
-.contorno{                        /* contenitore che contiene il contorno per gli eventi */
+.contorno{                        /* contenitore che contiene il contorno per gli eventi*/
   width: 38%;
   height: 450px;
   padding:3px;
   color:white;
-  background-color :black;
+  background-color:black;
   margin-right: auto;
   margin-top: 2em;
   margin-bottom: 1em;
   margin-left: 5%;
+  float: left;
 
 
 }
@@ -119,7 +120,6 @@ body {
     border: 1px solid black;
     height: 430px;
     width:99%;
-    float: left;
     overflow-y:auto;
     padding-right: 2px;
 }
