@@ -124,6 +124,10 @@ body {
     padding-right: 2px;
     color:black;
 }
+#eventi_pre p, #eventi_next p{
+  padding-bottom: 3px;
+  border-bottom: 1px solid black;
+}
 
 #footer {
   background-color: #000; /*DA SCEGLIERE */
