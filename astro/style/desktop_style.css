@@ -100,19 +100,17 @@ body {
   height: 500px;
 }
 
-.contorno{                        /* contenitore che contiene il contorno per gli eventi*/
+.contorno {                        /* contenitore che contiene il contorno per gli eventi*/
   width: 38%;
   height: 450px;
-  padding:3px;
-  color:white;
-  background-color:black;
+  padding: 3px;
+  color: white;
+  background-color: black;
   margin-right: auto;
   margin-top: 2em;
   margin-bottom: 1em;
   margin-left: 5%;
   float: left;
-
-
 }
 
 #eventi_pre, #eventi_next {     /*singolo contenitore degli eventi */
