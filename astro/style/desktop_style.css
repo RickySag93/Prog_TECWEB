@@ -5,7 +5,8 @@
 
 body {
   font-family: Verdana, Helvetica, Georgia, sans-serif;
-  max-width: 70%;                   /*    dimensione in larghezza della pagina con il contenuto        */
+  max-width: 70%;
+  min-width: 700px;              /*    dimensione in larghezza della pagina con il contenuto        */
   margin-left: auto;
   margin-right: auto;
   color: #000000;                   /*  colore del testo su tutta la pagina    */
@@ -22,36 +23,54 @@ body {
   height: 70px;
 }
 
-#menu {                       /* contenitore del menu fixed con gli elementi del menu più il logo a sinistra*/
+#menu {
+  left:0px;             /* contenitore del menu fixed con gli elementi del menu più il logo a sinistra*/
   background-color: #000;  /*DA SCEGLIERE sfondo del menu contenitore menu e logo */
   position: fixed;
-  top: 0px;
-  width: 70%;
+    min-width: 700px;
+  width: 100%;
   height: 75px;
 }
 
 #content_menu {        /* contenitore degli elementi del menu, ossia i bottoni per i link*/
-  margin-left: 10em;  /* distanzio il contenitore del menu dal logo */
+  margin-left: 9%;  /* distanzio il contenitore del menu dal logo, allineato con l'header */
 }
+
 
 #content_menu a {  /* bottoni del menu*/
   float: left;
   color: white;              /*colore del testo link*/
   background-color: #000;  /* prende il colore del contenitore menu*/
-  padding: 1em 1em 1em 1em;
-  border: 1px solid yellow;
-  margin-top: 0.1em;
+  padding: 1em;
+  border: 0px solid black;
   height: 20px;
-  width: 10%;
+  width: 5%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 1.5em;
+  font-size: 1em;
+  margin-top:1em;
+	-ms-transition: 0.3s;
+	-webkit-transition:0.3s;
+	-moz-transition: 0.3s;
+	transition: 0.3s;
 }
 
 #content_menu a:hover {
-  background-color: #b3b3b3;
-  color:black;
+    background-color: #595959;
+    color:white;
+    font-weight: bold;
+    font-size: 1.1em;
+  	-ms-transition: 0.3s;
+  	-webkit-transition: 0.3s;
+  	-moz-transition: 0.3s;
+  	transition:0.3s;
+}
+
+
+#tornasu {
+  float:right;
+  color:white;
 }
 
 #header {
