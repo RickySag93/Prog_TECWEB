@@ -129,14 +129,6 @@ body {
   height: 30px;
 }
 
-#slideshow {
-  border: 1px solid white;
-  margin-top: 2em;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
-  height: 420px;
-}
 
 #slideshow img {
   width: 100%;
