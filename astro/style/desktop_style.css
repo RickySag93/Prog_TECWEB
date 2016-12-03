@@ -86,6 +86,11 @@ body {
   height: 100px;
 }
 
+#login{
+  float:right;
+  color:white;
+}
+
 #breadcrumb {
   background-color: #000;  /*DA SCEGLIERE uguale all'header*/
   border: 1px solid white;
@@ -119,12 +124,12 @@ body {
   height: 500px;
 }
 
-.contorno{                        /* contenitore che contiene il contorno per gli eventi*/
+.contorno {                        /* contenitore che contiene il contorno per gli eventi*/
   width: 38%;
   height: 450px;
-  padding:3px;
-  color:white;
-  background-color:black;
+  padding: 3px;
+  color: white;
+  background-color: black;
   margin-right: auto;
   margin-top: 2em;
   margin-bottom: 1em;
