@@ -85,9 +85,9 @@ body {
   background-color: #000;   /*DA SCEGLIERE*/
   clear: both;
   min-width: 750px;
-  border-bottom: 1px solid white;
-  border-left: 1px solid white;
-  border-right: 1px solid white;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
   margin-left: auto;
   margin-right: auto;
   padding-top: 5em;
@@ -99,6 +99,7 @@ body {
   font-size:4em;
   font-style:italic;
   text-align: center;
+
 }
 
 
@@ -120,7 +121,7 @@ body {
 #breadcrumb {
   background-color: #000;  /*DA SCEGLIERE uguale all'header*/
   color: white;
-  border: 1px solid white;
+  border: 1px solid black;
   margin-top: 2em;
   margin-left: auto;
   margin-right: auto;
@@ -213,3 +214,29 @@ body {
   color:white;
 
 }
+
+ #footer p{
+   text-align:center;
+   font-size: 0.8em;
+   font-style: italic;
+   }
+
+  #footer img{
+     margin-left: 1.0em;
+     	margin-right: 1.0em;
+      margin-bottom: 0.8em;
+      }
+
+  #xhtmlvalido{
+         float: left;
+         display: inline-block;
+          }
+
+  #cssvalido{
+            float: right;
+            display: inline-block;
+            }
+  #logofooter{
+              padding-left: 50%;
+               padding-right: 50%
+             }
