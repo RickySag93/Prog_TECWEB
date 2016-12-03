@@ -9,8 +9,8 @@ html{
 
 body {
   font-family: Verdana, Helvetica, Georgia, sans-serif;
-  max-width: 70%;
-  min-width: 700px;              /*    dimensione in larghezza della pagina con il contenuto        */
+  max-width: 75%;
+  min-width: 750px;              /*    dimensione in larghezza della pagina con il contenuto        */
   margin-left: auto;
   margin-right: auto;
   height:100%;
@@ -83,23 +83,48 @@ body {
 #header {
   background-color: #000;   /*DA SCEGLIERE*/
   clear: both;
+  min-width: 750px;
   border-bottom: 1px solid white;
   border-left: 1px solid white;
   border-right: 1px solid white;
   margin-left: auto;
   margin-right: auto;
   padding-top: 5em;
-  width: 70%;
-  height: 100px;
+  height: 150px;
 }
 
+#header h1{
+  color:white;
+  font-size:4em;
+  font-style:italic;
+  text-align: center;
+}
+
+<<<<<<< HEAD
+=======
+#login{
+  margin-top: 1.5em;
+  float:right;
+  color:white;
+}
+
+#login h3{
+  font-size: 0.8em;
+  display:inline;
+}
+
+#login input{
+
+}
+
+>>>>>>> refs/remotes/origin/master
 #breadcrumb {
   background-color: #000;  /*DA SCEGLIERE uguale all'header*/
+  color: white;
   border: 1px solid white;
   margin-top: 2em;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
   height: 30px;
 }
 
