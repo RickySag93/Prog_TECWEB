@@ -93,11 +93,6 @@ body {
   height: 100px;
 }
 
-#login{
-  float:right;
-  color:white;
-}
-
 #breadcrumb {
   background-color: #000;  /*DA SCEGLIERE uguale all'header*/
   border: 1px solid white;
@@ -131,17 +126,19 @@ body {
   height: 500px;
 }
 
-.contorno {                        /* contenitore che contiene il contorno per gli eventi*/
+.contorno{                        /* contenitore che contiene il contorno per gli eventi*/
   width: 38%;
   height: 450px;
-  padding: 3px;
-  color: white;
-  background-color: black;
+  padding:3px;
+  color:white;
+  background-color:black;
   margin-right: auto;
   margin-top: 2em;
   margin-bottom: 1em;
   margin-left: 5%;
   float: left;
+
+
 }
 
 #eventi_pre, #eventi_next {     /*singolo contenitore degli eventi */
@@ -162,6 +159,7 @@ body {
   margin-left: 0;
   margin-right: 0;
   width:100%;
+  padding-bottom: ;
 }
 
 #content p {
@@ -169,6 +167,7 @@ body {
     width:70%;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 150px;
   }
 
   #content #breadcrumb p{
@@ -183,41 +182,14 @@ body {
 
 #footer {
   background-color: #000; /*DA SCEGLIERE */
-  color: white;
   margin-top: 2em;
   margin-bottom: 0em;
   margin-left: auto;
   margin-right: auto;
-  width: 100;
+  width: 100%;
   height: 150px;
   border-top: 1px solid black;
   border-left: 1px solid black;
   border-right: 1px solid black;
-}
 
-#footer p{
-  text-align:center;
-  font-size: 0.8em;
-  font-style: italic;
-}
-
-#footer img{
-	margin-left: 1.0em;
-	margin-right: 1.0em;
-	margin-bottom: 0.8em;
-}
-
-#xhtmlvalido{
-	float: left;
-	display: inline-block;
-}
-
-#cssvalido{
-	float: right;
-	display: inline-block;
-}
-
-#logofooter{
-  padding-left: 50%;
-  padding-right: 50%
 }
