@@ -67,6 +67,11 @@ body {
   height: 100px;
 }
 
+#login{
+  float:right;
+  color:white;
+}
+
 #breadcrumb {
   background-color: #000;  /*DA SCEGLIERE uguale all'header*/
   border: 1px solid white;
