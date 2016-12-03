@@ -9,8 +9,10 @@ body {
   min-width: 700px;              /*    dimensione in larghezza della pagina con il contenuto        */
   margin-left: auto;
   margin-right: auto;
+  height: auto;
   color: #000000;                   /*  colore del testo su tutta la pagina    */
   background-image: url("images/as.png");  /*  immagine background ai lati     */
+  min-height: 100%;
 }
 
 #content {        /*  contenuto della pagina, non riguarda i lati, viene escluso il menu fixed  */
@@ -94,6 +96,7 @@ body {
   margin-right: auto;
   width: 70%;
   height: 30px;
+  color:white;
 }
 
 #slideshow {
@@ -148,6 +151,16 @@ body {
   padding-left: 2px;
   border-bottom: 1px solid black;
 }
+
+#content p{
+  width:70%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1.2em;
+
+
+}
+
 
 #footer {
   background-color: #000; /*DA SCEGLIERE */
