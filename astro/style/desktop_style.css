@@ -130,8 +130,6 @@ body {
   margin-bottom: 1em;
   margin-left: 5%;
   float: left;
-
-
 }
 
 #eventi_pre, #eventi_next {     /*singolo contenitore degli eventi */
@@ -151,6 +149,7 @@ body {
 
 #footer {
   background-color: #000; /*DA SCEGLIERE */
+  color: white;
   margin-top: 2em;
   margin-bottom: 0em;
   margin-left: auto;
@@ -160,5 +159,31 @@ body {
   border-top: 1px solid black;
   border-left: 1px solid black;
   border-right: 1px solid black;
+}
 
+#footer p{
+  text-align:center;
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+#footer img{
+	margin-left: 1.0em;
+	margin-right: 1.0em;
+	margin-bottom: 0.8em;
+}
+
+#xhtmlvalido{
+	float: left;
+	display: inline-block;
+}
+
+#cssvalido{
+	float: right;
+	display: inline-block;
+}
+
+#logofooter{
+  padding-left: 50%;
+  padding-right: 50%
 }
