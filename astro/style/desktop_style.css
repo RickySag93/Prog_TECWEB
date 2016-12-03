@@ -2,6 +2,10 @@
   padding: 0em;
   margin: 0em;
 }
+html{
+  height:100%;
+  min-height: 100%;
+}
 
 body {
   font-family: Verdana, Helvetica, Georgia, sans-serif;
@@ -9,14 +13,15 @@ body {
   min-width: 700px;              /*    dimensione in larghezza della pagina con il contenuto        */
   margin-left: auto;
   margin-right: auto;
-  height: auto;
+  height:100%;
+  min-height: 100%;
   color: #000000;                   /*  colore del testo su tutta la pagina    */
   background-image: url("images/as.png");  /*  immagine background ai lati     */
-  min-height: 100%;
 }
 
 #content {        /*  contenuto della pagina, non riguarda i lati, viene escluso il menu fixed  */
   background-color: #fff;  /*DA SCEGLIERE sfondo della pagina con i contenuti */
+  min-height:100%;
 }
 
 #logo {
@@ -96,7 +101,6 @@ body {
   margin-right: auto;
   width: 70%;
   height: 30px;
-  color:white;
 }
 
 #slideshow {
@@ -146,20 +150,32 @@ body {
     padding-right: 2px;
     color:black;
 }
-#eventi_pre p, #eventi_next p{
+#content #eventi_pre p, #content #eventi_next p{
+  text-align: :left;
+  padding-top: 0px;
   padding-bottom: 5px;
   padding-left: 2px;
   border-bottom: 1px solid black;
+  margin-left: 0;
+  margin-right: 0;
+  width:100%;
 }
 
-#content p{
-  width:70%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 1.2em;
+#content p {
+    padding-top: 1.5em;
+    width:70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
+  #content #breadcrumb p{
+    margin-left: 0;
+    margin-right: 0;
+    width:100%;
+    color:white;
+    padding-top: 5px;
 
-}
+  }
 
 
 #footer {
@@ -168,7 +184,7 @@ body {
   margin-bottom: 0em;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: 100;
   height: 150px;
   border-top: 1px solid black;
   border-left: 1px solid black;
