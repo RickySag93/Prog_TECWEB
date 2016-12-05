@@ -38,7 +38,7 @@ body {
   min-width: 700px;
   width: 100%;
   height: 75px;
-  z-index=1;
+  z-index:1;
 }
 
 #content_menu {        /* contenitore degli elementi del menu, ossia i bottoni per i link*/
@@ -175,7 +175,7 @@ body {
     color:black;
 }
 #content #eventi_pre p, #content #eventi_next p {
-  text-align: :left;
+  text-align: left;
   padding-top: 0px;
   padding-bottom: 5px;
   padding-left: 2px;
