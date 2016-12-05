@@ -78,8 +78,12 @@ body {
 
 
 #tornasu {
+  margin-top: 5px;
+  margin-right: 5px;
   float:right;
   color:white;
+  width: 70x;
+  height: 70px;
 }
 
 #header {
@@ -148,7 +152,7 @@ body {
   margin-top: 2em;
   margin-left: auto;
   margin-right: auto;
-  width: 73%;
+  width: 70%;
   height: 500px;
 }
 
@@ -161,7 +165,7 @@ body {
   margin-right: auto;
   margin-top: 2em;
   margin-bottom: 1em;
-  margin-left: 5%;
+  margin-left: 7%;
   float: left;
 }
 
@@ -192,7 +196,7 @@ body {
     margin-right: auto;
   }
 
-#content #breadcrumb p{
+#content #breadcrumb p {
   margin-left: 0;
   margin-right: 0;
   width:100%;
