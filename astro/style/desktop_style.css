@@ -9,7 +9,7 @@ html{
 
 body {
   font-family: Verdana, Helvetica, Georgia, sans-serif;
-  max-width: 75%;
+  max-width: 70%;
   min-width: 750px;              /*    dimensione in larghezza della pagina con il contenuto        */
   margin-left: auto;
   margin-right: auto;
@@ -35,10 +35,10 @@ body {
   left:0px;             /* contenitore del menu fixed con gli elementi del menu più il logo a sinistra*/
   background-color: #000;  /*DA SCEGLIERE sfondo del menu contenitore menu e logo */
   position: fixed;
-    min-width: 700px;
+  min-width: 700px;
   width: 100%;
   height: 75px;
- z-index=1;
+  z-index=1;
 }
 
 #content_menu {        /* contenitore degli elementi del menu, ossia i bottoni per i link*/
@@ -95,7 +95,7 @@ body {
   height: 150px;
 }
 
-#header h1{
+#header h1 {
   color:white;
   font-size:4em;
   font-style:italic;
@@ -104,24 +104,25 @@ body {
 }
 
 
-#login{
+#login {
   margin-top: 1.5em;
   float:right;
   color:white;
 }
 
-#login h3{
+#login h3 {
   font-size: 0.8em;
   display:inline;
 }
 
-#login input{
+#login input {
 
 }
 
 #breadcrumb {
   background-color: #000;  /*DA SCEGLIERE uguale all'header*/
   color: white;
+  width: 100%;
   border: 1px solid black;
   margin-top: 2em;
   margin-left: auto;
@@ -151,7 +152,7 @@ body {
   height: 500px;
 }
 
-.contorno{                        /* contenitore che contiene il contorno per gli eventi*/
+.contorno {                        /* contenitore che contiene il contorno per gli eventi*/
   width: 38%;
   height: 450px;
   padding:3px;
@@ -162,8 +163,6 @@ body {
   margin-bottom: 1em;
   margin-left: 5%;
   float: left;
-
-
 }
 
 #eventi_pre, #eventi_next {     /*singolo contenitore degli eventi */
@@ -175,7 +174,7 @@ body {
     padding-right: 2px;
     color:black;
 }
-#content #eventi_pre p, #content #eventi_next p{
+#content #eventi_pre p, #content #eventi_next p {
   text-align: :left;
   padding-top: 0px;
   padding-bottom: 5px;
@@ -193,14 +192,13 @@ body {
     margin-right: auto;
   }
 
-  #content #breadcrumb p{
-    margin-left: 0;
-    margin-right: 0;
-    width:100%;
-    color:white;
-    padding-top: 5px;
-  }
-
+#content #breadcrumb p{
+  margin-left: 0;
+  margin-right: 0;
+  width:100%;
+  color:white;
+  padding-top: 5px;
+}
 
 #footer {
   background-color: #000; /*DA SCEGLIERE */
@@ -213,32 +211,35 @@ body {
   border-left: 1px solid black;
   border-right: 1px solid black;
   color:white;
-
 }
 
- #footer p{
+ #footer p {
    text-align:center;
    font-size: 0.8em;
    font-style: italic;
-   }
+}
 
-  #footer img{
-     margin-left: 1.0em;
-     	margin-right: 1.0em;
-      margin-bottom: 0.8em;
-      }
+#footer img {
+  margin-left: 1.0em;
+  margin-right: 1.0em;
+  margin-bottom: 0.8em;
+}
 
-  #xhtmlvalido{
-         float: left;
-         display: inline-block;
-          }
+  #xhtmlvalido {
+  float: left;
+  display: inline-block;
+}
 
-  #cssvalido{
-            float: right;
-            display: inline-block;
-            }
-  #logofooter{
-              padding-left: 50%;
-               padding-right: 50%
-             }
-.nascosta{display: none}
+#cssvalido {
+  float: right;
+  display: inline-block;
+}
+
+#logofooter {
+  padding-left: 50%;
+  padding-right: 50%
+}
+
+.nascosta {
+  display: none
+}
