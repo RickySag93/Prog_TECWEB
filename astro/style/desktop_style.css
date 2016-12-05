@@ -194,13 +194,7 @@ body {
     margin-right: auto;
   }
 
-#content #breadcrumb p{
-     margin-left: 0;
-     margin-right: 0;
-     width:100%;
-     color:white;
-     padding-top: 5px;
-}
+
 
 #content .list_element{
     width: 100%;
