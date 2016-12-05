@@ -194,6 +194,14 @@ body {
     margin-right: auto;
   }
 
+#content #breadcrumb p{
+     margin-left: 0;
+     margin-right: 0;
+     width:100%;
+     color:white;
+     padding-top: 5px;
+}
+
 #content .list_element{
     width: 100%;
     height: 120px;
@@ -214,23 +222,13 @@ body {
   width: 120px,
 }
 
-#content .list_element .element_content p{
+#content .list_element p{
     padding-top: 0px;
     margin-left: 0;
     margin-right: 0;
     width:100%;
 
 }
-
-
-
-  #content #breadcrumb p{
-    margin-left: 0;
-    margin-right: 0;
-    width:100%;
-    color:white;
-    padding-top: 5px;
-  }
 
 
 #footer {
