@@ -22,7 +22,7 @@ body {
 #content {        /*  contenuto della pagina, non riguarda i lati, viene escluso il menu fixed  */
   background-color: #fff;  /*DA SCEGLIERE sfondo della pagina con i contenuti */
   min-height:100%;
-  padding-bottom: -150px;
+  padding-bottom: 150px;
 }
 
 #logo {
