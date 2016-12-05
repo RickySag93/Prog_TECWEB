@@ -22,7 +22,7 @@ body {
 #content {        /*  contenuto della pagina, non riguarda i lati, viene escluso il menu fixed  */
   background-color: #fff;  /*DA SCEGLIERE sfondo della pagina con i contenuti */
   min-height:100%;
-  padding: 0 auto -150px;
+  padding-bottom: -150px;
 }
 
 #logo {
@@ -82,7 +82,7 @@ body {
   margin-right: 5px;
   float:right;
   color:white;
-  width: 70x;
+  width: 70px;
   height: 70px;
 }
 
@@ -233,7 +233,7 @@ body {
 }
 .element_foto img{
   height: 120px;
-  width: 120px,
+  width: 120px;
 }
 
 #content .list_element p{
