@@ -142,7 +142,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   height: 30px;
-
+  margin-bottom:2em;
 }
 
 #slideshow {
@@ -180,31 +180,34 @@ body {
   float: left;
 }
 
+
 #foto{
+  margin-top:2em;
+  display: block;
   margin: auto;
-  left: 0;
-  right: 0;
-  max-height:650px;
-  max-width: 700px:
+  max-width: 750px;
   min-height:50px;
   min-width: 50px;
+  margin-bottom:2em;
 }
 
 #rank{
+  margin:auto;
+  width:80%;
   background-color: #000;  /*DA SCEGLIERE uguale all'header*/
   color: white;
   height: 30px;
-  margin-bottom:15px;
+  margin-bottom:2em;
 }
 
 #vota{
   float:left;
-  padding-left:1%;
+  padding-left:5%;
 }
 
 #rank_txt{
-  float:right;
- padding-right:1%;
+ float:right;
+ padding-right:5%;
 }
 
 
@@ -245,7 +248,7 @@ body {
 }
 
 #content .list_element{
-    width: 100%;
+    width: 80%;
     height: 120px;
     border: 1px solid black;
     margin-left: auto;
