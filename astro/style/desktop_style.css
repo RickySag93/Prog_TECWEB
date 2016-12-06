@@ -170,6 +170,34 @@ body {
   float: left;
 }
 
+#foto{
+  margin: auto;
+  left: 0;
+  right: 0;
+  max-height:650px;
+  max-width: 700px:
+  min-height:50px;
+  min-width: 50px;
+}
+
+#rank{
+  background-color: #000;  /*DA SCEGLIERE uguale all'header*/
+  color: white;
+  height: 30px;
+  margin-bottom:15px;
+}
+
+#vota{
+  float:left;
+  padding-left:1%;
+}
+
+#rank_txt{
+  float:right;
+ padding-right:1%;
+}
+
+
 #eventi_pre, #eventi_next {     /*singolo contenitore degli eventi */
     background-color: #fff;  /*DA SCEGLIERE */
     border: 1px solid black;
@@ -205,16 +233,6 @@ body {
   color:white;
   padding-top: 5px;
 }
-
-#content #breadcrumb p{
-     margin-left: 0;
-     margin-right: 0;
-     width:100%;
-     color:white;
-     padding-top: 5px;
-}
-
-
 
 #content .list_element{
     width: 100%;
@@ -269,7 +287,7 @@ body {
   margin-bottom: 0.8em;
 }
 
-  #xhtmlvalido {
+#xhtmlvalido {
   float: left;
   display: inline-block;
 }
