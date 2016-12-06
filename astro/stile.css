@@ -67,7 +67,7 @@ input[type=checkbox].w3-check:disabled+.w3-validate,input[type=radio].w3-radio:d
 .w3-col.s1{width:8.33333%}
 .w3-col.s2{width:16.66666%}
 .w3-col.s3{width:24.99999%}
-.w3-col.s4{width:33.33333%}
+.w3-col.s4{width:30%}
 .w3-col.s5{width:41.66666%}
 .w3-col.s6{width:49.99999%}
 .w3-col.s7{width:58.33333%}
@@ -143,7 +143,7 @@ input[type=checkbox].w3-check:disabled+.w3-validate,input[type=radio].w3-radio:d
 .w3-margin{margin:16px!important}.w3-margin-0{margin:0!important}
 .w3-margin-top{margin-top:16px!important}.w3-margin-bottom{margin-bottom:16px!important}
 .w3-margin-left{margin-left:16px!important}.w3-margin-right{margin-right:16px!important}
-.w3-section{margin-top:16px!important;margin-bottom:16px!important}
+.w3-section{margin-top:16px!important;margin-bottom:16px!important;margin-left: 4%}
 .w3-padding-tiny{padding:2px 4px!important}.w3-padding-small{padding:4px 8px!important}
 .w3-padding-medium,.w3-padding,.w3-form{padding:8px 16px!important}
 .w3-padding-large{padding:12px 24px!important}.w3-padding-xlarge{padding:16px 32px!important}
