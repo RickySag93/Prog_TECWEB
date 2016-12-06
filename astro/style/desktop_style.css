@@ -46,7 +46,7 @@ body {
   min-width: 700px;
   width: 100%;
   height: 75px;
-  z-index:1;
+  z-index:2;
 }
 
 #content_menu {        /* contenitore degli elementi del menu, ossia i bottoni per i link*/
