@@ -277,17 +277,16 @@ body {
 	height:inherit;
   max-width:100%;
   overflow: hidden;
+  padding-right: 10%;
 
 
 }
 
 #content .element_content p{
-  padding-top: 0px;
+  padding-top: 3px;
   margin-left: 0;
   margin-right: 0;
   width:100%;
-
-
 }
 
 .element_content:hover{
