@@ -222,10 +222,10 @@ body {
 }
 #content #eventi_pre p, #content #eventi_next p {
   text-align: left;
-  padding-top: 0px;
   padding-bottom: 5px;
   padding-left: 2px;
   border-bottom: 1px solid black;
+  padding-top: 0px;
   margin-left: 0;
   margin-right: 0;
   width:100%;
@@ -273,9 +273,25 @@ body {
   width: 120px;
 }
 
-.element_content{
-	width:100%;
+.element_content {
 	height:inherit;
+  max-width:100%;
+  overflow: hidden;
+
+
+}
+
+#content .element_content p{
+  padding-top: 0px;
+  margin-left: 0;
+  margin-right: 0;
+  width:100%;
+
+
+}
+
+.element_content:hover{
+  overflow-y: auto;
 
 }
 
@@ -285,7 +301,7 @@ body {
     margin-right: 0;
     width:100%;
     color:black;
-   
+
 }
 
 #footer {
