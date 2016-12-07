@@ -264,16 +264,16 @@ body {
  .element_foto {
     border-right: 1px solid black;
     height:100%;
-    width:125px;
+    width:7.8125em;
     float: left;
 
 }
 .element_foto img{
-  height: 120px;
-  width: 120px;
+  height: 7.5em;
+  width: 7.5em;
 }
 
-<<<<<<< HEAD
+
 .element_content {
 	height:inherit;
   max-width:100%;
@@ -290,15 +290,13 @@ body {
   width:100%;
 }
 
+
+
 .element_content:hover{
   overflow-y: auto;
-=======
-.element_content{
-  width:100%;
-  height:inherit;
->>>>>>> refs/remotes/origin/master
 
 }
+
 
 #content .list_element span{
     padding-top: 0px;
