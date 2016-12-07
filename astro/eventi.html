@@ -32,13 +32,15 @@
   <div id="content">
     <div id="header">
       <h1>Benvenuti in astroport</h1>
-      <div id="login">
-        <h3>mail</h3>
+      <form action="login.php">
+      <fieldset id="login">
+        <label id="mail" for="mail">mail</label>
         <input type="text" name="mail" />
-        <h3>password</h3>
-        <input type="password" name="psw" />
+        <label id="password" for="password">password</label>
+        <input type="password" name="password" />
         <button type="submit">Login</button>
-      </div>
+      </fieldset>
+      </form>
     </div>
     <div id="breadcrumb">
       <p>Ti trovi in: Eventi</p>
