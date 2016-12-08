@@ -23,7 +23,7 @@ a img{
   border:0;
 }
 #content {        /*  contenuto della pagina, non riguarda i lati, viene escluso il menu fixed  */
-  background-color: #fff;  /*DA SCEGLIERE sfondo della pagina con i contenuti */
+  background-color: #edeeef;  /*DA SCEGLIERE sfondo della pagina con i contenuti */
   min-height:100%;
   padding-bottom: 9.375em;
 }
@@ -137,16 +137,100 @@ a img{
 }
 
 #breadcrumb {
-  background-color: #272a33;  /*DA SCEGLIERE uguale all'header*/
+  background-color: #808893;  /*DA SCEGLIERE uguale all'header*/
   color: white;
   width: 100%;
   margin-top: 2em;
-  margin-left: auto;
-  margin-right: auto;
   height: 1.875em;
   margin-bottom:2em;
 
 }
+
+#breadcrumb a {
+  text-decoration: none;
+  color: white;
+}
+
+#breadcrumb a:hover {
+  color: blue;
+}
+
+
+/* PAGINA REGISTRAZIONE */
+
+#titolo_reg {
+  text-align: center;
+}
+
+
+form  p
+{
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+
+#modulo_reg fieldset {
+	border: 1px dashed #ddd;
+	margin-top: 4em;
+}
+
+
+#modulo_reg label {
+	width: 8.75em;
+	height: 2em;
+	line-height: 2.2em;
+	margin-right: 5px;
+	padding-left: 5px;
+	background: #e7e7e7;
+	float: left;
+	display: block;
+	font-size: 1.1em;
+	color: #333;
+}
+
+
+input.psw{
+  background-color: #fff;
+  width: 290px;
+  color: #666;
+  padding: 5px 5px 3px 19px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  height: 25px;
+  line-height: 25px;
+  font-size: 1em;
+}
+
+
+
+input.text {
+	background-color: #fff;
+	width: 290px;
+	color: #666;
+	padding:5px 5px 3px 22px;
+	height: 25px;
+	border: 1px solid #ccc;
+}
+
+
+#button_reg {
+	background: #e6e6dc;
+	font-size: 1em;
+	color: #900;
+	padding: 6px 14px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #fff #d8d8d0 #d8d8d0 #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+  margin-top: 2em;
+  margin-left: 30em;
+  margin-bottom: 1em;
+}
+
+
 
 .slideshow {
   border: 1px solid white;
