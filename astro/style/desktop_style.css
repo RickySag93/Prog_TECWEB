@@ -290,7 +290,7 @@ body {
 
 
 .element_content {
-	height:inherit;
+	height:120px;
   max-width:100%;
   overflow: hidden;
 }
