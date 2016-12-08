@@ -155,6 +155,7 @@ a img{
 
 #breadcrumb a:hover {
   color: blue;
+  font-style: italic;
 }
 
 
