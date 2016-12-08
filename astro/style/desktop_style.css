@@ -321,6 +321,17 @@ a img{
 
 }
 
+/*#content .list_element button{
+  width:9em;
+  height:2em;
+  background-color: green;
+  color:white;
+  float:right;
+  z-index:1;
+
+} */
+
+
 #footer {
   background-color: #000; /*DA SCEGLIERE */
   margin-bottom: 0em;
