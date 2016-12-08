@@ -142,8 +142,10 @@ a img{
   width: 100%;
   margin-top: 2em;
   height: 1.875em;
-  margin-bottom:2em;
+}
 
+#breadcrumb p {
+  padding-left: 1em;
 }
 
 #breadcrumb a {
