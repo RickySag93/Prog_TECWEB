@@ -19,6 +19,9 @@ body {
   background-image: url("images/as.png");  /*  immagine background ai lati     */
 }
 
+a img{
+  border:0;
+}
 #content {        /*  contenuto della pagina, non riguarda i lati, viene escluso il menu fixed  */
   background-color: #fff;  /*DA SCEGLIERE sfondo della pagina con i contenuti */
   min-height:100%;
