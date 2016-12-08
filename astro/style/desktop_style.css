@@ -40,7 +40,7 @@ body {
   height: 4.6875em;
   z-index:2;
   left: 0;
-  padding-left: 14em;
+  padding-left: 15%;
   z-index: 2;
 }
 
@@ -182,7 +182,6 @@ body {
 }
 
 
-
 #foto{
   margin-top:2em;
   display: block;
@@ -276,7 +275,7 @@ body {
 }
 
 
- .element_foto {
+.element_foto {
     border-right: 1px solid black;
     height:100%;
     width:7.8125em;
@@ -303,13 +302,9 @@ body {
   padding-right: 10%;
 }
 
-
-
 .element_content:hover{
   overflow-y: auto;
-
 }
-
 
 #content .list_element span{
     padding-top: 0px;
@@ -317,7 +312,21 @@ body {
     margin-right: 0;
     width:100%;
     color:black;
+}
 
+#content .list_attivita{
+  width: 80%;
+  margin: auto;
+}
+
+.attivita_singola{
+  border: 2px solid black;
+  display:block;
+  color: black;
+  text-align: center;
+  background-color: orange;
+  margin: auto;
+  padding: 1em;
 }
 
 #footer {
