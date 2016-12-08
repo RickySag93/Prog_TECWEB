@@ -134,13 +134,10 @@ body {
 }
 
 #breadcrumb {
-  background-color: #272a33;  /*DA SCEGLIERE uguale all'header*/
+  background-color: #808893;  /*DA SCEGLIERE uguale all'header*/
   color: white;
   width: 100%;
   margin-top: 2em;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 2em;
   height: 1.875em;
   margin-bottom:2em;
 
@@ -149,6 +146,10 @@ body {
 #breadcrumb a {
   text-decoration: none;
   color: white;
+}
+
+#breadcrumb a:hover {
+  color: blue;
 }
 
 
