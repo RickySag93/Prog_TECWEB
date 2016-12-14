@@ -24,18 +24,7 @@
 	         .$connessione->$connect_error;
 	   exit();      
    }else{
-	   echo "Connesso! PROVIAMO un query! \n";
-	   if(!$result=$connessione->query("SELECT username FROM astrofilo")){
-		   echo "Errore query:".$connessione->error.". \n";
-		   exit();
-	   }else{
-		   if($result->num_rows>0){
-			   while($row = $result->fetch_array(MYSQLI_ASSOC)){
-                     echo $row['username'] ." /n";
-               }
-           $result->free();
-		   }
-		   $connessione->close();
-	   }
+	   echo "Connesso! ";
+	   echo "Today is " . date("Y-m-d H:i:s")." -- ";
    }
 ?>

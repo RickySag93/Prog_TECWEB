@@ -25,7 +25,7 @@ $att_foto= SELECT foto.idfoto,foto.immagine,foto.titolo,foto.idastrofilo,astrofi
 -- pagina studio singolo
 
 $data_studio= SELECT studia.*,astrofilo.username,astrofilo.imgprofilo
-              FROM studia JOIN astrofilo ON studia.idastrofilo=astrofilo.mail
+              FROM studia JOIN astrofilo ON studia.astrofilo=astrofilo.mail
               WHERE studia.idstudio=$idst;
 
 $foto_studio= SELECT *
