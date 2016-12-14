@@ -291,6 +291,7 @@ input.text {
 .slidebuttonright:hover img, .slidebuttonleft:hover img{
   background-color:#000;
   opacity:0.6;
+  filter:Alpha(opacity=60);
   visibility:visible;
 }
 
@@ -302,7 +303,7 @@ input.text {
     margin-top: 1em;
     margin-bottom: 1em;
     z-index: 0;
-    display:hidden;
+    display: hidden;
 }
 
 .singleimage {
@@ -320,9 +321,11 @@ input.text {
 }
 .opacity {
   opacity:0.5;
+  filter:Alpha(opacity=50);
 }
 .opacity:hover {
   opacity:1;
+  filter:Alpha(opacity=100);
 }
 
 
