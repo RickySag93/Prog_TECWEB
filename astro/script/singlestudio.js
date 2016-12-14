@@ -3,6 +3,8 @@
  */
 
 var slideIndex = 1;
+var y=document.getElementsByClassName("otherimages");
+y.style.display="block";
 showDivs(slideIndex);
 
 function plusDivs(n) {
