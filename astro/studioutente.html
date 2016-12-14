@@ -10,14 +10,14 @@
   <meta name="keywords" content="Astrofilia, studio corpi celesti, gruppi astrofilia, universo,  " />
   <meta name="author" content="---" />
 
-  <script type="text/javascript" src="singlestudio.js"></script>
+  <script type="text/javascript" src="script/singlestudio.js"></script>
   <link type="text/css" rel="stylesheet" href="stile.css"/>
   <link rel="stylesheet" type="text/css" media="screen" href="style/desktop_style.css" />
     <link rel="stylesheet" type="text/css" media="handheld, screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="style/mobile_style.css" />
   <link rel="shortcut icon" href="style/images/favicon.png" />
 </head>
 
-<body>
+<body onload="showDivs(1)">
 
   <div id="menu">
       <a href="index.html"><img id="logo" src="style/images/logo.png" alt="Logo del sito web astrofili" /> </a>
@@ -65,23 +65,26 @@
 		<span id="rank_txt">rank: 4</span>
 	</div>
 
-      <div class="w3-content" style="max-width:1200px">
-          <img class="mySlides" src="style/images/img_fjords_wide.jpg" style="width:100%" alt="" />
-          <img class="mySlides nascosta" src="style/images/img_mountains_wide.jpg" style="width:100%" alt="" />
-          <img class="mySlides nascosta" src="style/images/img_nature_wide.jpg" style="width:100%" alt="" />
+      <div class="slideshow" >
+          <img class="imgslide" src="style/images/img_fjords_wide.jpg" style="width:100%" alt="" />
+          <img class="imgslide" src="style/images/img_mountains_wide.jpg" style="width:100%" alt="" />
+          <img class="imgslide" src="style/images/img_nature_wide.jpg" style="width:100%" alt="" />
 
-          <div class="w3-row-padding w3-section">
-              <div class="w3-col s4">
-                  <img class="demo w3-opacity w3-hover-opacity-off" src="style/images/img_fjords_wide.jpg" style="width:100%" onclick="currentDiv(1)" alt="" />
+        </div>
+
+          <div class="otherimages">
+              <div class="singleimage">
+                  <img class="imageproperties opacity" src="style/images/img_fjords_wide.jpg" onclick="currentDiv(1)" alt="" />
               </div>
-              <div class="w3-col s4">
-                  <img class="demo w3-opacity w3-hover-opacity-off" src="style/images/img_mountains_wide.jpg" style="width:100%" onclick="currentDiv(2)" alt="" />
+              <div class="singleimage">
+                  <img class="imageproperties opacity" src="style/images/img_mountains_wide.jpg" onclick="currentDiv(2)" alt="" />
               </div>
-              <div class="w3-col s4">
-                  <img class="demo w3-opacity w3-hover-opacity-off" src="style/images/img_nature_wide.jpg" style="width:100%" onclick="currentDiv(3)" alt="" />
+              <div class="singleimage">
+                  <img class="imageproperties opacity" src="style/images/img_nature_wide.jpg" onclick="currentDiv(3)" alt="" />
               </div>
           </div>
-      </div>
+
+  <div class="commenti">
     <h4>Commenti</h4>
     <div class="list_element">
         <div class="element_foto">
@@ -91,6 +94,7 @@
           <p> COMMENTO </p>
         </div>
     </div>
+  </div>
 
     </div>
   <div id="footer">
