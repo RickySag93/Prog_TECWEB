@@ -295,7 +295,7 @@ input.text {
 }
 
 .otherimages{
-    width:72%;
+    width:80%;
     height:60%;
     margin-left: auto;
     margin-right: auto;
@@ -309,7 +309,7 @@ input.text {
   display:inline;
   z-index: 0;
   cursor: pointer;
-  margin-left: 2em;
+  margin-left: 1.5em;
 
 }
 .imageproperties{
