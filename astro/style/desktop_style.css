@@ -236,18 +236,60 @@ input.text {
 
 
 .slideshow {
+  position:relative;
   border: 1px solid white;
   margin-top: 2em;
   margin-left: auto;
   margin-right: auto;
   width: 80%;
-  height: 25em;
+  height: 40em;
 
 }
 
-.slideshow img {
+.imgslide {
   width: 100%;
   height: 100%;
+  z-index: =0;
+}
+
+
+
+.slidebuttonleft{
+  z-index: 1;
+  position:absolute;
+  width:10%;
+  height:100%;
+}
+
+.slidebuttonleft img{
+  z-index: 1;
+  position:absolute;
+  width:100%;
+  height:100%;
+  visibility:hidden;
+}
+
+.slidebuttonright{
+  z-index: 1;
+  position:absolute;
+  right:0;
+  width:10%;
+  height:100%;
+}
+
+.slidebuttonright img{
+  z-index: 1;
+  position:absolute;
+  right:0;
+  width:100%;
+  height:100%;
+  visibility:hidden;
+}
+
+.slidebuttonright:hover img, .slidebuttonleft:hover img{
+  background-color:#000;
+  opacity:0.6;
+  visibility:visible;
 }
 
 #eventi {               /* contenitore degli eventi prec e succ*/
