@@ -1,11 +1,6 @@
 var slideIndex = 1;
-document.onload.displayfirst();
+showDivs(1);
 
-function displayfirst(){
-    var x = document.getElementsByClassName("imgslide");
-     x[1].style.display = "block";
-
-}
 function plusDivs(n) {
   showDivs(slideIndex += n);
 }
