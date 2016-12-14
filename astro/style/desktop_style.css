@@ -242,7 +242,7 @@ input.text {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
-  height: 40em;
+  height: 35em;
 
 }
 
@@ -293,6 +293,37 @@ input.text {
   opacity:0.6;
   visibility:visible;
 }
+
+.otherimages{
+    width:72%;
+    height:60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    z-index: 0;
+}
+
+.singleimage {
+  display:inline;
+  z-index: 0;
+  cursor: pointer;
+  margin-left: 2em;
+
+}
+.imageproperties{
+  height:12em;
+  width:20em;
+
+
+}
+.opacity {
+  opacity:0.5;
+}
+.opacity:hover {
+  opacity:1;
+}
+
 
 #eventi {               /* contenitore degli eventi prec e succ*/
   margin-top: 2em;
@@ -399,7 +430,10 @@ input.text {
     margin-right: auto;
 }
 
+.commenti{
+  margin-top: auto;
 
+}
 .list_element a{
     display:block;
     text-decoration:none;
