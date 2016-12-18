@@ -35,7 +35,7 @@
 			echo "Errore della query: ".$connessione->error.".";
 	}else{
 		if($result->num_rows<=0){ // vuol dire che può votare
-      $giudica_foto="INSERT INTO giudicafoto(votante,idfoto,voto) VALUES('$mail_votante','$idft','$voto')";
+      $giudica_foto="INSERT INTO giudicafoto(votante,idfoto,voto,datainserimento) VALUES('$mail_votante','$idft','$voto','date("Y-m-d H:i:s")')";
       if(!$connessione->query($giudica_foto)){
         //errore nell'insert
       }

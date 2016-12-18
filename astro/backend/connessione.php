@@ -1,30 +1,32 @@
 <?php
-   /* 
-    * PARAMETRI IN LOCALE
-       $host="localhost";
+   /*
+    * PARAMETRI IN LOCALE(cioè botta)
+       $host="127.0.01";
        $user="root";
        $pwd="";
        $db="ASTROSERIO";
-    
+
     * PARAMETRI IN REMOTO
        $host="localhost";
        $user="mbottaro";
        $pwd="toosie5eimooW6ai";
        $db="mbottaro";
     * */
-       $host="localhost";
-       $user="mbottaro";
-       $pwd="toosie5eimooW6ai";
-       $db="mbottaro";
-   
+
+    $host="127.0.0.1";
+    $user="root";
+    $pwd="";
+    $db="ASTROSERIO";
+
    $connessione=new mysqli($host,$user,$pwd,$db);
-   
+
    if($connessione->connect_errno){
 	   echo "Connessione fallita(".$connessione->connect_errno."):"
 	         .$connessione->$connect_error;
-	   exit();      
+	   exit();
    }else{
-	   echo "Connesso! ";
-	   echo "Today is " . date("Y-m-d H:i:s")." -- ";
+	   echo "Connesso! \n";
+	   echo "Today is " . date("Y-m-d H:i:s")."\n";
+     $usermail="alfmeg@mail.it"; // serve solo per i test
    }
 ?>
