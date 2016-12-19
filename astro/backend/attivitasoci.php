@@ -1,25 +1,26 @@
 <?php
    include "connessione.php";
-   $att_studi="SELECT studia.idstudio,studia.titolo,studia.evento,studia.inizio,studia.datainserimento,
+   $att_studi="SELECT studia.datainserimento,studia.idstudio,studia.titolo,studia.evento,studia.inizio,
                       astrofilo.username,astrofilo.nome,astrofilo.cognome,astrofilo.imgprofilo
                FROM studia JOIN relazioni ON studia.astrofilo=relazioni.astro2 JOIN astrofilo ON studia.astrofilo=astrofilo.mail
                WHERE relazioni.astro1='$usermail'";
 
-   $att_foto= "SELECT foto.idfoto,foto.immagine,foto.titolo,foto.idastrofilo,foto.datainserimento,astrofilo.username
+   // manca foto.immagine nel SELECT, questo solo per fare dei test da terminale
+   $att_foto= "SELECT foto.datainserimento,foto.idfoto,foto.titolo,foto.idastrofilo,astrofilo.username
                           FROM foto JOIN relazioni ON foto.idastrofilo=relazioni.astro2 JOIN astrofilo ON foto.idastrofilo=astrofilo.mail
                           WHERE relazioni.astro1='$usermail' AND foto.idastrofilo IS NOT NULL";
 
-   $studi_soci=array();
-   $foto_soci=array();
+   $attivita_soci=array();
 
    if(!$result=$connessione->query($att_studi)){
      echo "Errore della query: ".$connessione->error.".";
    }else{
      if($result->num_rows>0){
        while($studi_soci=$result->fetch_array(MYSQLI_ASSOC)){
-         echo $studi_soci['username']." ha fatto uno studio";
+         /*echo $studi_soci['username']." ha fatto uno studio";
          if($studi_soci['titolo']=="") echo" il ".$studi_soci['datainserimento'].".\n";
-         else echo ": ".$studi_soci['titolo'].", il ".$studi_soci['datainserimento'].".\n";
+         else echo ": ".$studi_soci['titolo'].", il ".$studi_soci['datainserimento'].".\n";*/
+        array_push($attivita_soci,$studi_soci);
        }
        $result->free();
        //echo "Trovati studi \n";
@@ -31,11 +32,12 @@
    }else{
      if($result->num_rows>0){
        while($foto_soci=$result->fetch_array(MYSQLI_ASSOC)){
-         echo $foto_soci['username']." ha fatto una foto";
-         if($foto_soci['titolo']=="") echo" il ".$foto_soci['datainserimento'].".\n";
-         else echo ": ".$foto_soci['titolo'].", il ".$foto_soci['datainserimento'].".\n";
+        /* echo $foto_soci['username']." ha fatto una foto";
+         if($foto_soci['titolo']=="") echo " il ".$foto_soci['datainserimento'].".\n";
+         else echo ": ".$foto_soci['titolo'].", il ".$foto_soci['datainserimento'].".\n";*/
+         array_push($attivita_soci,$foto_soci);
        }
-       $result->free();
+       //$result->free();
       // echo "Trovate foto\n";
      }
    }
@@ -43,5 +45,44 @@
    // fondo studi con foto per ordinali e visualizzarli con un ordine cronologico
 
    //$attivita_soci=array_merge($studi_soci,$foto_soci);
+   //echo "Stampo array \n";
+   // algoritmo di ordinamento
+   function sortAttivitaSoci(&$array, $key){
+       $sorter=array();
+       $ret=array();
+       reset($array);
+       foreach ($array as $ii => $va) {
+           $sorter[$ii]=$va[$key];
+       }
+       arsort($sorter);
+       foreach ($sorter as $ii => $va) {
+           $ret[$ii]=$array[$ii];
+       }
+       $array=$ret;
+   }
+   // l'array è ordinato in base all'attributo key.
+
+   sortAttivitaSoci($attivita_soci,"datainserimento");
+   // la stampa delle attività si basa sul fallimento della ricerca di certe chiavi.
+   // quando la ricerca fallisce, PHP ritorna un NOTICE a video. In fase di sviluppo e debug va bene,
+   // ma alla consegna dovrà essere abilitata la funzione error_reporting(0); .
+   error_reporting(0);
+
+   // stampa attività
+   foreach($attivita_soci as $att){
+     if($att['idfoto']==""){
+         echo $att['username']." ha fatto uno studio";
+         if($att['titolo']=="") echo" il ".$att['datainserimento'].".\n";
+         else echo ": \"".$att['titolo']."\", il ".$att['datainserimento'].".\n";
+     }else if($att['idstudio']==""){
+         echo $att['username']." ha fatto una foto";
+         if($att['titolo']=="") echo " il ".$att['datainserimento'].".\n";
+         else echo ": \"".$att['titolo']."\", il ".$att['datainserimento'].".\n";
+     }
+   }
+   /*
+   echo "\n ############ \n";
+   print_r($attivita_soci);
+   */
 
 ?>

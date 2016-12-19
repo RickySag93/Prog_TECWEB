@@ -1,5 +1,5 @@
 <?php
-    
+
     include "connessione.php";
     // SLIDESHOW
     if(!$result=$connessione->query("SELECT *
@@ -35,5 +35,5 @@
 			$result->free();
 		}
 	}
-    
+
 ?>
