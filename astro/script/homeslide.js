@@ -1,5 +1,8 @@
 var slideIndex = 1;
+document.addEventListener('DOMContentLoaded', function() {
 showDivs(1);
+}, false);
+
 
 function plusDivs(n) {
   showDivs(slideIndex += n);
