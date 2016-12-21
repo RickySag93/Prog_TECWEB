@@ -51,9 +51,10 @@ html {
     position: fixed;
     left: 0;
     padding-left: 15%;
-    min-width: 700px;
+    min-width: 46em;
     width: 100%;
     height: 4.6875em;
+    z-index: 2;
   }
 
   #content_menu {        /* contenitore degli elementi del menu, ossia i bottoni per i link*/
@@ -102,7 +103,7 @@ html {
   #header {
     background-color: #274f8e;   /*DA SCEGLIERE*/
     clear: both;
-    min-width: 46.875em;
+    min-width: 46em;
     margin-left: auto;
     margin-right: auto;
     padding-top: 5em;
