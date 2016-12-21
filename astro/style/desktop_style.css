@@ -49,8 +49,10 @@ html {
                /* contenitore del menu fixed con gli elementi del menu più il logo a sinistra*/
     background-color: #28313f;  /*DA SCEGLIERE sfondo del menu contenitore menu e logo */
     position: fixed;
+    left: 0;
+    padding-left: 15%;
     min-width: 700px;
-    width: 70%;
+    width: 100%;
     height: 4.6875em;
   }
 
@@ -132,6 +134,23 @@ html {
   	width:12em;
   	height:1.25em;
   }
+
+  #box_login {
+    float: right;
+  }
+
+  #content #box_login p {
+    padding-left: 18em;
+    padding-top: 4em;
+    color: white;
+    font-size: 0.8em;
+  }
+
+  #box_login a {
+    color: yellow;
+  }
+
+
 }
 
 #breadcrumb {
@@ -146,7 +165,7 @@ html {
   margin-left: 0;
   margin-right: 0;
   padding-left: 1em;
-  padding-top: 0.5em;
+  padding-top: 0.3em;
 }
 
 #breadcrumb a {
