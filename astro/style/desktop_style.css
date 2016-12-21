@@ -1,151 +1,152 @@
+
 * {
   padding: 0em;
   margin: 0em;
 }
-html{
+
+html {
   height:100%;
   min-height: 100%;
 }
 
-body {
-  font-family: Verdana, Helvetica, Georgia, sans-serif;
-  max-width: 70%;
-  min-width: 46.875em;              /*    dimensione in larghezza della pagina con il contenuto        */
-  margin-left: auto;
-  margin-right: auto;
-  height:100%;
-  min-height: 100%;
-  color: #000000;                   /*  colore del testo su tutta la pagina    */
-  background-image: url("images/as.png");  /*  immagine background ai lati     */
-}
 
-a img{
-  border:0;
-}
-#content {        /*  contenuto della pagina, non riguarda i lati, viene escluso il menu fixed  */
-  background-color: #edeeef;  /*DA SCEGLIERE sfondo della pagina con i contenuti */
-  min-height:100%;
-  padding-bottom: 9.375em;
-}
+@media screen and (min-width: 481px) {  /* VERSIONE DESKTOP */
 
-#logo {
-  float: left;
-  width: 4.375em;
-  height: 4.375em;
-}
+  body {
+    font-family: Verdana, Helvetica, Georgia, sans-serif;
+    max-width: 70%;
+    min-width: 46.875em;              /*    dimensione in larghezza della pagina con il contenuto        */
+    margin-left: auto;
+    margin-right: auto;
+    height:100%;
+    min-height: 100%;
+    color: #000000;                   /*  colore del testo su tutta la pagina    */
+    background-image: url("images/as.png");  /*  immagine background ai lati     */
+  }
 
-#menu {
-             /* contenitore del menu fixed con gli elementi del menu più il logo a sinistra*/
-  background-color: #28313f;  /*DA SCEGLIERE sfondo del menu contenitore menu e logo */
-  position: fixed;
-  min-width: 700px;
-  width: 100%;
-  height: 4.6875em;
-  z-index:2;
-  left: 0;
-  padding-left: 15%;
-  z-index: 2;
-}
+/*
+    SEZIONE HOME
+*/
 
-#content_menu {        /* contenitore degli elementi del menu, ossia i bottoni per i link*/
-  margin-left: 9%;  /* distanzio il contenitore del menu dal logo, allineato con l'header */
-}
+  a img {
+    border:0;
+  }
+
+  #content {        /*  contenuto della pagina, non riguarda i lati, viene escluso il menu fixed  */
+    background-color: #edeeef;  /*DA SCEGLIERE sfondo della pagina con i contenuti */
+    min-height:100%;
+    padding-bottom: 9.375em;
+  }
+
+  #logo {
+    float: left;
+    width: 4.375em;
+    height: 4.375em;
+  }
 
 
-#content_menu a {  /* bottoni del menu*/
-  float: left;
-  color: white;              /*colore del testo link*/
-  background-color: #28313f;  /* prende il colore del contenitore menu*/
-  padding: 1em;
-  border: 0px solid black;
-  height: 1.25em;
-  width: 3.5em;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1em;
-  margin-top:1em;
-	-ms-transition: 0.3s;
-	-webkit-transition:0.3s;
-	-moz-transition: 0.3s;
-	transition: 0.3s;
-}
+  #menu {
+               /* contenitore del menu fixed con gli elementi del menu più il logo a sinistra*/
+    background-color: #28313f;  /*DA SCEGLIERE sfondo del menu contenitore menu e logo */
+    position: fixed;
+    min-width: 700px;
+    width: 70%;
+    height: 4.6875em;
+  }
 
-#content_menu a:hover {
-    background-color: #595959;
-    color:white;
-    font-weight: bold;
-    font-size: 1.1em;
+  #content_menu {        /* contenitore degli elementi del menu, ossia i bottoni per i link*/
+    margin-left: 9%;  /* distanzio il contenitore del menu dal logo, allineato con l'header */
+  }
+
+  #content_menu a {  /* bottoni del menu*/
+    float: left;
+    color: white;              /*colore del testo link*/
+    background-color: #28313f;  /* prende il colore del contenitore menu*/
+    padding: 1em;
+    border: 0px solid black;
+    height: 1.25em;
+    width: 3.5em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin-top:1em;
   	-ms-transition: 0.3s;
-  	-webkit-transition: 0.3s;
+  	-webkit-transition:0.3s;
   	-moz-transition: 0.3s;
-  	transition:0.3s;
-}
+  	transition: 0.3s;
+  }
 
+  #content_menu a:hover {
+      background-color: #595959;
+      color:white;
+      font-weight: bold;
+      font-size: 1.1em;
+	  -ms-transition: 0.3s;
+	  -webkit-transition: 0.3s;
+	  -moz-transition: 0.3s;
+	  transition:0.3s;
+  }
 
-#tornasu {
-  margin-top: 0.3125em;
-  margin-right: 0.3125em;
-  float:right;
-  color:white;
-  width: 4.375em;
-  height: 4.375em;
-}
+  #tornasu {
+    margin-top: 0.3125em;
+    margin-right: 0.3125em;
+    float:right;
+    color:white;
+    width: 4.375em;
+    height: 4.375em;
+  }
 
-#header {
-  background-color: #274f8e;   /*DA SCEGLIERE*/
-  clear: both;
-  min-width: 46.875em;
-  border-bottom: 1px solid black;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 5em;
-  height: 9.375em;
-}
+  #header {
+    background-color: #274f8e;   /*DA SCEGLIERE*/
+    clear: both;
+    min-width: 46.875em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5em;
+    height: 9.375em;
+  }
 
-#header h1 {
-  color:white;
-  font-size:4em;
-  font-style:italic;
-  text-align: center;
+  #header h1 {
+    color:white;
+    font-size:4em;
+    font-style:italic;
+    text-align: center;
+  }
 
-}
+  #login {
+    display: block;
+    border: 0;
+    margin-top: 1.5em;
+    float:right;
+    color:white;
+  }
 
+  #login label {
+    font-size: 0.8em;
+    display:inline;
+    font-weight: bold;
+  }
 
-#login {
-  display: block;
-  border: 0;
-  margin-top: 1.5em;
-  float:right;
-  color:white;
-}
-
-#login label {
-  font-size: 0.8em;
-  display:inline;
-  font-weight: bold;
-}
-
-#login input {
-
-	width:12em;
-	height:1.25em;
-
-
+  #login input {
+  	width:12em;
+  	height:1.25em;
+  }
 }
 
 #breadcrumb {
   background-color: #808893;  /*DA SCEGLIERE uguale all'header*/
-  color: white;
   width: 100%;
   margin-top: 2em;
   height: 1.875em;
 }
 
-#breadcrumb p {
+#content #breadcrumb p {
+  color:white;
+  margin-left: 0;
+  margin-right: 0;
   padding-left: 1em;
+  padding-top: 0.5em;
 }
 
 #breadcrumb a {
@@ -157,82 +158,6 @@ a img{
   color: blue;
   font-style: italic;
 }
-
-
-/* PAGINA REGISTRAZIONE */
-
-#titolo_reg {
-  text-align: center;
-}
-
-
-form  p
-{
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-
-
-#modulo_reg fieldset {
-	border: 1px dashed #ddd;
-	margin-top: 4em;
-}
-
-
-#modulo_reg label {
-	width: 8.75em;
-	height: 2em;
-	line-height: 2.2em;
-	margin-right: 5px;
-	padding-left: 5px;
-	background: #e7e7e7;
-	float: left;
-	display: block;
-	font-size: 1.1em;
-	color: #333;
-}
-
-
-input.psw{
-  background-color: #fff;
-  width: 290px;
-  color: #666;
-  padding: 5px 5px 3px 19px;
-  font-size: 1em;
-  border: 1px solid #ccc;
-  height: 25px;
-  line-height: 25px;
-  font-size: 1em;
-}
-
-
-
-input.text {
-	background-color: #fff;
-	width: 290px;
-	color: #666;
-	padding:5px 5px 3px 22px;
-	height: 25px;
-	border: 1px solid #ccc;
-}
-
-
-#button_reg {
-	background: #e6e6dc;
-	font-size: 1em;
-	color: #900;
-	padding: 6px 14px;
-	border-width: 2px;
-	border-style: solid;
-	border-color: #fff #d8d8d0 #d8d8d0 #fff;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bold;
-  margin-top: 2em;
-  margin-left: 30em;
-  margin-bottom: 1em;
-}
-
 
 
 .slideshow {
@@ -328,7 +253,6 @@ input.text {
   filter:Alpha(opacity=100);
 }
 
-
 #eventi {               /* contenitore degli eventi prec e succ*/
   margin-top: 2em;
   margin-left: auto;
@@ -349,6 +273,97 @@ input.text {
   margin-left: 7%;
   float: left;
 }
+
+#eventi_pre, #eventi_next {     /*singolo contenitore degli eventi */
+    background-color: #fff;  /*DA SCEGLIERE */
+    border: 1px solid black;
+    height: 26.875em;
+    max-width:99%;
+    overflow-y:auto;
+    padding-right: 0.125em;
+    color:black;
+}
+
+#content #eventi_pre p, #content #eventi_next p {
+  text-align: left;
+  padding-bottom: 5px;
+  padding-left: 2px;
+  border-bottom: 1px solid black;
+  padding-top: 0px;
+  margin-left: 0;
+  margin-right: 0;
+  width:100%;
+}
+
+/* FINE HOME */
+
+/* PAGINA REGISTRAZIONE */
+
+#titolo_reg {
+  text-align: center;
+}
+
+form  p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+#modulo_reg fieldset {
+	border: 1px dashed #ddd;
+	margin-top: 4em;
+}
+
+#modulo_reg label {
+	width: 8.75em;
+	height: 2em;
+	line-height: 2.2em;
+	margin-right: 5px;
+	padding-left: 5px;
+	background: #e7e7e7;
+	float: left;
+	display: block;
+	font-size: 1.1em;
+	color: #333;
+}
+
+input.psw{
+  background-color: #fff;
+  width: 290px;
+  color: #666;
+  padding: 5px 5px 3px 19px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  height: 25px;
+  line-height: 25px;
+  font-size: 1em;
+}
+
+input.text {
+	background-color: #fff;
+	width: 290px;
+	color: #666;
+	padding:5px 5px 3px 22px;
+	height: 25px;
+	border: 1px solid #ccc;
+}
+
+#button_reg {
+	background: #e6e6dc;
+	font-size: 1em;
+	color: #900;
+	padding: 6px 14px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #fff #d8d8d0 #d8d8d0 #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+  margin-top: 2em;
+  margin-left: 30em;
+  margin-bottom: 1em;
+}
+
+/* FINE REGISTRAZIONE */
 
 
 #foto{
@@ -380,51 +395,12 @@ input.text {
  padding-right:5%;
 }
 
-#eventi_pre, #eventi_next {     /*singolo contenitore degli eventi */
-    background-color: #fff;  /*DA SCEGLIERE */
-    border: 1px solid black;
-    height: 26.875em;
-    max-width:99%;
-    overflow-y:auto;
-    padding-right: 0.125em;
-    color:black;
-}
-#content #eventi_pre p, #content #eventi_next p {
-  text-align: left;
-  padding-bottom: 5px;
-  padding-left: 2px;
-  border-bottom: 1px solid black;
-  padding-top: 0px;
-  margin-left: 0;
-  margin-right: 0;
-  width:100%;
-}
-
 #content p {
     padding-top: 1.5em;
     width:70%;
     margin-left: auto;
     margin-right: auto;
   }
-
-
-#content #breadcrumb p {
-  margin-left: 0;
-  margin-right: 0;
-  width:100%;
-  color:white;
-  padding-top: 0.3125em;
-}
-
-#content #breadcrumb p{
-     margin-left: 0;
-     margin-right: 0;
-     width:100%;
-     color:white;
-     padding-top: 5px;
-}
-
-
 
 #content .list_element{
     width: 80%;
@@ -434,10 +410,7 @@ input.text {
     margin-right: auto;
 }
 
-.commenti{
-  margin-top: auto;
 
-}
 .list_element a{
     display:block;
     text-decoration:none;
@@ -516,7 +489,7 @@ input.text {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  height: 9.375em;
+  height: 7em;
   border-top: 1px solid black;
   border-left: 1px solid black;
   border-right: 1px solid black;
@@ -524,15 +497,14 @@ input.text {
 }
 
  #footer p {
+   padding-top: 1em;
    text-align:center;
    font-size: 0.8em;
    font-style: italic;
 }
 
 #footer img {
-  margin-left: 1.0em;
-  margin-right: 1.0em;
-  margin-bottom: 0.8em;
+  margin: 1em 1em 0.8em 1em;
 }
 
   #xhtmlvalido {
@@ -547,7 +519,7 @@ input.text {
 
 #logofooter {
   padding-left: 50%;
-  padding-right: 50%
+  padding-right: 50%;
 }
 
 .nascosta {
@@ -555,3 +527,139 @@ input.text {
 }
 
 .demo {cursor:pointer}
+
+
+/*
+    CSS PER LAYOUT MOBILE SMARTPHONE
+*/
+@media screen and (max-width: 480px){
+
+/*
+    HOME MOBILE
+*/
+
+    body {
+      font-family: Verdana, Helvetica, Georgia, sans-serif;
+      color: #000000;                   /*  colore del testo su tutta la pagina    */
+    }
+
+    a img {
+      border:0;
+    }
+
+    #content {        /*  contenuto della pagina, non riguarda i lati, viene escluso il menu fixed  */
+      background-color: #edeeef;  /*DA SCEGLIERE sfondo della pagina con i contenuti */
+      min-height:100%;
+      padding-bottom: 9.375em;
+    }
+
+    #logo {
+      display: none;
+    }
+
+    #menu {
+                 /* contenitore del menu fixed con gli elementi del menu più il logo a sinistra*/
+      background-color: #28313f;  /*DA SCEGLIERE sfondo del menu contenitore menu e logo */
+    }
+
+
+    #content_menu a {  /* bottoni del menu*/
+      color: white;              /*colore del testo link*/
+      background-color: #28313f;  /* prende il colore del contenitore menu*/
+      padding: 1em;
+      border: 0px solid black;
+      height: 1em;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      font-size: 1em;
+  }
+
+    #header {
+      background-color: #274f8e;
+      clear: both;
+      padding-top: 5em;
+      height: 5em;
+    }
+
+    #header h1 {
+      color: white;
+      font-size: 2em;
+      font-style: italic;
+      text-align: center;
+    }
+
+    #login {
+      display: block;
+      border: 0;
+      margin-top: 1.5em;
+      float:right;
+      color:white;
+    }
+
+    #login label {
+      font-size: 0.8em;
+      display:inline;
+      font-weight: bold;
+    }
+
+    #login input {
+    	width:12em;
+    	height:1.25em;
+    }
+
+    #breadcrumb {
+      background-color: #808893;
+      color: white;
+      width: 100%;
+      margin-top: 2em;
+      height: 1.875em;
+    }
+
+    #breadcrumb p {
+      padding-left: 1em;
+    }
+
+    #tornasu {
+      display: none;
+    }
+
+    .contorno {                        /* contenitore che contiene il contorno per gli eventi*/
+      width: 38%;
+      height: 28.125em;
+      padding:0.1875em;
+      color:white;
+      background-color:black;
+      margin-right: auto;
+      margin-top: 2em;
+      margin-bottom: 1em;
+      margin-left: 7%;
+      float: left;
+    }
+
+    #eventi_pre, #eventi_next {     /*singolo contenitore degli eventi */
+        background-color: #fff;  /*DA SCEGLIERE */
+        border: 1px solid black;
+        height: 20em;
+        max-width:99%;
+        overflow-y:auto;
+        color:black;
+    }
+
+    #content #eventi_pre p, #content #eventi_next p {
+      padding-bottom: 5px;
+      padding-left: 2px;
+      border-bottom: 1px solid black;
+      padding-top: 0px;
+      margin-left: 0;
+      margin-right: 0;
+      width:100%;
+    }
+
+
+/*
+  FINE HOME
+*/
+
+}
