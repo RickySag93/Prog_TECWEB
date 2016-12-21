@@ -18,6 +18,6 @@ function showDivs(n) {
      x[i].style.display = "none";
   }
   x[slideIndex-1].style.display = "block";
-  var g=document.getElementsByClassName("number");
+  var g=document.getElementById("number");
   g[1].style.display="none";
 }
