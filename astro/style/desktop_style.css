@@ -271,13 +271,13 @@ height:5em;
   height:100%;
   border-color:white;
   cursor:pointer;
-  border-right: 1px solid white;
+  border-right: 4px solid gray;
 }
 
 .slidebuttonleft img{
   z-index: 0;
   position:absolute;
-  width:100%;
+  width:90%;
   height:95%;
 }
 
@@ -289,14 +289,14 @@ height:5em;
   height:100%;
   border-color:white;
   cursor:pointer;
-  border-left: 1px solid white;
+  border-left: 4px solid gray;
 }
 
 .slidebuttonright img{
   z-index: 0;
   position:absolute;
   right:0;
-  width:100%;
+  width:90%;
   height:95%;
 
 }
@@ -308,7 +308,6 @@ position:absolute;
 left:49%;
 right:49%;
 color:white;
-display: block;
 }
 
 
