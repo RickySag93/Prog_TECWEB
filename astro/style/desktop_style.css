@@ -311,38 +311,6 @@ color:white;
 display: block;
 }
 
-.otherimages{
-    width:80%;
-    height:60%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    z-index: 0;
-    display: hidden;
-}
-
-.singleimage {
-  display:inline;
-  z-index: 0;
-  cursor: pointer;
-  margin-left: 1.5em;
-
-}
-.imageproperties{
-  height:12em;
-  width:20em;
-
-
-}
-.opacity {
-  opacity:0.5;
-  filter:Alpha(opacity=50);
-}
-.opacity:hover {
-  opacity:1;
-  filter:Alpha(opacity=100);
-}
 
 
 #eventi {               /* contenitore degli eventi prec e succ*/
