@@ -19,5 +19,5 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "block";
   var g=document.getElementById("number");
-  g[1].style.display="none";
+  g.style.display="none";
 }
