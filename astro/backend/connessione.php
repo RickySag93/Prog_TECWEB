@@ -27,6 +27,6 @@
    }else{
 	   /*echo "Connesso! \n";
 	   echo "Today is " . date("Y-m-d H:i:s")."\n";*/
-     $usermail="alfmeg@mail.it"; // serve solo per i test
+     $usermail="matbo@mail.it"; // serve solo per i test
    }
 ?>
