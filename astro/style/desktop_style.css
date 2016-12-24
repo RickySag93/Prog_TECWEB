@@ -33,15 +33,21 @@ html {
   }
 
   #content {        /*  contenuto della pagina, non riguarda i lati, viene escluso il menu fixed  */
-    background-color: #edeeef;  /*DA SCEGLIERE sfondo della pagina con i contenuti */
+    background-color: #edeeef;
     min-height:100%;
     padding-bottom: 9.375em;
   }
 
-  #logo {
+
+  #logo_home {
     float: left;
     width: 4.375em;
     height: 4.375em;
+    margin-left: 15%;
+  }
+
+  #logo_mobile, #account_mobile {
+    display: none;
   }
 
 #content_menu {
@@ -50,7 +56,7 @@ html {
 
   #menu {
                /* contenitore del menu fixed con gli elementi del menu più il logo a sinistra*/
-    background-color: #28313f;  /*DA SCEGLIERE sfondo del menu contenitore menu e logo */
+    background-color: #28313f;
     position: fixed;
     left: 0;
     min-width: 46em;
@@ -94,14 +100,15 @@ html {
   }
 
   #tornasu {
-    margin-top: 0.6em;
-    margin-left: 40em;
+    position: absolute;
+    margin-top: 0.5em;
+    right: 0;
     width: 4em;
     height: 4em;
   }
 
   #header {
-    background-color: #274f8e;   /*DA SCEGLIERE*/
+    background-color: #274f8e;
     clear: both;
     min-width: 46em;
     margin-left: auto;
@@ -152,10 +159,52 @@ html {
   }
 
 
+  #eventi {               /* contenitore degli eventi prec e succ*/
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 31.25em;
+  }
+
+  .contorno {                        /* contenitore che contiene il contorno per gli eventi*/
+    width: 38%;
+    height: 28.125em;
+    padding:0.1875em;
+    color:white;
+    background-color:black;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    margin-left: 7%;
+    float: left;
+  }
+
+  #eventi_pre, #eventi_next {     /*singolo contenitore degli eventi */
+      background-color: #fff;
+      border: 1px solid black;
+      height: 26.875em;
+      max-width:99%;
+      overflow-y:auto;
+      padding-right: 0.125em;
+      color:black;
+  }
+
+  #content #eventi_pre p, #content #eventi_next p {
+    text-align: left;
+    padding-bottom: 5px;
+    padding-left: 2px;
+    border-bottom: 1px solid black;
+    padding-top: 0px;
+    margin-left: 0;
+    margin-right: 0;
+    width:100%;
+  }
+
 }
 
 #breadcrumb {
-  background-color: #808893;  /*DA SCEGLIERE uguale all'header*/
+  background-color: #808893;
   width: 100%;
   margin-top: 2em;
   height: 1.875em;
@@ -197,8 +246,6 @@ html {
   z-index: =0;
   display:none;
 }
-
-
 
 
 .slidebuttonleft{
@@ -273,47 +320,6 @@ html {
   filter:Alpha(opacity=100);
 }
 
-#eventi {               /* contenitore degli eventi prec e succ*/
-  margin-top: 2em;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
-  height: 31.25em;
-}
-
-.contorno {                        /* contenitore che contiene il contorno per gli eventi*/
-  width: 38%;
-  height: 28.125em;
-  padding:0.1875em;
-  color:white;
-  background-color:black;
-  margin-right: auto;
-  margin-top: 2em;
-  margin-bottom: 1em;
-  margin-left: 7%;
-  float: left;
-}
-
-#eventi_pre, #eventi_next {     /*singolo contenitore degli eventi */
-    background-color: #fff;  /*DA SCEGLIERE */
-    border: 1px solid black;
-    height: 26.875em;
-    max-width:99%;
-    overflow-y:auto;
-    padding-right: 0.125em;
-    color:black;
-}
-
-#content #eventi_pre p, #content #eventi_next p {
-  text-align: left;
-  padding-bottom: 5px;
-  padding-left: 2px;
-  border-bottom: 1px solid black;
-  padding-top: 0px;
-  margin-left: 0;
-  margin-right: 0;
-  width:100%;
-}
 
 /* FINE HOME */
 
@@ -323,6 +329,7 @@ html {
 #modulo_reg {
   width: 80%;
   margin-top: 2em;
+  margin-left: 10em;
 }
 
 #modulo_reg h1 {
@@ -401,7 +408,7 @@ input.psw, input.text {
 #rank{
   margin:auto;
   width:80%;
-  background-color: #000;  /*DA SCEGLIERE uguale all'header*/
+  background-color: #000;
   color: white;
   height: 1.875em;
   margin-bottom:2em;
@@ -506,7 +513,7 @@ input.psw, input.text {
 
 
 #footer {
-  background-color: #000; /*DA SCEGLIERE */
+  background-color: #000;
   margin-bottom: 0em;
   margin-left: auto;
   margin-right: auto;
@@ -560,6 +567,7 @@ input.psw, input.text {
     HOME MOBILE
 */
 
+
     body {
       font-family: Verdana, Helvetica, Georgia, sans-serif;
       color: #000000;                   /*  colore del testo su tutta la pagina    */
@@ -570,33 +578,30 @@ input.psw, input.text {
     }
 
     #content {        /*  contenuto della pagina, non riguarda i lati, viene escluso il menu fixed  */
-      background-color: #edeeef;  /*DA SCEGLIERE sfondo della pagina con i contenuti */
+      background-color: #edeeef;
       min-height:100%;
       padding-bottom: 9.375em;
     }
 
-    #logo {
+    #logo_home {
       display: none;
     }
 
-    #menu {
-                 /* contenitore del menu fixed con gli elementi del menu più il logo a sinistra*/
-      background-color: #28313f;  /*DA SCEGLIERE sfondo del menu contenitore menu e logo */
+    #logo_mobile {
+      float: left;
+      width: 4em;
+      height: 4em;
     }
 
+    #account_mobile {
+      float: right;
+      width: 4em;
+      height: 4em;
+    }
 
-    #content_menu a {  /* bottoni del menu*/
-      color: white;              /*colore del testo link*/
-      background-color: #28313f;  /* prende il colore del contenitore menu*/
-      padding: 1em;
-      border: 0px solid black;
-      height: 1em;
-      width: 100%;
-      text-align: center;
-      text-decoration: none;
-      display: block;
-      font-size: 1em;
-  }
+    #content_menu a {
+      display: none;
+    }
 
     #header {
       background-color: #274f8e;
@@ -611,6 +616,23 @@ input.psw, input.text {
       font-style: italic;
       text-align: center;
     }
+
+
+/*
+
+    #content_menu a {   bottoni del menu
+      color: white;              colore del testo link
+      background-color: #28313f;   prende il colore del contenitore menu
+      padding: 1em;
+      border: 0px solid black;
+      height: 1em;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      font-size: 1em;
+  }
+*/
 
     #login {
       display: block;
@@ -661,7 +683,7 @@ input.psw, input.text {
     }
 
     #eventi_pre, #eventi_next {     /*singolo contenitore degli eventi */
-        background-color: #fff;  /*DA SCEGLIERE */
+        background-color: #fff;
         border: 1px solid black;
         height: 20em;
         max-width:99%;
