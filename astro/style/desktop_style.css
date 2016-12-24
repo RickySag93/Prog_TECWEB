@@ -44,13 +44,15 @@ html {
     height: 4.375em;
   }
 
+#content_menu {
+    width: 70%;
+}
 
   #menu {
                /* contenitore del menu fixed con gli elementi del menu più il logo a sinistra*/
     background-color: #28313f;  /*DA SCEGLIERE sfondo del menu contenitore menu e logo */
     position: fixed;
     left: 0;
-    padding-left: 15%;
     min-width: 46em;
     width: 100%;
     height: 4.6875em;
@@ -58,7 +60,7 @@ html {
   }
 
   #content_menu {        /* contenitore degli elementi del menu, ossia i bottoni per i link*/
-    margin-left: 9%;  /* distanzio il contenitore del menu dal logo, allineato con l'header */
+    margin-left: 15%;  /* distanzio il contenitore del menu dal logo, allineato con l'header */
   }
 
   #content_menu a {  /* bottoni del menu*/
@@ -92,12 +94,10 @@ html {
   }
 
   #tornasu {
-    margin-top: 0.3125em;
-    margin-right: 0.3125em;
-    float:right;
-    color:white;
-    width: 4.375em;
-    height: 4.375em;
+    margin-top: 0.6em;
+    margin-left: 40em;
+    width: 4em;
+    height: 4em;
   }
 
   #header {
@@ -319,26 +319,38 @@ html {
 
 /* PAGINA REGISTRAZIONE */
 
-#titolo_reg {
-  text-align: center;
+
+#modulo_reg {
+  width: 80%;
+  margin-top: 2em;
 }
 
-form  p {
+#modulo_reg h1 {
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+#modulo_reg input {
+  display: block;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
 
+#modulo_reg legend {
+  display: none;
+}
+
 #modulo_reg fieldset {
-	border: 1px dashed #ddd;
-	margin-top: 4em;
+	border: 0;
 }
 
 #modulo_reg label {
-	width: 8.75em;
+	width: 15%;
 	height: 2em;
-	line-height: 2.2em;
-	margin-right: 5px;
-	padding-left: 5px;
+	line-height: 2.3em;
+	margin-left: 3em;
+  margin-right: 2em;
+	padding-left: 1em;
 	background: #e7e7e7;
 	float: left;
 	display: block;
@@ -346,30 +358,21 @@ form  p {
 	color: #333;
 }
 
-input.psw{
+input.psw, input.text {
   background-color: #fff;
-  width: 290px;
+  width: 18em;
   color: #666;
-  padding: 5px 5px 3px 19px;
+  padding: 5px 5px 3px 22px;
   font-size: 1em;
   border: 1px solid #ccc;
   height: 25px;
-  line-height: 25px;
+  line-height: 2.2em;
   font-size: 1em;
-}
-
-input.text {
-	background-color: #fff;
-	width: 290px;
-	color: #666;
-	padding:5px 5px 3px 22px;
-	height: 25px;
-	border: 1px solid #ccc;
 }
 
 #button_reg {
 	background: #e6e6dc;
-	font-size: 1em;
+  font-size: 1em;
 	color: #900;
 	padding: 6px 14px;
 	border-width: 2px;
@@ -378,9 +381,8 @@ input.text {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: bold;
-  margin-top: 2em;
-  margin-left: 30em;
-  margin-bottom: 1em;
+  margin-left: 50%;
+  margin-top: 5em;
 }
 
 /* FINE REGISTRAZIONE */

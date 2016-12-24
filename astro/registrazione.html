@@ -19,7 +19,7 @@
 <body>
 
   <div id="menu">
-      <img id="logo" src="style/images/logo.png" alt="Logo del sito web astrofili" />
+      <a href="index.html"><img id="logo" src="style/images/logo.png" alt="Logo del sito web astrofili" /></a>
       <div id="content_menu">
         <a href="listafoto.html">Foto</a>
         <a href="listastudi.html">Studi</a>
@@ -46,33 +46,34 @@
       <p>Ti trovi in: <span xml:lang="en"><a href="index.html">Home</a></span> &raquo; Registrati</p>
     </div>
 
-    <h1 id="titolo_reg">Registrati adesso</h1>
     <div id="modulo_reg">
-    	<form method="post" name="modulo">
-        <fieldset>
+        <h1>Registrati adesso</h1>
+    	   <form method="post" name="modulo">
+          <fieldset>
+              <legend>Registrazione</legend>
 
-            <p><label for="nome">Nome</label>
-            <input id="nome" type="text" name="nome" class="text"></p>
+              <label for="nome">Nome</label>
+              <input type="text" name="nome" class="text" />
 
-            <p><label for="cognome">Cognome</label>
-            <input id="cognome" type="text" name="cognome" class="text"></p>
+              <label for="cognome">Cognome</label>
+              <input type="text" name="cognome" class="text" />
 
-            <p><label for="email">Email</label>
-            <input id="email" type="text" name="email" class="text"></p>
+              <label for="email">Email</label>
+              <input type="text" name="email" class="text" />
 
-            <p><label for="user">Username</label>
-            <input id="user_reg" type="text" name="user" class="text"></p>
+              <label for="username">Username</label>
+              <input type="text" name="user" class="text" />
 
-            <p><label for="psw">Password</label>
-            <input id="psw_reg" type="password" name="psw" class="psw"></p>
+              <label for="password">Password</label>
+              <input type="password" name="psw" class="psw" />
 
-            <p><label for="rpsw">Ripeti Password</label>
-            <input id="rpsw_reg" type="password" name="rpsw" class="psw"></p>
+              <label for="ripeti password">Ripeti Password</label>
+              <input type="password" name="rpsw" class="psw" />
 
-            <input type="button" id="button_reg" value="Registrati">
+              <input type="button" id="button_reg" value="Registrati" />
 
-        </fieldset>
-      </form>
+          </fieldset>
+        </form>
     </div>
 
   </div>
