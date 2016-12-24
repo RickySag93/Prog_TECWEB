@@ -1,0 +1,18 @@
+immagine migliore torna su / oppure solo scritta torna su
+immagini migliori per le frecce slideshow
+separare meglio css desktop e mobile
+migliorare i commenti css specificando le sezione delle varie pagine e contenitori
+aggiungere due link, uno per i crediti e uno per la mappa del sito
+menu mobile(not easy)
+eventi homepage per mobile(not banal)
+scrivere qualcosa per about
+sistemare il bottone login
+aggiungere bottoni per l'ordinamento nelle pagine di foto, studi, gruppi
+breve descrizione del sito sotto al titolo nell'header
+bottone e pagina attività deve comparire solo da loggati
+fare pagina per il gruppo singolo
+pulsanti per il rank delle immagini (+ e -)
+immagini astronomiche per il sito
+aggiungere tabindex
+iniziare relazione?
+
