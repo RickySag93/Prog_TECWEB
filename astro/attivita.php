@@ -1,7 +1,13 @@
 <?php
-   include "backend/connessione.php";
-   echo file_get_contents("parti/attivita1.html");
-
+  include "backend/connessione.php";
+  echo file_get_contents("parti/attivita1.html");
+  session_start();
+  if(isset($_SESSION['usermail'])){ // loggato
+   echo file_get_contents("parti/headerloggato.html");
+   echo '  <div id="breadcrumb">
+         <p>Ti trovi in: <span xml:lang="en"><a href="index.html">Home</a></span> &raquo;  <a href="listastudi.html">Lista studi</a> </p>
+     </div><div class="list_attivita">';
+   $usermail=$_SESSION['usermail'];
    $att_studi="SELECT studia.datainserimento,studia.idstudio,studia.titolo,studia.evento,studia.inizio,
                       astrofilo.username,astrofilo.nome,astrofilo.cognome,astrofilo.imgprofilo
                FROM studia JOIN relazioni ON studia.astrofilo=relazioni.astro2 JOIN astrofilo ON studia.astrofilo=astrofilo.mail
@@ -23,7 +29,7 @@
          if($studi_soci['titolo']=="") echo" il ".$studi_soci['datainserimento'].".\n";
          else echo ": ".$studi_soci['titolo'].", il ".$studi_soci['datainserimento'].".\n";*/
         array_push($attivita_soci,$studi_soci);
-       }
+      }
        $result->free();
        //echo "Trovati studi \n";
      }
@@ -71,6 +77,7 @@
    error_reporting(0);
 
    // stampa attività
+  if(sizeof($attivita_soci)){
    foreach($attivita_soci as $att){
      echo '<a href="#" class="attivita_singola"><span>';
      if($att['idfoto']==""){
@@ -84,7 +91,12 @@
      }
      echo '</a>';
    }
-   echo file_get_contents("parti/attivita2.html");
+ }else echo 'Nessuna attività.';
+}else{
+  echo file_get_contents("parti/headernonloggato.html");
+   echo "Devi aver effettuato l'accesso per poter godere di questa funzionalità."; // non loggato
+ }
+ echo file_get_contents("parti/attivita2.html");
    /*
    echo "\n ############ \n";
    print_r($attivita_soci);

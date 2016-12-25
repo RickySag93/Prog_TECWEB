@@ -4,9 +4,11 @@
     // SLIDESHOW
     //echo file_get_contents("index0.html");
     echo file_get_contents("parti/index0.html");
-    $imm_query="SELECT *
-        FROM foto JOIN fotobyrank ON foto.idfoto=fotobyrank.idfoto
-        LIMIT 5";
+    session_start();
+    if(!isset($_SESSION['usermail'])) echo file_get_contents("parti/formlogin.html");
+    else echo file_get_contents("parti/logout.html");
+    echo file_get_contents("parti/slideshow.html");
+    $imm_query="SELECT *  FROM foto JOIN fotobyrank ON foto.idfoto=fotobyrank.idfoto LIMIT 5";
     if(!$result=$connessione->query($imm_query)){
 			echo "Errore della query: ".$connessione->error.".";
 	}else{

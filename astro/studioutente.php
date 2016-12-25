@@ -1,5 +1,5 @@
 <?php
-$idst="5"; // per i test, dovrà essere passato dalla pagina precedente
+$idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina precedente
     include "backend/connessione.php";
     echo file_get_contents("parti/studioutente0.html");
     $data_studio= "SELECT studia.*,astrofilo.username,astrofilo.imgprofilo
@@ -8,12 +8,14 @@ $idst="5"; // per i test, dovrà essere passato dalla pagina precedente
     if(!$result=$connessione->query($data_studio)){
       echo "Errore della query: ".$connessione->error.".";
     }else{
+      if($result->num_rows > 0){ // potrebbe essere passato l'id di uno studio non esistente.
+        // Questo controllo impedisce di "visualizzare" studi inesistenti
           $row=mysqli_fetch_array($result);
           $foto_query= "SELECT * FROM foto WHERE idstudio='$idst'";
           $foto_studio=$connessione->query($foto_query);
           $foto_row=mysqli_fetch_array($foto_studio);
           $tecn_data_query="SELECT * FROM coinvolto WHERE id='$idst'"; // dati tecnici
-          echo '<h2>'.$row['titolo'].'</h2><div class="list_element"><div class="element_foto">';
+          echo '<h2>'.$row['titolo'].'</h2><h3>Studio di: '.$row['username'].'</h3><div class="list_element"><div class="element_foto">';
           echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['imgprofilo'] ).'"  alt="da decidere" /></div>
             <div class="element_content" > <ul><li>Arco temporale: ('.$row['inizio'].', '.$row['fine'].') </li>';
 
@@ -42,11 +44,12 @@ $idst="5"; // per i test, dovrà essere passato dalla pagina precedente
            echo "Errore della query: ".$connessione->error.".";
          else{
            while($commenti_row=$commenti_studio->fetch_array(MYSQLI_ASSOC)){
-             echo '<div class="list_element"><div class="element_foto"><img src=""data:image/jpeg;base64,'.base64_encode( $commenti_row['imgprofilo'] ).'"  alt="da decidere" /></div>
+             echo '<div class="list_element"><div class="element_foto"><img src="data:image/jpeg;base64,'.base64_encode( $commenti_row['imgprofilo'] ).'"  alt="da decidere" /></div>
                    <div class="element_content">
                    <p> '.$commenti_row['username'].': '.$commenti_row['commento'].' </p>  </div> </div> </div>';
            }
-         }
+          }
+        }else echo 'IMPOSSIBILE VISUALIZZARE LO STUDIO';
   	}
       echo file_get_contents("parti/studioutente2.html");
 ?>

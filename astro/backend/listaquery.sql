@@ -1,6 +1,6 @@
 /*
 Questo file contiene solo le query più importanti e complesse, non è quindi un elenco completo.
-Per info aggiuntive domandare al back-end dev.
+Per info aggiuntive domandare al back-end dev (Mattia Bottaro).
 */
 
 -- QUERY HOME
