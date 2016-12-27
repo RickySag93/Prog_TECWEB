@@ -12,13 +12,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <script type="text/javascript" src="script/homeslide.js"></script>
-  <link type="text/css" rel="stylesheet" href="stile.css"/>
+  <script type="text/javascript" src="script/tornasu.js"></script>
   <link rel="stylesheet" type="text/css" media="screen" href="style/desktop_style.css" />
     <link rel="stylesheet" type="text/css" media="handheld, screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="style/mobile_style.css" />
   <link rel="shortcut icon" href="style/images/favicon.png" />
 </head>
 
-<body onload="showDivs(1);">
+<body >
 
   <div id="menu">
       <img id="logo_home" src="style/images/logo.png" alt="Logo del sito web astrofili" />
@@ -57,13 +57,14 @@
 
     <div class="slideshow" >
 
-      <a class="slidebuttonleft" onclick="plusDivs(-1)"><img src="style/images/slideshowleft.png" alt="" /></a>
-      <a class="slidebuttonright" onclick="plusDivs(1)"><img src="style/images/slideshowright.png" alt="" /></a>
-
-        <img src="style/images/de.jpg" class="imgslide firstimage"  alt=""/>
-
-
+        <img src="style/images/de.jpg" class="imgslide"  alt=""/>
          <img src="style/images/letame.jpg" class="imgslide" alt=""/>
+
+         <div class="arrowbar">
+		  <a class="slidebuttonleft" onclick="plusDivs(-1)"><img src="style/images/slideshowleft.png" alt="" /></a>
+		  <a class="slidebuttonright" onclick="plusDivs(1)"><img src="style/images/slideshowright.png" alt="" /></a>
+		  <span id="number">rr</span>
+		  </div>
 
     </div>
 

@@ -10,14 +10,13 @@
   <meta name="keywords" content="Astrofilia, studio corpi celesti, gruppi astrofilia, universo,  " />
   <meta name="author" content="---" />
 
-  <script type="text/javascript" src="script/singlestudio.js"></script>
-  <link type="text/css" rel="stylesheet" href="stile.css"/>
+  <script type="text/javascript" src="script/homeslide.js"></script>
   <link rel="stylesheet" type="text/css" media="screen" href="style/desktop_style.css" />
     <link rel="stylesheet" type="text/css" media="handheld, screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="style/mobile_style.css" />
   <link rel="shortcut icon" href="style/images/favicon.png" />
 </head>
 
-<body onload="showDivs(1)">
+<body>
 
   <div id="menu">
       <a href="index.html"><img id="logo" src="style/images/logo.png" alt="Logo del sito web astrofili" /> </a>
@@ -65,24 +64,18 @@
 		<span id="rank_txt">rank: 4</span>
 	</div>
 
-      <div class="slideshow" >
+        <div class="slideshow" >
           <img class="imgslide" src="style/images/img_fjords_wide.jpg" style="width:100%" alt="" />
           <img class="imgslide" src="style/images/img_mountains_wide.jpg" style="width:100%" alt="" />
           <img class="imgslide" src="style/images/img_nature_wide.jpg" style="width:100%" alt="" />
 
-        </div>
-
-          <div class="otherimages">
-              <div class="singleimage">
-                  <img class="imageproperties opacity" src="style/images/img_fjords_wide.jpg" onclick="currentDiv(1)" alt="" />
-              </div>
-              <div class="singleimage">
-                  <img class="imageproperties opacity" src="style/images/img_mountains_wide.jpg" onclick="currentDiv(2)" alt="" />
-              </div>
-              <div class="singleimage">
-                  <img class="imageproperties opacity" src="style/images/img_nature_wide.jpg" onclick="currentDiv(3)" alt="" />
-              </div>
+             <div class="arrowbar">
+          <a class="slidebuttonleft" onclick="plusDivs(-1)"><img src="style/images/slideshowleft.png" alt="" /></a>
+          <a class="slidebuttonright" onclick="plusDivs(1)"><img src="style/images/slideshowright.png" alt="" /></a>
+          <span id="number">rr</span>
           </div>
+
+        </div>
 
   <div class="commenti">
     <h4>Commenti</h4>
