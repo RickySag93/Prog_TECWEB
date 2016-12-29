@@ -79,12 +79,13 @@
    // stampa attività
   if(sizeof($attivita_soci)){
    foreach($attivita_soci as $att){
-     echo '<a href="#" class="attivita_singola"><span>';
      if($att['idfoto']==""){
+        echo '<a href="studioutente.php?idst='.$att['idstudio'].'" class="attivita_singola"><span>';
          echo $att['username']." ha fatto uno studio";
          if($att['titolo']=="") echo" il ".$att['datainserimento'].".\n";
          else echo ": \"".$att['titolo']."\", il ".$att['datainserimento'].".\n";
      }else if($att['idstudio']==""){
+         echo '<a href="fotoutente.php?idft='.$att['idfoto'].'" class="attivita_singola"><span>';
          echo $att['username']." ha fatto una foto";
          if($att['titolo']=="") echo " il ".$att['datainserimento'].".\n";
          else echo ": \"".$att['titolo']."\", il ".$att['datainserimento'].".\n";
