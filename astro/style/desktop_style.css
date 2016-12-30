@@ -10,7 +10,7 @@ html {
 }
 
 
-@media screen and (min-width: 481px) {  /* VERSIONE DESKTOP */
+@media screen and (min-width: 901px) {  /* VERSIONE DESKTOP */
 
   body {
     font-family: Verdana, Helvetica, Georgia, sans-serif;
@@ -201,6 +201,61 @@ html {
     width:100%;
   }
 
+  #modulo_reg {
+    width: 80%;
+    margin-top: 2em;
+    margin-left: 10%;
+  }
+
+  #modulo_reg h1 {
+    text-align: center;
+    margin-bottom: 3em;
+  }
+
+  #modulo_reg input {
+    display: block;
+    margin-bottom: 0.5em;
+  }
+
+  #modulo_reg label {
+  	width: 15%;
+  	height: 2em;
+  	line-height: 2.3em;
+  	margin-left: 3em;
+    margin-right: 2em;
+  	padding-left: 1em;
+  	background: #515863;
+  	float: left;
+  	display: block;
+  	font-size: 1.1em;
+  	color: white;
+  }
+
+  input.psw, input.text {
+    background-color: #fff;
+    width: 18em;
+    color: #666;
+    padding: 5px 5px 3px 22px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    height: 25px;
+    line-height: 2.2em;
+  }
+
+  #button_reg {
+  	background: #e6e6dc;
+    font-size: 1em;
+  	color: #900;
+  	padding: 6px 14px;
+  	border-width: 2px;
+  	border-style: solid;
+  	border-color: #fff #d8d8d0 #d8d8d0 #fff;
+  	text-decoration: none;
+  	text-transform: uppercase;
+  	font-weight: bold;
+    margin-left: 40%;
+    margin-top: 5em;
+  }
 }
 
 #breadcrumb {
@@ -242,7 +297,7 @@ html {
 .imgslide {
   width: 100%;
   height: 90%;
-  z-index: 0;
+  z-index: =0;
   display:none;
 }
 
@@ -308,72 +363,14 @@ color:white;
 
 /* PAGINA REGISTRAZIONE */
 
-
-#modulo_reg {
-  width: 80%;
-  margin-top: 2em;
-  margin-left: 10em;
-}
-
-#modulo_reg h1 {
-  text-align: center;
-  margin-bottom: 3em;
-}
-
-#modulo_reg input {
-  display: block;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-
 #modulo_reg legend {
   display: none;
 }
 
 #modulo_reg fieldset {
-	border: 0;
+  border: 0;
 }
 
-#modulo_reg label {
-	width: 15%;
-	height: 2em;
-	line-height: 2.3em;
-	margin-left: 3em;
-  margin-right: 2em;
-	padding-left: 1em;
-	background: #e7e7e7;
-	float: left;
-	display: block;
-	font-size: 1.1em;
-	color: #333;
-}
-
-input.psw, input.text {
-  background-color: #fff;
-  width: 18em;
-  color: #666;
-  padding: 5px 5px 3px 22px;
-  font-size: 1em;
-  border: 1px solid #ccc;
-  height: 25px;
-  line-height: 2.2em;
-  font-size: 1em;
-}
-
-#button_reg {
-	background: #e6e6dc;
-  font-size: 1em;
-	color: #900;
-	padding: 6px 14px;
-	border-width: 2px;
-	border-style: solid;
-	border-color: #fff #d8d8d0 #d8d8d0 #fff;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bold;
-  margin-left: 50%;
-  margin-top: 5em;
-}
 
 /* FINE REGISTRAZIONE */
 
@@ -544,7 +541,7 @@ input.psw, input.text {
 /*
     CSS PER LAYOUT MOBILE SMARTPHONE
 */
-@media screen and (max-width: 480px){
+@media screen and (max-width: 900px){
 
 /*
     HOME MOBILE
@@ -600,6 +597,54 @@ input.psw, input.text {
       text-align: center;
     }
 
+    #modulo_reg {
+      margin-left: 4em;
+    }
+
+    #modulo_reg h1 {
+      text-align: center;
+      margin-bottom: 3em;
+    }
+
+    #modulo_reg input {
+      display: block;
+      margin-bottom: 1.5em;
+      background-color: #fff;
+      width: 19em;
+      color: #666;
+      padding: 5px 5px 3px 22px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      height: 2em;
+      line-height: 2.2em;
+    }
+
+    #modulo_reg label {
+      display: block;
+    	width: 18em;
+    	height: 2em;
+    	line-height: 2.2em;
+      padding-left: 1em;
+    	background: #515863;
+    	font-size: 1.1em;
+    	color: white;
+    }
+
+    #button_reg {
+    	background: #e6e6dc;
+      font-size: 1em;
+    	color: #900;
+    	padding: 6px 14px;
+    	border-width: 2px;
+    	border-style: solid;
+    	border-color: #fff #d8d8d0 #d8d8d0 #fff;
+    	text-decoration: none;
+    	text-transform: uppercase;
+    	font-weight: bold;
+      margin-left: 20%;
+      margin-top: 5em;
+    }
+
 
 /*
 
@@ -636,26 +681,14 @@ input.psw, input.text {
     	height:1.25em;
     }
 
-    #breadcrumb {
-      background-color: #808893;
-      color: white;
-      width: 100%;
-      margin-top: 2em;
-      height: 1.875em;
-    }
-
-    #breadcrumb p {
-      padding-left: 1em;
-    }
-
     #tornasu {
       display: none;
     }
 
     .contorno {                        /* contenitore che contiene il contorno per gli eventi*/
       width: 38%;
-      height: 50 %;
-      padding: 1%;
+      height: 28.125em;
+      padding:0.1875em;
       color:white;
       background-color:black;
       margin-right: auto;
@@ -685,23 +718,7 @@ input.psw, input.text {
     }
 
 
-
-  #footer {
-    background-color: #000;
-    margin-bottom: 0%;
-    margin-top: 45%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: 7em;
-    border-top: 1px solid black;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    color:white;
-  }
-
 /*
   FINE HOME
 */
-
 }
