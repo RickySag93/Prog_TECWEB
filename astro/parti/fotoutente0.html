@@ -4,16 +4,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 <head>
   <meta http-equiv="content-type" content="txt/html; charset=utf-8" />
-  <title> Foto Utente | Portale astrofili  </title>
-  <meta name="title" content="Home | Portale astrofili" />
+  <title> Home | Portale astrofili  </title>
+  <meta name="title" content="Foto utente | Portale astrofili" />
   <meta name="description" content="Portale di appassionati di astrofilia con condivisione foto astronomiche, gruppi di astrofili ed eventi" />
   <meta name="keywords" content="Astrofilia, studio corpi celesti, gruppi astrofilia, universo,  " />
   <meta name="author" content="---" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <script type="text/javascript" src="untitled.js"></script>
-  <link type="text/css" rel="stylesheet" href="stile.css"/>
+  <script type="text/javascript" src="script/homeslide.js"></script>
+  <script type="text/javascript" src="script/tornasu.js"></script>
   <link rel="stylesheet" type="text/css" media="screen" href="style/desktop_style.css" />
-    <link rel="stylesheet" type="text/css" media="handheld, screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="style/mobile_style.css" />
   <link rel="shortcut icon" href="style/images/favicon.png" />
 </head>
 
@@ -35,15 +35,18 @@
   <div id="content">
     <div id="header">
       <h1>Benvenuti in astroport</h1>
-      <form action="login.php">
-      <fieldset id="login">
-        <label id="mail" for="mail">mail</label>
-        <input type="text" name="mail" />
-        <label id="password" for="password">password</label>
-        <input type="password" name="password" />
-        <button type="submit">Login</button>
-      </fieldset>
-      </form>
+      <div id="box_login">
+        <form action="backend/login.php" method="post">
+        <fieldset id="login">
+          <label for="mail">mail</label>
+          <input type="text" name="mail" />
+          <label for="password">password</label>
+          <input type="password" name="password" />
+          <button type="submit">Login</button>
+        </fieldset>
+        </form>
+        <p>Non sei registrato? <a href="registrazione.html">Crea un account</a></p>
+      </div>
     </div>
     <div id="breadcrumb">
       <p>Ti trovi in: <span xml:lang="en"><a href="index.php">Home</a></span> &raquo; <a href="listafoto.php">Lista foto</a> &raquo; Foto</p>
