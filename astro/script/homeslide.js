@@ -1,6 +1,21 @@
 var slideIndex = 1;
-window.addEventListener('load',initDivs, false);
+if(window.addEventListener){
+  window.addEventListener('load',initDivs);
+}
+else if(window.attachEvent){
+  window.attachEvent("onload",initDivs);
+}
 
+
+
+function leftDivs(){
+  plusDivs(-1);
+}
+
+function rightDivs(){
+  plusDivs(1);
+
+}
 
 function plusDivs(n) {
   showDivs(slideIndex += n);
@@ -8,6 +23,18 @@ function plusDivs(n) {
 
 function initDivs(){
   showDivs(1);
+  var l=document.getElementById("slidebuttonleft");
+  var r=document.getElementById("slidebuttonright");
+  if(l.addEventListener){
+  l.addEventListener('click',leftDivs);
+}else if(l.attachEvent){
+  l.attachEvent("onclick",leftDivs)
+}
+  if(r.addEventListener){
+  r.addEventListener('click',rightDivs);
+}else if(r.attachEvent){
+    r.attachEvent("onclick",rightDivs);
+  }
 }
 
 function showDivs(n) {

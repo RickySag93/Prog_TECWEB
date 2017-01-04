@@ -315,7 +315,7 @@ height:5em;
 }
 
 
-.slidebuttonleft{
+#slidebuttonleft{
   z-index: 0;
   position:absolute;
   width:10%;
@@ -325,14 +325,14 @@ height:5em;
   border-right: 4px solid gray;
 }
 
-.slidebuttonleft img{
+#slidebuttonleft img{
   z-index: 0;
   position:absolute;
   width:90%;
   height:95%;
 }
 
-.slidebuttonright{
+#slidebuttonright{
   z-index: 0;
   position:absolute;
   right:0;
@@ -343,7 +343,7 @@ height:5em;
   border-left: 4px solid gray;
 }
 
-.slidebuttonright img{
+#slidebuttonright img{
   z-index: 0;
   position:absolute;
   right:0;
