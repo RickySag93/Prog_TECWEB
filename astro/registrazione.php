@@ -6,7 +6,7 @@
     echo file_get_contents("parti/headerloggato.html");
     echo "Non puoi registrarti se sei loggato.";
   }else{
-    echo file_get_contents("parti/headernonloggato.html");
+    echo file_get_contents("parti/formlogin.html");
     echo '<div id="breadcrumb">
       <p>Ti trovi in: <span xml:lang="en"><a href="index.html">Home</a></span> &raquo; <strong>Registrati</strong></p>
     </div>';
