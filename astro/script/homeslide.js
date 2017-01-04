@@ -21,5 +21,5 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "block";
   var g=document.getElementById("number");
-  g.innerHTML=slideIndex+"/"+tot;
+  g.innerHTML="".concat(slideIndex,"/",tot);
 }
