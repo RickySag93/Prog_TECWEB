@@ -1,13 +1,10 @@
 <?php
   include "backend/connessione.php";
   echo file_get_contents("parti/listastudi0.html");
-  session_start();
-  if(isset($_SESSION['usermail'])){ // loggato
     echo file_get_contents("parti/headerloggato.html");
     echo '  <div id="breadcrumb">
           <p>Ti trovi in: <span xml:lang="en"><a href="index.html">Home</a></span> &raquo;  <a href="listastudi.html">Lista studi</a> </p>
       </div>';
-    $usermail=$_SESSION['usermail'];
     $st_query="SELECT * FROM studia WHERE astrofilo='$usermail' ORDER BY studia.inizio DESC";
     if(!$result=$connessione->query($st_query)){
       echo "Errore della query: ".$connessione->error.".";
@@ -29,12 +26,5 @@
   			$result->free();
       }else echo "Nessuno studio";
   	}
-  }else{
-    echo file_get_contents("parti/headernonloggato.html");
-    echo '  <div id="breadcrumb">
-          <p>Ti trovi in: <span xml:lang="en"><a href="index.html">Home</a></span> &raquo;  <a href="listastudi.html">Lista studi</a> </p>
-      </div>';
-    echo "Devi aver effettuato l'accesso per poter godere di questa funzionalità.";
-  }
     echo file_get_contents("parti/listastudi1.html");
 ?>
