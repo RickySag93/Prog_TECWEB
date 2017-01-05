@@ -20,8 +20,6 @@
   <div id="menu">
       <a href="index.php"><img id="logo_home" src="style/images/logo.png" alt="Logo del sito web astrofili" /></a>
       <div id="content_menu">
-        <img id="logo_mobile" src="style/images/menu.png" alt="" />
-        <img id="account_mobile" src="style/images/account.png" alt="" />
         <a href="listafoto.php">Foto</a>
         <a href="listastudi.php">Studi</a>
         <a href="attivita.php">Attività</a>
@@ -34,19 +32,22 @@
   <div id="content">
     <div id="header">
       <h1>Benvenuti in astroport</h1>
-      <form action="login.php">
-      <fieldset id="login">
-        <label id="mail" for="mail">mail</label>
-        <input type="text" name="mail" />
-        <label id="password" for="password">password</label>
-        <input type="password" name="password" />
-        <button type="submit">Login</button>
-      </fieldset>
-      </form>
+      <div id="box_login">
+        <form action="backend/login.php" method="post">
+        <fieldset id="login">
+          <label for="mail">mail</label>
+          <input type="text" name="mail" />
+          <label for="password">password</label>
+          <input type="password" name="password" />
+          <button type="submit">Login</button>
+        </fieldset>
+        </form>
+        <p>Non sei registrato? <a href="registrazione.php">Crea un account</a></p>
+      </div>
     </div>
 
     <div id="breadcrumb">
-        <p>Ti trovi in: <span xml:lang="en"><a href="index.html">Home</a></span> &raquo; <span xml:lang="en"><strong>About</strong></span></p>
+        <p>Ti trovi in: <span xml:lang="en"><a href="index.php">Home</a></span> &raquo; <span xml:lang="en"><strong>About</strong></span></p>
      </div>
 
 
