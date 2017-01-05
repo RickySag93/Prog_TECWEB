@@ -46,9 +46,6 @@ html {
     margin-left: 15%;
   }
 
-  #logo_mobile, #account_mobile {
-    display: none;
-  }
 
 #content_menu {
     width: 70%;
@@ -262,6 +259,25 @@ html {
   }
 }
 
+#profilo {
+  width: 10em;
+  float: right;
+  margin-right: 1em;
+}
+
+#profilo a {
+  color: white;
+  text-decoration: none;
+  float: right;
+}
+
+#content #profilo p {
+  color: #feffcc;
+  font-size: 1.1em;
+  margin: 0;
+}
+
+
 #breadcrumb {
   background-color: #808893;
   width: 100%;
@@ -351,6 +367,7 @@ height:5em;
   height:95%;
 
 }
+
 #number{
 font-size:1.2em;
 padding-top:1.1em;
@@ -507,7 +524,7 @@ color:white;
 }
 
  #footer p {
-   padding-top: 1em;
+   padding-top: 2em;
    text-align: center;
    font-size: 0.8em;
    font-style: italic;
@@ -527,11 +544,14 @@ color:white;
   display: inline-block;
 }
 
- #footer a{
+ #footer a {
+  display: block;
   color: white;
+  margin-top: 1em;
+  text-align: center;
   text-transform: uppercase;
-  padding-top: 2em;
-  font-size: 1em;
+  font-size: 1.1em;
+  text-decoration: none;
 }
 
 
@@ -540,6 +560,27 @@ color:white;
 }
 
 .demo {cursor:pointer}
+
+/*
+  MAPPA DEL SITO                           */
+
+ #mappa {
+   margin-top: 3em;
+   margin-left: 2em;
+ }
+
+ #home_link {
+   font-size: 1.3em;
+ }
+
+  #mappa ul {
+    list-style-type: none;
+    margin-left: 2em;
+  }
+
+  #mappa li {
+    margin-top: 1em;
+  }
 
 
 /*
@@ -650,11 +691,9 @@ color:white;
     }
 
 
-/*
-
-    #content_menu a {   bottoni del menu
-      color: white;              colore del testo link
-      background-color: #28313f;   prende il colore del contenitore menu
+    #content_menu a {
+      color: white;
+      background-color: #28313f;
       padding: 1em;
       border: 0px solid black;
       height: 1em;
@@ -664,7 +703,7 @@ color:white;
       display: block;
       font-size: 1em;
   }
-*/
+
 
     #login {
       display: block;
