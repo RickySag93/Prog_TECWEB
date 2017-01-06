@@ -12,14 +12,12 @@ function validateRegistrazione(){
   var valid=true;
 
 if(nmcnmregex.test(nm)==false){
-    alert('nome non valido');
     valid=false;
   }
   if(nmcnmregex.test(cnm)==false){
       valid=false;
     }
   if(emlregex.test(eml)==false){
-        alert('email non valida');
         valid=false;
     }
   if(usrnmregex.test(usrnm)==false){
