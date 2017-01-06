@@ -8,7 +8,7 @@
   }else{
     echo file_get_contents("parti/formlogin.html");
     echo '<div id="breadcrumb">
-      <p>Ti trovi in: <span xml:lang="en"><a href="index.html">Home</a></span> &raquo; <strong>Registrati</strong></p>
+      <p>Ti trovi in: <span xml:lang="en"><a href="index.php">Home</a></span> &raquo; <strong>Registrati</strong></p>
     </div>';
 
     if(isset($_SESSION['err'])){
