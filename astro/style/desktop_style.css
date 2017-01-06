@@ -551,7 +551,6 @@ color:white;
   text-align: center;
   text-transform: uppercase;
   font-size: 1.1em;
-  text-decoration: none;
 }
 
 
@@ -637,7 +636,7 @@ color:white;
 
     #header h1 {
       color: white;
-      font-size: 3em;
+      font-size: 2em;
       font-style: italic;
       text-align: center;
     }

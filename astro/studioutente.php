@@ -2,6 +2,12 @@
 $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina precedente
     include "backend/connessione.php";
     echo file_get_contents("parti/studioutente0.html");
+    session_start();
+    if(!isset($_SESSION['usermail'])) echo file_get_contents("parti/headernonloggato.html");
+    else echo file_get_contents("parti/headerloggato.html");
+    echo '<div id="breadcrumb">
+        <p>Ti trovi in: <span xml:lang="en"><a href="index.php">Home</a></span> &raquo; Studio utente</p>
+    </div>';
     $data_studio= "SELECT studia.*,astrofilo.username,astrofilo.imgprofilo
                   FROM studia JOIN astrofilo ON studia.astrofilo=astrofilo.mail
                   WHERE studia.idstudio='$idst'";
@@ -15,8 +21,7 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
           $foto_studio=$connessione->query($foto_query);
           $foto_row=mysqli_fetch_array($foto_studio);
           $tecn_data_query="SELECT * FROM coinvolto WHERE id='$idst'"; // dati tecnici
-          echo '<h2>'.$row['titolo'].'</h2><h3>Studio di: '.$row['username'].'</h3><div class="list_element"><div class="element_foto">';
-          echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['imgprofilo'] ).'"  alt="da decidere" /></div>
+          echo '<h2>'.$row['titolo'].'</h2><h3>Studio di: '.$row['username'].'</h3><div class="list_element">
             <div class="element_content" > <ul><li>Arco temporale: ('.$row['inizio'].', '.$row['fine'].') </li>';
 
           if(!$tecn_data_studio=$connessione->query($tecn_data_query))
@@ -44,7 +49,7 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
            echo "Errore della query: ".$connessione->error.".";
          else{
            while($commenti_row=$commenti_studio->fetch_array(MYSQLI_ASSOC)){
-             echo '<div class="list_element"><div class="element_foto"><img src="data:image/jpeg;base64,'.base64_encode( $commenti_row['imgprofilo'] ).'"  alt="da decidere" /></div>
+             echo '<div class="list_element">
                    <div class="element_content">
                    <p> '.$commenti_row['username'].': '.$commenti_row['commento'].' </p>  </div> </div> </div>';
            }

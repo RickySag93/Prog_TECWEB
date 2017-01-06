@@ -15,8 +15,14 @@
 		if($result->num_rows>0){
 			// while stampa immagini
       while($row=$result->fetch_array(MYSQLI_ASSOC)){
+        echo '<img src="'.$row['immagine'].'" class="imgslide" alt="" />';
         //echo "<p>".$row['idfoto']."</p>";
-        echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['immagine'] ).'" class="imgslide"  alt="" />';
+
+        /* $row['immagine']=pack('H*',$row['immagine']);
+         $im=imagecreatefromstring($row['immagine']);
+         imagejpeg($im);*/
+         //echo $row['immagine'];
+      //  imagedestroy($img);
       }
 			$result->free();
 		}
