@@ -22,7 +22,7 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
         $rank_row=mysqli_fetch_array($rank_foto);
 
         echo $row['titolo'].'</h2>';
-    	echo'<h3>Foto di: '.$row['username'].'</h3><img id="foto" src="data:image/jpeg;base64,'.base64_encode( $row['immagine'] ).'"  alt="da decidere" />';
+    	echo'<h3>Foto di: '.$row['username'].'</h3><img id="foto" src="'.$row['immagine'].'"  alt="da decidere" />';
     	echo '<div id="rank"><span id="vota">+ | -</span><span id="rank_txt">'.$rank_row['rank'].'</span></div>';
       echo '
     	 <div class="list_element">

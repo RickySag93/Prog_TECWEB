@@ -14,7 +14,7 @@
       if($result->num_rows > 0){
         while($row=$result->fetch_array(MYSQLI_ASSOC)){
           echo '<div class="list_element">';
-          echo '<a href="fotoutente.php?idft='.$row['idfoto'].'" class="element_foto"><img src="data:image/jpeg;base64,'.base64_encode( $row['immagine'] ).'"  alt="" /> </a>';
+          echo '<a href="fotoutente.php?idft='.$row['idfoto'].'" class="element_foto"><img src="'.$row['immagine'].'"  alt="" /> </a>';
           echo '<a href="fotoutente.php?idft='.$row['idfoto'].'" class="element_content"> <span>'.$row['titolo'].'</span><p> '.$row['didascalia'].'</p><p> In data -> '.$row['datainserimento'].'</p><p>';
           $rank_query="SELECT SUM(voto) AS rank FROM giudicafoto WHERE idfoto=".$row['idfoto'];
           $rank_studio=$connessione->query($rank_query);
