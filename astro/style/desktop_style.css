@@ -111,7 +111,7 @@ html {
     margin-left: auto;
     margin-right: auto;
     padding-top: 5em;
-    height: 9.375em;
+    height: 9em;
   }
 
   #header h1 {
@@ -120,45 +120,6 @@ html {
     font-style:italic;
     text-align: center;
   }
-
-  #login {
-    display: block;
-    border: 0;
-    margin-top: 1.5em;
-    float:right;
-    color:white;
-  }
-
-  #login label {
-    font-size: 0.8em;
-    display:inline;
-    font-weight: bold;
-  }
-
-  #login input {
-  	width:12em;
-  	height:1.25em;
-  }
-
-  #login button {
-    margin-right: 0.5em;
-  }
-
-  #box_login {
-    float: right;
-  }
-
-  #content #box_login p {
-    padding-left: 18em;
-    padding-top: 4em;
-    color: white;
-    font-size: 0.8em;
-  }
-
-  #box_login a {
-    color: yellow;
-  }
-
 
   #eventi {               /* contenitore degli eventi prec e succ*/
     margin-top: 2em;
@@ -201,18 +162,18 @@ html {
     width:100%;
   }
 
-  #modulo_reg {
+  #modulo_reg, #box_login {
     width: 55em;
     margin-top: 2em;
     margin-left: 10%;
   }
 
-  #modulo_reg input {
+  #modulo_reg input, #box_login input {
     height: 1.5625em;
     margin-bottom: 0.5em;
   }
 
-  #modulo_reg label {
+  #modulo_reg label, #box_login label {
     width: 20%;
     min-width: 150px;
     margin-left: 3em;
@@ -220,7 +181,7 @@ html {
     float: left;
   }
 
-  #button_reg {
+  #button_reg, #log_b {
     margin-left: 50%;
   }
 
@@ -269,6 +230,11 @@ html {
   color: blue;
   font-style: italic;
 }
+
+/*
+PAGINA LOGIN */
+
+
 
 
 .slideshow {
@@ -351,20 +317,20 @@ color:white;
 
 /* PAGINA REGISTRAZIONE */
 
-#modulo_reg h1 {
+#modulo_reg h1, #box_login h1 {
   text-align: center;
   margin-bottom: 3em;
 }
 
-#modulo_reg legend {
+#modulo_reg legend, #box_login legend {
   display: none;
 }
 
-#modulo_reg fieldset {
+#modulo_reg fieldset, #box_login fieldset {
   border: 0;
 }
 
-#modulo_reg input {
+#modulo_reg input, #box_login input {
   display: block;
   background-color: #fff;
   color: #666;
@@ -375,7 +341,7 @@ color:white;
   line-height: 2.2em;
 }
 
-#modulo_reg label {
+#modulo_reg label, #box_login label {
   display: block;
   font-size: 1.1em;
   color: white;
@@ -385,7 +351,11 @@ color:white;
   padding-left: 1em;
 }
 
-#button_reg {
+#button_reg, #log_b {
+  margin-top: 3em;
+}
+
+#button_reg, #log_b, #button_login button {
   background: #e6e6dc;
   font-size: 1em;
   color: #900;
@@ -396,9 +366,14 @@ color:white;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
-  margin-top: 3em;
 }
 
+#button_login button {
+  clear: both;
+  float: right;
+  margin-right: 1em;
+  margin-bottom: 2em;
+ }
 
 /* FINE REGISTRAZIONE */
 
@@ -652,24 +627,24 @@ color:white;
       text-align: center;
     }
 
-    #modulo_reg {
+    #modulo_reg, #box_login {
       width: 20em;
       margin-top: 2em;
       margin-left: auto;
       margin-right: auto;
     }
 
-    #modulo_reg input {
+    #modulo_reg input, #box_login input {
       margin-bottom: 1.5em;
       height: 2em;
     }
 
 
-    #modulo_reg label {
+    #modulo_reg label, #box_login label {
       width: 18em;
     }
 
-    #button_reg {
+    #button_reg, #log_b {
       float: right;
     	margin-right: 15%;
     }
@@ -686,26 +661,6 @@ color:white;
       display: block;
       font-size: 1em;
   }
-
-
-    #login {
-      display: block;
-      border: 0;
-      margin-top: 1.5em;
-      float:right;
-      color:white;
-    }
-
-    #login label {
-      font-size: 0.8em;
-      display:inline;
-      font-weight: bold;
-    }
-
-    #login input {
-    	width:12em;
-    	height:1.25em;
-    }
 
     #tornasu {
       display: none;
