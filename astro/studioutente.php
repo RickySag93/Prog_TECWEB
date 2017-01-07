@@ -40,12 +40,14 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
             echo '</ul></li></ul>';
           }
           echo '</div></div>'; // il secondo div è stato aperto nel file parti/studioutente0.html
-          echo '<div class="list_element"><span>'.$row['appunti'].'</span></div>';
+          echo '<div class="big_list_element">
+                <div class="big_element_content">
+                <span>'.$row['appunti'].'</span> </div> </div>';
           $rank_query="SELECT SUM(voto) AS rank FROM giudicastudio WHERE studio=".$row['idstudio'];
           $rank_studio=$connessione->query($rank_query);
           $rank_row=mysqli_fetch_array($rank_studio);
           echo '<div id="rank"> <span id="vota">+ | -</span> <span id="rank_txt">rank: '.$rank_row['rank'].'</span></div>';
-          echo file_get_contents("parti/studioutente1.html");
+          echo file_get_contents("parti/commenti.html");
           $commenti_studio_query= "SELECT astrofilo.username,astrofilo.imgprofilo,commentastudio.commento,commentastudio.datainserimento
                                   FROM commentastudio JOIN astrofilo ON commentastudio.astrofilo=astrofilo.mail
                                   WHERE commentastudio.studio='$idst'
@@ -54,12 +56,12 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
            echo "Errore della query: ".$connessione->error.".";
          else{
            while($commenti_row=$commenti_studio->fetch_array(MYSQLI_ASSOC)){
-             echo '<div class="list_element">
-                   <div class="element_content">
+             echo '<div class="big_list_element">
+                   <div class="big_element_content">
                    <p> '.$commenti_row['username'].': '.$commenti_row['commento'].' </p>  </div> </div> </div>';
            }
           }
         }else echo '<p>Lo studio non è presente nel database.</p>';
   	}
-      echo file_get_contents("parti/studioutente2.html");
+      echo file_get_contents("parti/studioutente1.html");
 ?>
