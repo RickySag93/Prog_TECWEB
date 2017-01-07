@@ -44,8 +44,8 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
          echo '<h4>Commenti</h4>';
           while($commenti_row=$commenti_foto->fetch_array(MYSQLI_ASSOC)){
             echo '
-               <div class="list_element">
-               <div class="element_content">
+               <div class="big_list_element">
+               <div class="big_element_content">
                <p>'.$commenti_row['username'].': '.$commenti_row['commento'].'</p>
                </div>
                </div>';
