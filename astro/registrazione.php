@@ -11,8 +11,12 @@
       <p>Ti trovi in: <span xml:lang="en"><a href="index.html">Home</a></span> &raquo; <strong>Registrati</strong></p>
     </div>';
 
-    if(isset($_SESSION['err'])) echo '<p><strong>'.$_SESSION['err'].'</strong></p>';
-    echo file_get_contents("parti/mod_registrazione.html");
+    if(isset($_SESSION['err'])){
+      echo '<p><strong>'.$_SESSION['err'].'</strong></p>';
+      session_destroy();
+    }
+    if($errore_DB==FALSE) echo file_get_contents("parti/mod_registrazione.html");
+    else echo '<p>'.$msg_errore_DB.'</p>';
   }
   echo file_get_contents("parti/registrazione1.html");
 ?>

@@ -1,5 +1,6 @@
 <?php
-    include "connessione.php";
+   include "connessione.php";
+   if($errore_DB==FALSE){
     $password=$_POST['psw'];
     $r_password=$_POST['rpsw'];
     $usermail=$_POST['email'];
@@ -9,7 +10,7 @@
     $pwd_pattern='/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,32}$/'; // minimo 8 caratteri, un numero, un carattere maiuscolo, un carattere minuscolo. Max 32 char
     $usrn_pattern='/^[A-Za-z]{1}[A-Za-z0-9]{4,20}$/'; //  almeno 5 caratteri, max 20. solo lettere e numeri. Non può partire con un numero.
     $nome_cognome_pattern='/^[A-Za-z]{3,20}$/'; // almeno 3 caratteri,max 20, solo lettere, no numeri
-    if($password==$r_password){ // se le password coincidono...
+     if($password==$r_password){ // se le password coincidono...
       if(preg_match($nome_cognome_pattern,$nome)){ // se il nome rispetta la regex...
         if(preg_match($nome_cognome_pattern,$cognome)){ // se il cognome risp..
           if(filter_var($usermail,FILTER_VALIDATE_EMAIL) && strlen($usermail)<=40){ // se la mail è valida...
@@ -32,6 +33,7 @@
                         header('Location: ../registrazione.php');
                       }else
                          echo "tutto ok!";
+                         //header('Location: ../tiseiregistrato.php');
 
                    }else{//password non valida
                      session_start();
@@ -88,4 +90,6 @@
       header('Location: ../registrazione.php');
       //echo "Password distinte";
     }
+  }
+  header('Location: ../registrazione.php');
  ?>

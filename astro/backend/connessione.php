@@ -12,21 +12,28 @@
        $pwd="toosie5eimooW6ai";
        $db="mbottaro";
     * */
+    /*
+    In fase di sviluppo, debug e test dev'essere disabilitato il metodo error_reporting.
+    Questo metodo non stampa gli eventuali warning generati. Alla consegna, invece, il metodo dovrà essere abilitato.
+    Questo non perchè vogliamo imbrogliare, ma perchè i casi che generao i warning sono gestiti.
+    Per provare, si faccia fallire in qualche modo la connsessione al DB(ad es cambiando i parametri di connessione).
+    */
+    //error_reporting(E_ERROR | E_PARSE);
 
     $host="127.0.0.1";
     $user="root";
     $pwd="";
     $db="ASTROSERIO";
-
    $connessione=new mysqli($host,$user,$pwd,$db);
-
+   $msg_errore_DB="";
+   $errore_DB=FALSE;
    if($connessione->connect_errno){
-	   echo "Connessione fallita(".$connessione->connect_errno."):"
-	         .$connessione->$connect_error;
-	   exit();
+	   $msg_errore_DB="Abbiamo dei problemi a connetterci con il nostro database. I nostri tecnici stanno facendo il possibile.";
+     $errore_DB=TRUE;
+	   //exit();
    }else{
 	   /*echo "Connesso! \n";
 	   echo "Today is " . date("Y-m-d H:i:s")."\n";*/
-     $usermail="matbo@mail.it"; // serve solo per i test
+     //$usermail="matbo@mail.it"; // serve solo per i test
    }
 ?>

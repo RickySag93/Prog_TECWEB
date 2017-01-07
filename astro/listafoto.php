@@ -5,9 +5,10 @@
   if(!isset($_SESSION['usermail'])) echo file_get_contents("parti/headernonloggato.html");
   else echo file_get_contents("parti/headerloggato.html");
     echo '<div id="breadcrumb">
-        <p>Ti trovi in: <span xml:lang="en"><a href="index.html">Home</a></span> &raquo; <strong>Lista foto</strong></p>
+        <p>Ti trovi in: <span xml:lang="en"><a href="index.php">Home</a></span> &raquo; <strong>Lista foto</strong></p>
      </div>';
     $imm_query="SELECT * FROM foto WHERE idstudio IS NULL ORDER BY datainserimento DESC";
+   if($errore_DB==FALSE){
     if(!$result=$connessione->query($imm_query)){
       echo "Errore della query: ".$connessione->error.".";
     }else{
@@ -24,6 +25,7 @@
         }
   			$result->free();
       }else echo "Nessuna foto";
-  	}
+  	 }
+   }else echo '<p>'.$msg_errore_DB.'</p>';
     echo file_get_contents("parti/listafoto1.html");
 ?>

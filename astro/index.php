@@ -8,11 +8,12 @@
     if(!isset($_SESSION['usermail'])) echo file_get_contents("parti/formlogin.html");
     else echo file_get_contents("parti/logout.html");
     echo file_get_contents("parti/slideshow.html");
+  if($errore_DB==FALSE){
     $imm_query="SELECT *  FROM foto JOIN fotobyrank ON foto.idfoto=fotobyrank.idfoto LIMIT 5";
     if(!$result=$connessione->query($imm_query)){
 			echo "Errore della query: ".$connessione->error.".";
-	}else{
-		if($result->num_rows>0){
+	  }else if(!$connessione->connect_errno){
+		 if($result->num_rows>0){
 			// while stampa immagini
       while($row=$result->fetch_array(MYSQLI_ASSOC)){
         echo '<img src="'.$row['immagine'].'" class="imgslide" alt="" />';
@@ -27,10 +28,12 @@
 			$result->free();
 		}
 	}
+}else echo '<p>'.$msg_errore_DB.'</p>';
 
 	$datetime_now=date("Y-m-d H:i:s");
   // AVVENIMENTI PASSATI: quelli finiti. Dal piu` recente al meno recente.
   echo file_get_contents("parti/index1.html");
+if($errore_DB==FALSE){
   if(!$result=$connessione->query("SELECT * FROM avvenimenti WHERE fine<'$datetime_now' ORDER BY fine DESC LIMIT 5")){
       echo "Errore della query: ".$connessione->error.".";
   }else{
@@ -41,9 +44,10 @@
       $result->free();
     }
   }
-
+}else echo '<p>'.$msg_errore_DB.'</p>';
   echo file_get_contents("parti/index2.html");
   // AVVENIMENTI FUTURI: quelli non ancora finiti. Dal piu` prossimo al piu` distante
+if($errore_DB==FALSE){
   if(!$result=$connessione->query("SELECT * FROM avvenimenti WHERE fine>'$datetime_now'ORDER BY inizio LIMIT 5")){
 			echo "Errore della query: ".$connessione->error.".";
 	}else{
@@ -54,6 +58,7 @@
 			$result->free();
 		}
 	}
+}else echo '<p>'.$msg_errore_DB.'</p>';
   echo file_get_contents("parti/index3.html");
 
 ?>
