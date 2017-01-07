@@ -165,7 +165,7 @@ html {
     margin-left: auto;
     margin-right: auto;
     width: 70%;
-    height: 31.25em;
+    height: 30em;
   }
 
   .contorno {                        /* contenitore che contiene il contorno per gli eventi*/
@@ -174,7 +174,6 @@ html {
     padding:0.1875em;
     color:white;
     background-color:black;
-    margin-right: auto;
     margin-top: 2em;
     margin-bottom: 1em;
     margin-left: 7%;
@@ -203,60 +202,28 @@ html {
   }
 
   #modulo_reg {
-    width: 80%;
+    width: 55em;
     margin-top: 2em;
     margin-left: 10%;
   }
 
-  #modulo_reg h1 {
-    text-align: center;
-    margin-bottom: 3em;
-  }
-
   #modulo_reg input {
-    display: block;
+    height: 1.5625em;
     margin-bottom: 0.5em;
   }
 
   #modulo_reg label {
-  	width: 15%;
-  	height: 2em;
-  	line-height: 2.3em;
-  	margin-left: 3em;
+    width: 20%;
+    min-width: 150px;
+    margin-left: 3em;
     margin-right: 2em;
-  	padding-left: 1em;
-  	background: #515863;
-  	float: left;
-  	display: block;
-  	font-size: 1.1em;
-  	color: white;
-  }
-
-  input.psw, input.text {
-    background-color: #fff;
-    width: 18em;
-    color: #666;
-    padding: 5px 5px 3px 22px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    height: 25px;
-    line-height: 2.2em;
+    float: left;
   }
 
   #button_reg {
-  	background: #e6e6dc;
-    font-size: 1em;
-  	color: #900;
-  	padding: 6px 14px;
-  	border-width: 2px;
-  	border-style: solid;
-  	border-color: #fff #d8d8d0 #d8d8d0 #fff;
-  	text-decoration: none;
-  	text-transform: uppercase;
-  	font-weight: bold;
-    margin-left: 40%;
-    margin-top: 5em;
+    margin-left: 50%;
   }
+
 }
 
 #profilo {
@@ -384,12 +351,52 @@ color:white;
 
 /* PAGINA REGISTRAZIONE */
 
+#modulo_reg h1 {
+  text-align: center;
+  margin-bottom: 3em;
+}
+
 #modulo_reg legend {
   display: none;
 }
 
 #modulo_reg fieldset {
   border: 0;
+}
+
+#modulo_reg input {
+  display: block;
+  background-color: #fff;
+  color: #666;
+  padding: 5px 5px 3px 22px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  width: 19em;
+  line-height: 2.2em;
+}
+
+#modulo_reg label {
+  display: block;
+  font-size: 1.1em;
+  color: white;
+  background: #515863;
+  height: 2em;
+  line-height: 2em;
+  padding-left: 1em;
+}
+
+#button_reg {
+  background: #e6e6dc;
+  font-size: 1em;
+  color: #900;
+  padding: 6px 14px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #fff #d8d8d0 #d8d8d0 #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 3em;
 }
 
 
@@ -564,7 +571,7 @@ color:white;
   MAPPA DEL SITO                           */
 
  #mappa {
-   margin-top: 3em;
+   margin-top: 6em;
    margin-left: 2em;
  }
 
@@ -611,18 +618,6 @@ color:white;
       display: none;
     }
 
-    #logo_mobile {
-      float: left;
-      width: 4em;
-      height: 4em;
-    }
-
-    #account_mobile {
-      float: right;
-      width: 4em;
-      height: 4em;
-    }
-
     #content_menu a {
       display: none;
     }
@@ -642,53 +637,26 @@ color:white;
     }
 
     #modulo_reg {
-      margin-left: 10%;
-    }
-
-    #modulo_reg h1 {
-      text-align: center;
-      margin-bottom: 3em;
+      width: 20em;
+      margin-top: 2em;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     #modulo_reg input {
-      display: block;
       margin-bottom: 1.5em;
-      background-color: #fff;
-      width: 19em;
-      color: #666;
-      padding: 5px 5px 3px 22px;
-      font-size: 1em;
-      border: 1px solid #ccc;
       height: 2em;
-      line-height: 2.2em;
     }
 
+
     #modulo_reg label {
-      display: block;
-    	width: 18em;
-    	height: 2em;
-    	line-height: 2.2em;
-      padding-left: 1em;
-    	background: #515863;
-    	font-size: 1.1em;
-    	color: white;
+      width: 18em;
     }
 
     #button_reg {
-    	background: #e6e6dc;
-      font-size: 1em;
-    	color: #900;
-    	padding: 6px 14px;
-    	border-width: 2px;
-    	border-style: solid;
-    	border-color: #fff #d8d8d0 #d8d8d0 #fff;
-    	text-decoration: none;
-    	text-transform: uppercase;
-    	font-weight: bold;
-      margin-left: 20%;
-      margin-top: 5em;
+      float: right;
+    	margin-right: 15%;
     }
-
 
     #content_menu a {
       color: white;

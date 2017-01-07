@@ -5,7 +5,7 @@
   if(!isset($_SESSION['usermail'])) echo file_get_contents("parti/headernonloggato.html");
   else echo file_get_contents("parti/headerloggato.html");
     echo '  <div id="breadcrumb">
-          <p>Ti trovi in: <span xml:lang="en"><a href="index.php">Home</a></span> &raquo;  <a href="listastudi.html"><strong>Lista studi</strong></a> </p>
+          <p>Ti trovi in: <span xml:lang="en"><a href="index.php">Home</a></span> &raquo; <strong>Lista studi</strong></p>
       </div>';
     $st_query="SELECT * FROM studia ORDER BY studia.inizio DESC";
    if($errore_DB==FALSE){
