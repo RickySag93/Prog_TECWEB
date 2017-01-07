@@ -23,12 +23,12 @@
           $imm_studio=$connessione->query($imm_query);
           $imm_row=mysqli_fetch_array($imm_studio);
           echo '<div class="list_element">';
-          echo '<a href="studioutente.php?idst='.$row['idstudio'].'" class="element_content"> <span>Titolo: '.$row['titolo'].'</span><p>Tipologia: '.$row['evento'].'</p><p> Arco temporale: ['.$row['inizio'].' , '.$row['fine'].']</p><p>';
+          echo '<a href="studioutente.php?idst='.$row['idstudio'].'" class="element_content"> <span>Titolo: '.$row['titolo'].'</span><span>Tipologia: '.$row['evento'].'</span><span> Arco temporale: ['.$row['inizio'].' , '.$row['fine'].']</span><span>';
           $rank_query="SELECT SUM(voto) AS rank FROM giudicastudio WHERE studio=".$row['idstudio'];
           $rank_studio=$connessione->query($rank_query);
           $rank_row=mysqli_fetch_array($rank_studio);
           echo "Rank: ".$rank_row['rank'];
-          echo '</p></a></div>';
+          echo '</span></a></div>';
          }
   			$result->free();
       }else echo "Nessuno studio";
