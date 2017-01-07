@@ -4,13 +4,18 @@
   session_start();
   if(!isset($_SESSION['usermail'])) echo file_get_contents("parti/headernonloggato.html");
   else echo file_get_contents("parti/headerloggato.html");
+  if(isset($_SESSION['msg_login'])){
+    echo '<p>'.$_SESSION['msg_login'].'<p>';
+    unset($_SESSION['msg_login']);
+  }
     echo '  <div id="breadcrumb">
           <p>Ti trovi in: <span xml:lang="en"><a href="index.php">Home</a></span> &raquo; <strong>Lista studi</strong></p>
       </div>';
     $st_query="SELECT * FROM studia ORDER BY studia.inizio DESC";
    if($errore_DB==FALSE){
     if(!$result=$connessione->query($st_query)){
-      echo "Errore della query: ".$connessione->error.".";
+      //echo "Errore della query: ".$connessione->error.".";
+      echo '<p>Abbiamo riscontrato dei problemi nel visualizzare gli studi.</p>';
      }else{
       if($result->num_rows>0){
         while($row=$result->fetch_array(MYSQLI_ASSOC)){

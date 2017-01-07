@@ -5,6 +5,10 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
     session_start();
     if(!isset($_SESSION['usermail'])) echo file_get_contents("parti/headernonloggato.html");
     else echo file_get_contents("parti/headerloggato.html");
+    if(isset($_SESSION['msg_login'])){
+      echo '<p>'.$_SESSION['msg_login'].'<p>';
+      unset($_SESSION['msg_login']);
+    }
     echo '<div id="breadcrumb">
       <p>Ti trovi in: <span xml:lang="en"><a href="index.php">Home</a></span> &raquo; <a href="listafoto.php">Lista foto</a> &raquo; <strong>Foto</strong></p>
     </div>';
@@ -12,7 +16,8 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
                 FROM foto JOIN astrofilo ON foto.idastrofilo=astrofilo.mail
                 WHERE foto.idfoto='$idft' AND foto.idstudio IS NULL";
     if(!$result=$connessione->query($data_foto)){
-        echo "Errore della query: ".$connessione->error.".";
+        //echo "Errore della query: ".$connessione->error.".";
+        echo '<p>Abbiamo riscontrato dei problemi nel visualizzare la foto.</p>';
     }else{
       if($result->num_rows > 0){ // potrebbe essere passato l'id di una foto non esistente o di una foto associata ad uno studio
         //(non visualizzabile in questa pagina). Questo controllo impedisce di "visualizzare" foto inesistenti
@@ -21,8 +26,7 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
         $rank_foto=$connessione->query($rank_query);
         $rank_row=mysqli_fetch_array($rank_foto);
 
-        echo $row['titolo'].'</h2>';
-    	echo'<h3>Foto di: '.$row['username'].'</h3><img id="foto" src="'.$row['immagine'].'"  alt="da decidere" />';
+    	echo'<h2>'.$row['titolo'].'</h2><img id="foto" src="'.$row['immagine'].'"  alt="'.$row['didascalia'].'" />';
     	echo '<div id="rank"><span id="vota">+ | -</span><span id="rank_txt">'.$rank_row['rank'].'</span></div>';
       echo '
     	 <div class="list_element">
@@ -47,7 +51,7 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
                </div>';
          }
        }
-     }else echo 'IMPOSSIBILE VISUALIZZARE LA FOTO';
+     }else echo '<p>La foto non è presente nel database.</p>';
         echo file_get_contents("parti/fotoutente1.html");
     }
 

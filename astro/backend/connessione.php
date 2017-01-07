@@ -30,7 +30,7 @@
    if($connessione->connect_errno){
 	   $msg_errore_DB="Abbiamo dei problemi a connetterci con il nostro database. I nostri tecnici stanno facendo il possibile.";
      $errore_DB=TRUE;
-	   //exit();
+	   // qui ci andrebbe uno script che invia una mail a chi deve fixare il problema
    }else{
 	   /*echo "Connesso! \n";
 	   echo "Today is " . date("Y-m-d H:i:s")."\n";*/

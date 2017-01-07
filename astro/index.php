@@ -7,23 +7,22 @@
     session_start();
     if(!isset($_SESSION['usermail'])) echo file_get_contents("parti/formlogin.html");
     else echo file_get_contents("parti/logout.html");
+    if(isset($_SESSION['msg_login'])){
+      echo '<p>'.$_SESSION['msg_login'].'<p>';
+      unset($_SESSION['msg_login']);
+    }
     echo file_get_contents("parti/slideshow.html");
+
   if($errore_DB==FALSE){
     $imm_query="SELECT *  FROM foto JOIN fotobyrank ON foto.idfoto=fotobyrank.idfoto LIMIT 5";
     if(!$result=$connessione->query($imm_query)){
-			echo "Errore della query: ".$connessione->error.".";
+      echo '<p>Abbiamo riscontrato dei problemi nel visualizzare le foto.</p>';
+			//echo "Errore della query: ".$connessione->error.".";
 	  }else if(!$connessione->connect_errno){
 		 if($result->num_rows>0){
 			// while stampa immagini
       while($row=$result->fetch_array(MYSQLI_ASSOC)){
-        echo '<img src="'.$row['immagine'].'" class="imgslide" alt="" />';
-        //echo "<p>".$row['idfoto']."</p>";
-
-        /* $row['immagine']=pack('H*',$row['immagine']);
-         $im=imagecreatefromstring($row['immagine']);
-         imagejpeg($im);*/
-         //echo $row['immagine'];
-      //  imagedestroy($img);
+        echo '<img src="'.$row['immagine'].'" class="imgslide" alt="'.$row['didascalia'].'" />';
       }
 			$result->free();
 		}
@@ -35,7 +34,8 @@
   echo file_get_contents("parti/index1.html");
 if($errore_DB==FALSE){
   if(!$result=$connessione->query("SELECT * FROM avvenimenti WHERE fine<'$datetime_now' ORDER BY fine DESC LIMIT 5")){
-      echo "Errore della query: ".$connessione->error.".";
+       echo '<p>Abbiamo riscontrato dei problemi nel visualizzare gli eventi passati.</p>';
+      //echo "Errore della query: ".$connessione->error.".";
   }else{
     if($result->num_rows>0){
       while($row=$result->fetch_array(MYSQLI_ASSOC)){
@@ -49,7 +49,8 @@ if($errore_DB==FALSE){
   // AVVENIMENTI FUTURI: quelli non ancora finiti. Dal piu` prossimo al piu` distante
 if($errore_DB==FALSE){
   if(!$result=$connessione->query("SELECT * FROM avvenimenti WHERE fine>'$datetime_now'ORDER BY inizio LIMIT 5")){
-			echo "Errore della query: ".$connessione->error.".";
+      echo '<p>Abbiamo riscontrato dei problemi nel visualizzare gli eventi futuri.</p>';
+      //echo "Errore della query: ".$connessione->error.".";
 	}else{
 		if($result->num_rows>0){
 			while($row=$result->fetch_array(MYSQLI_ASSOC)){

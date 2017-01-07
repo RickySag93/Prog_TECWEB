@@ -5,6 +5,10 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
     session_start();
     if(!isset($_SESSION['usermail'])) echo file_get_contents("parti/headernonloggato.html");
     else echo file_get_contents("parti/headerloggato.html");
+    if(isset($_SESSION['msg_login'])){
+      echo '<p>'.$_SESSION['msg_login'].'<p>';
+      unset($_SESSION['msg_login']);
+    }
     echo '<div id="breadcrumb">
         <p>Ti trovi in: <span xml:lang="en"><a href="index.php">Home</a></span> &raquo; Studio utente</p>
     </div>';
@@ -21,11 +25,12 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
           $foto_studio=$connessione->query($foto_query);
           $foto_row=mysqli_fetch_array($foto_studio);
           $tecn_data_query="SELECT * FROM coinvolto WHERE id='$idst'"; // dati tecnici
-          echo '<h2>'.$row['titolo'].'</h2><h3>Studio di: '.$row['username'].'</h3><div class="list_element">
+          echo '<h2>'.$row['titolo'].'</h2><div class="list_element">
             <div class="element_content" > <ul><li>Arco temporale: ('.$row['inizio'].', '.$row['fine'].') </li>';
 
           if(!$tecn_data_studio=$connessione->query($tecn_data_query))
-              echo "Errore della query: ".$connessione->error.".";
+              //echo "Errore della query: ".$connessione->error.".";
+              echo '<p>Abbiamo riscontrato dei problemi nel visualizzare lo studio.</p>';
           else{
               echo '<li>Corpi coinvolti:<ul> ';
             while($tecn_row=$tecn_data_studio->fetch_array(MYSQLI_ASSOC)){
@@ -54,7 +59,7 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
                    <p> '.$commenti_row['username'].': '.$commenti_row['commento'].' </p>  </div> </div> </div>';
            }
           }
-        }else echo 'IMPOSSIBILE VISUALIZZARE LO STUDIO';
+        }else echo '<p>Lo studio non è presente nel database.</p>';
   	}
       echo file_get_contents("parti/studioutente2.html");
 ?>
