@@ -7,6 +7,10 @@
     echo "Non puoi registrarti se sei loggato.";
   }else{
     echo file_get_contents("parti/formlogin.html");
+    if(isset($_SESSION['msg_login'])){
+      echo '<p>'.$_SESSION['msg_login'].'<p>';
+      unset($_SESSION['msg_login']);
+    }
     echo '<div id="breadcrumb">
       <p>Ti trovi in: <span xml:lang="en"><a href="index.php">Home</a></span> &raquo; <strong>Registrati</strong></p>
     </div>';
