@@ -40,7 +40,7 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
           $rank_studio=$connessione->query($rank_query);
           $rank_row=mysqli_fetch_array($rank_studio);
           echo '<div id="rank"> <span id="vota">+ | -</span> <span id="rank_txt">rank: '.$rank_row['rank'].'</span></div>';
-          echo file_get_contents("parti/studioutente1.html");
+          echo file_get_contents("parti/commenti.html");
           $commenti_studio_query= "SELECT astrofilo.username,astrofilo.imgprofilo,commentastudio.commento,commentastudio.datainserimento
                                   FROM commentastudio JOIN astrofilo ON commentastudio.astrofilo=astrofilo.mail
                                   WHERE commentastudio.studio='$idst'
@@ -56,5 +56,5 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
           }
         }else echo 'IMPOSSIBILE VISUALIZZARE LO STUDIO';
   	}
-      echo file_get_contents("parti/studioutente2.html");
+      echo file_get_contents("parti/studioutente1.html");
 ?>
