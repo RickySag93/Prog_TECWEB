@@ -498,6 +498,10 @@ color:white;
   padding-right: 10%;
 }
 
+#content .element_content span{
+  display:block;
+}
+
 #content .big_element_content span{
     padding-top: 0px;
     margin-left: 0;
