@@ -1,4 +1,13 @@
-<div id="button_login">
-  <a href="login.html"><button>Login</button></a>
-</div>    <!-- Div che chiude il contenitore header -->
-</div>
+<div id="box_login">
+  <h1>Accedi al tuo account</h1>
+  <form action="backend/login.php" method="post">
+  <fieldset id="login">
+    <label for="mail">mail</label>
+    <input type="text" name="mail" />
+    <label for="password">password</label>
+    <input type="password" name="password" />
+    <button id="log_b" type="submit">Login</button>
+  </fieldset>
+  </form>
+  <p>Non sei registrato? <a href="registrazione.php">Crea un account</a></p>
+</div> 

@@ -17,8 +17,11 @@
          // qui dovremmo essere protetti da SQL injection visto il forte controllo sulle regex.
          $row_user=mysqli_fetch_array($check_user_result);
          $_SESSION['usermail']=$usermail;
-       }else $_SESSION['msg_login']="Login non valido.";
+       }else{
+         $_SESSION['msg_login']="Login non valido.";
+
+       }
      }
    }
-   header('Location: ' . $_SERVER['HTTP_REFERER']);
+   header('Location: ../login.php');
  ?>
