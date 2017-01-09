@@ -46,7 +46,9 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
           $rank_query="SELECT SUM(voto) AS rank FROM giudicastudio WHERE studio=".$row['idstudio'];
           $rank_studio=$connessione->query($rank_query);
           $rank_row=mysqli_fetch_array($rank_studio);
-          echo '<div id="rank"> <span id="vota">+ | -</span> <span id="rank_txt">rank: '.$rank_row['rank'].'</span></div>';
+    	echo '<div id="rank"><span id="vota">';
+    	echo file_get_contents("parti/button.html");
+    	echo '</span><span id="rank_txt">'.$rank_row['rank'].'</span></div>';
           echo file_get_contents("parti/commenti.html");
           $commenti_studio_query= "SELECT astrofilo.username,astrofilo.imgprofilo,commentastudio.commento,commentastudio.datainserimento
                                   FROM commentastudio JOIN astrofilo ON commentastudio.astrofilo=astrofilo.mail
