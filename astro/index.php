@@ -14,7 +14,7 @@
     echo file_get_contents("parti/slideshow.html");
 
   if($errore_DB==FALSE){
-    $imm_query="SELECT *  FROM foto JOIN fotobyrank ON foto.idfoto=fotobyrank.idfoto LIMIT 5";
+    $imm_query="SELECT *  FROM foto JOIN fotobyrank ON foto.idfoto=fotobyrank.idfoto LIMIT 3";
     if(!$result=$connessione->query($imm_query)){
       echo '<p>Abbiamo riscontrato dei problemi nel visualizzare le foto.</p>';
 			//echo "Errore della query: ".$connessione->error.".";

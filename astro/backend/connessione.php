@@ -13,7 +13,7 @@
        $db="mbottaro";
     * */
     /*
-    In fase di sviluppo, debug e test dev'essere disabilitato il metodo error_reporting.
+    In fase di sviluppo, debug e test dev'essere disabilitato il metodo error_reporting().
     Questo metodo non stampa gli eventuali warning generati. Alla consegna, invece, il metodo dovrà essere abilitato.
     Questo non perchè vogliamo imbrogliare, ma perchè i casi che generao i warning sono gestiti.
     Per provare, si faccia fallire in qualche modo la connsessione al DB(ad es cambiando i parametri di connessione).

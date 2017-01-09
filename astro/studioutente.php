@@ -3,8 +3,13 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
     include "backend/connessione.php";
     echo file_get_contents("parti/studioutente0.html");
     session_start();
-    if(!isset($_SESSION['usermail'])) echo file_get_contents("parti/headernonloggato.html");
-    else echo file_get_contents("parti/headerloggato.html");
+    if(!isset($_SESSION['usermail'])) {
+      echo file_get_contents("parti/headernonloggato.html");
+      $usr=NULL;
+    }else{
+      echo file_get_contents("parti/headerloggato.html");
+      $usr=$_SESSION['usermail'];
+    }
     if(isset($_SESSION['msg_login'])){
       echo '<p>'.$_SESSION['msg_login'].'<p>';
       unset($_SESSION['msg_login']);
@@ -12,6 +17,7 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
     echo '<div id="breadcrumb">
         <p>Ti trovi in: <span xml:lang="en"><a href="index.php">Home</a></span> &raquo; Studio utente</p>
     </div>';
+   if($errore_DB==FALSE){
     $data_studio= "SELECT studia.*,astrofilo.username,astrofilo.imgprofilo
                   FROM studia JOIN astrofilo ON studia.astrofilo=astrofilo.mail
                   WHERE studia.idstudio='$idst'";
@@ -47,7 +53,15 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
           $rank_studio=$connessione->query($rank_query);
           $rank_row=mysqli_fetch_array($rank_studio);
     	echo '<div id="rank"><span id="vota">';
-    	echo file_get_contents("parti/button.html");
+      if(isset($_SESSION['usermail']) AND $votante_result=$connessione->query("SELECT votante FROM giudicastudio WHERE studio='$idst' AND votante='$usr'")){
+        if($votante_result->num_rows==0){ // non possiamo votare due volte la stessa foto
+          echo ' <form method="post" action="backend/votastudio.php">
+                 <button name="up"><img src="parti/immagini/up.png"></button> |
+                 <button name="down"><img src="parti/immagini/down.png"></button>
+                 <input type="hidden" name="studio" value="'.$idst.'" />
+                 </form>';
+         }
+      }// else non puoi votare
     	echo '</span><span id="rank_txt">'.$rank_row['rank'].'</span></div>';
           echo file_get_contents("parti/commenti.html");
           $commenti_studio_query= "SELECT astrofilo.username,astrofilo.imgprofilo,commentastudio.commento,commentastudio.datainserimento
@@ -64,6 +78,7 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
            }
           }
         }else echo '<p>Lo studio non è presente nel database.</p>';
-  	}
+      }
+  	}else echo '<p>'.$msg_errore_DB.'</p>';
       echo file_get_contents("parti/studioutente1.html");
 ?>
