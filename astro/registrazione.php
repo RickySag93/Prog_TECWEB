@@ -6,7 +6,6 @@
     echo file_get_contents("parti/headerloggato.html");
     echo "Non puoi registrarti se sei loggato.";
   }else{
-    echo file_get_contents("parti/formlogin.html");
     if(isset($_SESSION['msg_login'])){
       echo '<p>'.$_SESSION['msg_login'].'<p>';
       unset($_SESSION['msg_login']);

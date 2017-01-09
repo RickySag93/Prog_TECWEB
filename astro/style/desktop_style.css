@@ -115,10 +115,7 @@ html {
   }
 
   #header h1 {
-    color:white;
-    font-size:4em;
-    font-style:italic;
-    text-align: center;
+    font-size: 3.5em;
   }
 
   #eventi {               /* contenitore degli eventi prec e succ*/
@@ -187,6 +184,12 @@ html {
 
 }
 
+#header h1 {
+  color: white;
+  font-style: italic;
+  text-align: center;
+}
+
 #profilo {
   width: 10em;
   float: right;
@@ -214,6 +217,7 @@ html {
 }
 
 #content #breadcrumb p {
+  width: 100%;
   color:white;
   margin-left: 0;
   margin-right: 0;
@@ -562,6 +566,7 @@ color:white;
   MAPPA DEL SITO                           */
 
  #mappa {
+   height: 20em;
    margin-top: 6em;
    margin-left: 2em;
  }
@@ -616,15 +621,12 @@ color:white;
     #header {
       background-color: #274f8e;
       clear: both;
-      padding-top: 1em;
+      padding-top: 0.5em;
       height: 9em;
     }
 
     #header h1 {
-      color: white;
-      font-size: 2em;
-      font-style: italic;
-      text-align: center;
+      font-size: 2.7em;
     }
 
     #modulo_reg, #box_login {
