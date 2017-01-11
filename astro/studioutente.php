@@ -63,7 +63,20 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
          }
       }// else non puoi votare
     	echo '</span><span id="rank_txt">'.$rank_row['rank'].'</span></div>';
-          echo file_get_contents("parti/commenti.html");
+      if(isset($_SESSION['usermail'])){
+        if(isset($_SESSION['err_commento'])){
+          echo $_SESSION['err_commento'];
+          unset($_SESSION['err_commento']);
+        }
+        echo '<div class="commenti">
+        <form method="post" action="backend/commentastudio.php">
+            <h4>Commenti</h4>
+            <textarea name="commento" rows="20" cols="80"></textarea>
+            <input type="hidden" name="studio" value="'.$idst.'" />
+            <button name="commenta">Commenta</button>
+        </form>
+        </div>';
+      }
           $commenti_studio_query= "SELECT astrofilo.username,astrofilo.imgprofilo,commentastudio.commento,commentastudio.datainserimento
                                   FROM commentastudio JOIN astrofilo ON commentastudio.astrofilo=astrofilo.mail
                                   WHERE commentastudio.studio='$idst'
@@ -74,7 +87,7 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
            while($commenti_row=$commenti_studio->fetch_array(MYSQLI_ASSOC)){
              echo '<div class="big_list_element">
                    <div class="big_element_content">
-                   <p> '.$commenti_row['username'].': '.$commenti_row['commento'].' </p>  </div> </div> </div>';
+                   <p> '.$commenti_row['username'].': '.$commenti_row['commento'].' '.$commenti_row['datainserimento'].'</p>  </div></div>';
            }
           }
         }else echo '<p>Lo studio non è presente nel database.</p>';

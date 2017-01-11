@@ -31,14 +31,16 @@
                         session_start();
                         $_SESSION['err']="Spiacenti, abbiamo avuto un problema con il nostro database.";
                         header('Location: ../registrazione.php');
-                      }else
-                         echo "tutto ok!";
-                         //header('Location: ../tiseiregistrato.php');
-
+                      }else{
+                        session_start();
+                         $_SESSION['err']='<span class="center_me first">Registrazione avvenuta con successo! </span>
+                         <span class="center_me"><a href="index.php">Torna in <span xml:lang="en">Home</span></a></span>';
+                         header('Location: ../login.php');
+                       }
                    }else{//password non valida
                      session_start();
                      $_SESSION['err']="La password inserita non è corretta.";
-                     header('Location: ../registrazione.php');
+                     header('Location: ../login.php');
                    }
               }else{// username già in uso
                 session_start();
@@ -91,5 +93,4 @@
       //echo "Password distinte";
     }
   }
-  header('Location: ../registrazione.php');
  ?>

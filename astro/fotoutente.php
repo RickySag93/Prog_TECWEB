@@ -36,7 +36,7 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
     	echo '<div id="rank"><span id="vota">';
       if(isset($_SESSION['usermail']) AND $votante_result=$connessione->query("SELECT votante FROM giudicafoto WHERE idfoto='$idft' AND votante='$usr'")){
         if($votante_result->num_rows==0){ // non possiamo votare due volte la stessa foto
-          echo ' <form method="post" action="backend/votafoto.php">
+          echo '<form method="post" action="backend/votafoto.php">
                  <button name="up"><img src="parti/immagini/up.png"></button> |
                  <button name="down"><img src="parti/immagini/down.png"></button>
                  <input type="hidden" name="foto" value="'.$idft.'" />
@@ -50,6 +50,20 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
               <span> '.$row['didascalia'].'  </span>
             </div>
         </div>';
+        if(isset($_SESSION['usermail'])){
+          if(isset($_SESSION['err_commento'])){
+            echo $_SESSION['err_commento'];
+            unset($_SESSION['err_commento']);
+          }
+          echo '<div class="commenti">
+          <form method="post" action="backend/commentafoto.php">
+              <h4>Commenti</h4>
+              <textarea name="commento" rows="20" cols="80"></textarea>
+              <input type="hidden" name="foto" value="'.$idft.'" />
+              <button name="commenta">Commenta</button>
+          </form>
+          </div>';
+        }
         $commenti_foto_query= "SELECT astrofilo.username,astrofilo.imgprofilo,commentafoto.commento,commentafoto.datainserimento
                        FROM commentafoto JOIN astrofilo ON commentafoto.astrofilo=astrofilo.mail
                        WHERE commentafoto.idfoto='$idft'
@@ -57,12 +71,11 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
        if(!$commenti_foto=$connessione->query($commenti_foto_query))
          echo "Errore della query: ".$connessione->error.".";
        else{
-         echo '<h4>Commenti</h4>';
           while($commenti_row=$commenti_foto->fetch_array(MYSQLI_ASSOC)){
             echo '
                <div class="big_list_element">
                <div class="big_element_content">
-               <p>'.$commenti_row['username'].': '.$commenti_row['commento'].'</p>
+               <p>'.$commenti_row['username'].': '.$commenti_row['commento'].' '.$commenti_row['datainserimento'].'</p>
                </div>
                </div>';
          }
