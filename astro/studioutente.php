@@ -15,7 +15,7 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
       unset($_SESSION['msg_login']);
     }
     echo '<div id="breadcrumb">
-        <p>Ti trovi in: <span xml:lang="en"><a href="index.php">Home</a></span> &raquo; Studio utente</p>
+        <p>Ti trovi in: <span xml:lang="en"><a href="index.php">Home</a></span> &raquo; <a href="listastudi.php">Lista studi</a> &raquo; <strong>Studio utente</strong></p>
     </div>';
    if($errore_DB==FALSE){
     $data_studio= "SELECT studia.*,astrofilo.username,astrofilo.imgprofilo
