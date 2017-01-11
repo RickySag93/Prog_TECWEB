@@ -20,9 +20,15 @@
          $row_user=mysqli_fetch_array($check_user_result);
          $_SESSION['usermail']=$usermail;
          $_POST['password']=""; // dalla console del browser è possibile visualizzare i parametri di $_POST, meglio eliminarli il prima possibile
-       }else $_SESSION['msg_login']="Login non valido.";
+         header('Location: ../index.php');
+       }else{
+         $_SESSION['msg_login']="Login non valido.";
+         header('Location: ../login.php');
+       }
      }
-   }else $_SESSION['msg_login']="Login non valido.";
+   }else{
+      $_SESSION['msg_login']="Login non valido.";
+      header('Location: ../login.php');
+    }
    }
-   header('Location: ../login.php');
  ?>

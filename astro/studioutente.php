@@ -53,14 +53,12 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
           $rank_studio=$connessione->query($rank_query);
           $rank_row=mysqli_fetch_array($rank_studio);
     	echo '<div id="rank"><span id="vota">';
-      if(isset($_SESSION['usermail']) AND $votante_result=$connessione->query("SELECT votante FROM giudicastudio WHERE studio='$idst' AND votante='$usr'")){
-        if($votante_result->num_rows==0){ // non possiamo votare due volte la stessa foto
+      if(isset($_SESSION['usermail'])){
           echo ' <form method="post" action="backend/votastudio.php">
                  <button name="up"><img src="parti/immagini/up.png"></button> |
                  <button name="down"><img src="parti/immagini/down.png"></button>
                  <input type="hidden" name="studio" value="'.$idst.'" />
                  </form>';
-         }
       }// else non puoi votare
     	echo '</span><span id="rank_txt">'.$rank_row['rank'].'</span></div>';
       if(isset($_SESSION['usermail'])){

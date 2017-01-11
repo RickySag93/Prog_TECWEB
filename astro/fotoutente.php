@@ -34,14 +34,12 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
 
     	echo'<h2>'.$row['titolo'].'</h2><img id="foto" src="'.$row['immagine'].'"  alt="'.$row['didascalia'].'" />';
     	echo '<div id="rank"><span id="vota">';
-      if(isset($_SESSION['usermail']) AND $votante_result=$connessione->query("SELECT votante FROM giudicafoto WHERE idfoto='$idft' AND votante='$usr'")){
-        if($votante_result->num_rows==0){ // non possiamo votare due volte la stessa foto
-          echo '<form method="post" action="backend/votafoto.php">
+      if(isset($_SESSION['usermail'])){
+        echo '<form method="post" action="backend/votafoto.php">
                  <button name="up"><img src="parti/immagini/up.png"></button> |
                  <button name="down"><img src="parti/immagini/down.png"></button>
                  <input type="hidden" name="foto" value="'.$idft.'" />
                  </form>';
-         }
       }// else non puoi votare
     	echo '</span><span id="rank_txt">'.$rank_row['rank'].'</span></div>';
       echo '
