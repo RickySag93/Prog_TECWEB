@@ -33,15 +33,15 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
         $rank_row=mysqli_fetch_array($rank_foto);
 
     	echo'<h2>'.$row['titolo'].'</h2><img id="foto" src="'.$row['immagine'].'"  alt="'.$row['didascalia'].'" />';
-    	echo '<div id="rank"><span id="vota">';
+    	echo '<div id="rank">';
       if(isset($_SESSION['usermail'])){
         echo '<form method="post" action="backend/votafoto.php">
-                 <button name="up"><img src="parti/immagini/up.png"></button> |
-                 <button name="down"><img src="parti/immagini/down.png"></button>
-                 <input type="hidden" name="foto" value="'.$idft.'" />
+                 <div><button name="up"><img src="parti/immagini/up.png" alt="mi piace"/></button> 
+                 <button name="down"><img src="parti/immagini/down.png" alt=" non mi piace"/></button>
+                 <input type="hidden" name="foto" value="'.$idft.'"/></div>
                  </form>';
       }// else non puoi votare
-    	echo '</span><span id="rank_txt">'.$rank_row['rank'].'</span></div>';
+    	echo '<span id="rank_txt">'.$rank_row['rank'].'</span></div>';
       echo '
     	 <div class="list_element">
             <div class="element_content" >
@@ -56,9 +56,9 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
           echo '<div class="commenti">
           <form method="post" action="backend/commentafoto.php">
               <h4>Commenti</h4>
-              <textarea name="commento" rows="20" cols="80"></textarea>
-              <input type="hidden" name="foto" value="'.$idft.'" />
-              <button name="commenta">Commenta</button>
+              <div><textarea name="commento" rows="20" cols="80"></textarea>
+              <div><input type="hidden" name="foto" value="'.$idft.'" />
+              <button name="commenta">Commenta</button></div>
           </form>
           </div>';
         }
