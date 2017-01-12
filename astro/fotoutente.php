@@ -53,12 +53,12 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
             echo $_SESSION['err_commento'];
             unset($_SESSION['err_commento']);
           }
-          echo '<div class="commenti">
+            echo '<div id="box_comment">
           <form method="post" action="backend/commentafoto.php">
               <h4>Commenti</h4>
-              <div><textarea name="commento" rows="20" cols="80"></textarea>
-              <div><input type="hidden" name="foto" value="'.$idft.'" />
-              <button name="commenta">Commenta</button></div>
+              <textarea name="commento"></textarea>
+              <input type="hidden" name="foto" value="'.$idft.'" />
+              <button id="comment" name="commenta">Commenta</button>
           </form>
           </div>';
         }
