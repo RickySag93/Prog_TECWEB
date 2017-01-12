@@ -10,7 +10,7 @@ html {
 }
 
 
-@media screen and (min-width: 901px) {  /* VERSIONE DESKTOP */
+@media screen and (min-width: 921px) {  /* VERSIONE DESKTOP */
 
   body {
     font-family: Verdana, Helvetica, Georgia, sans-serif;
@@ -191,23 +191,24 @@ html {
 }
 
 #profilo {
+  margin-top: 2em;
   width: 10em;
   float: right;
   margin-right: 1em;
 }
 
 #profilo a {
-  color: white;
+  font-size: 0.9em;
+  color: #efe597;
   text-decoration: none;
   float: right;
 }
 
-#content #profilo p {
-  color: #feffcc;
-  font-size: 1.1em;
-  margin: 0;
+#content h2 {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 2em;
 }
-
 
 #breadcrumb {
   background-color: #808893;
@@ -235,19 +236,14 @@ html {
   font-style: italic;
 }
 
-/*
-PAGINA LOGIN */
-
-
-
 
 .slideshow {
+  width: 80%;
   position:relative;
   border: 1px solid white;
   margin-top: 2em;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
   height: 35em;
 }
 
@@ -359,7 +355,7 @@ color:white;
   margin-top: 3em;
 }
 
-#button_reg, #log_b, #button_login button {
+#button_reg, #log_b, #button_login button, #comment {
   background: #e6e6dc;
   font-size: 1em;
   color: #900;
@@ -372,8 +368,11 @@ color:white;
   font-weight: bold;
 }
 
+#comment {
+  display: block;
+}
+
 #button_login button {
-  clear: both;
   float: right;
   margin-right: 1em;
   margin-bottom: 2em;
@@ -418,7 +417,6 @@ color:white;
     margin-right: auto;
   }
 
-  
 .first{
   margin-top: 18%;
 }
@@ -429,7 +427,8 @@ color:white;
     text-align: center;
   }
 
-#content .list_element{
+#content .list_element {
+    margin-top: 0.5em;
     width: 80%;
     height: 7.8125em;
     border: 1px solid black;
@@ -437,13 +436,32 @@ color:white;
     margin-right: auto;
 }
 
+#box_comment {
+  margin-top: 4em;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#box_comment textarea {
+  width: 100%;
+  height: 8em;
+}
+
+#content .list_element span {
+  margin-top: 0.2em;
+  padding-left: 0.5em;
+}
 
 .list_element a{
     display:block;
     text-decoration:none;
-
 }
 
+.didascalia_el {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
 
 .element_foto {
     border-right: 1px solid black;
@@ -481,7 +499,8 @@ color:white;
 
 
 #content .element_content p, #content .big_element_content p{
-  padding-top: 3px;
+  margin-top: 0.2em;
+  padding-top: 0.1em;
   margin-left: 0;
   margin-right: 0;
   width:100%;
@@ -499,31 +518,6 @@ color:white;
     width:100%;
     color:black;
 }
-
-#content .list_attivita{
-  width: 80%;
-  margin: auto;
-}
-
-.attivita_singola{
-  border: 2px solid black;
-  display:block;
-  color: black;
-  text-align: center;
-  background-color: orange;
-  margin: auto;
-  padding: 1em;
-}
-
-/*#content .list_element button{
-  width:9em;
-  height:2em;
-  background-color: green;
-  color:white;
-  float:right;
-  z-index:1;
-
-} */
 
 
 #footer {
@@ -596,10 +590,16 @@ color:white;
   }
 
 
+@media screen and (max-width: 1400px){
+  .slideshow {
+    width: 100%;
+  }
+}
+
 /*
     CSS PER LAYOUT MOBILE SMARTPHONE
 */
-@media screen and (max-width: 900px){
+@media screen and (max-width: 920px){
 
 /*
     HOME MOBILE
@@ -625,15 +625,11 @@ color:white;
       display: none;
     }
 
-    #content_menu a {
-      display: none;
-    }
-
     #header {
       background-color: #274f8e;
       clear: both;
       padding-top: 0.5em;
-      height: 9em;
+      height: 10em;
     }
 
     #header h1 {
@@ -690,6 +686,12 @@ color:white;
       margin-left: auto;
       margin-top: 2em;
       margin-bottom: 1em;
+    }
+
+    #content .list_element{
+        width: 100%;
+        height: 7.8em;
+        border: 1px solid black;
     }
 
     #eventi_pre, #eventi_next {     /*singolo contenitore degli eventi */

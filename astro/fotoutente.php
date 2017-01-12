@@ -43,9 +43,9 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
       }// else non puoi votare
     	echo '</span><span id="rank_txt">'.$rank_row['rank'].'</span></div>';
       echo '
-    	 <div class="list_element">
-            <div class="element_content" >
-              <span> '.$row['didascalia'].'  </span>
+    	 <div class="big_list_element didascalia_el">
+            <div class="big_element_content">
+              <p> '.$row['didascalia'].'  </p>
             </div>
         </div>';
         if(isset($_SESSION['usermail'])){
@@ -53,12 +53,12 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
             echo $_SESSION['err_commento'];
             unset($_SESSION['err_commento']);
           }
-          echo '<div class="commenti">
+          echo '<div id="box_comment">
           <form method="post" action="backend/commentafoto.php">
               <h4>Commenti</h4>
-              <textarea name="commento" rows="20" cols="80"></textarea>
+              <textarea name="commento"></textarea>
               <input type="hidden" name="foto" value="'.$idft.'" />
-              <button name="commenta">Commenta</button>
+              <button id="comment" name="commenta">Commenta</button>
           </form>
           </div>';
         }

@@ -32,18 +32,17 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
           $foto_row=mysqli_fetch_array($foto_studio);
           $tecn_data_query="SELECT * FROM coinvolto WHERE id='$idst'"; // dati tecnici
           echo '<h2>'.$row['titolo'].'</h2><div class="list_element">
-            <div class="element_content" > <ul><li>Arco temporale: ('.$row['inizio'].', '.$row['fine'].') </li>';
+            <div class="element_content" > <p><strong>Arco temporale:</strong> ('.$row['inizio'].', '.$row['fine'].') </p>';
 
           if(!$tecn_data_studio=$connessione->query($tecn_data_query))
               //echo "Errore della query: ".$connessione->error.".";
               echo '<p>Abbiamo riscontrato dei problemi nel visualizzare lo studio.</p>';
           else{
-              echo '<li>Corpi coinvolti:<ul> ';
+              echo '<p><strong>Corpi coinvolti:</strong> ';
             while($tecn_row=$tecn_data_studio->fetch_array(MYSQLI_ASSOC)){
-              echo '<li>'.$tecn_row['corpo'].' (magnitudo: '.$tecn_row['magnitudo'].'; altezza: '.$tecn_row['altezza'].';
-              azimut: '.$tecn_row['azimut'].')</li>';
+              echo ' '.$tecn_row['corpo'].' (magnitudo: '.$tecn_row['magnitudo'].'; altezza: '.$tecn_row['altezza'].';
+              azimut: '.$tecn_row['azimut'].')</p>';
             }
-            echo '</ul></li></ul>';
           }
           echo '</div></div>'; // il secondo div è stato aperto nel file parti/studioutente0.html
           echo '<div class="big_list_element">
@@ -66,12 +65,11 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
           echo $_SESSION['err_commento'];
           unset($_SESSION['err_commento']);
         }
-        echo '<div class="commenti">
+        echo '<div id="box_comment">
         <form method="post" action="backend/commentastudio.php">
-            <h4>Commenti</h4>
-            <textarea name="commento" rows="20" cols="80"></textarea>
+            <textarea name="commento"></textarea>
             <input type="hidden" name="studio" value="'.$idst.'" />
-            <button name="commenta">Commenta</button>
+            <button id="comment" name="commenta">Commenta</button>
         </form>
         </div>';
       }
