@@ -22,7 +22,7 @@
           $imm_query="SELECT * FROM foto WHERE idstudio=".$row['idstudio']." AND idstudio IS NOT NULL LIMIT 1";
           $imm_studio=$connessione->query($imm_query);
           $imm_row=mysqli_fetch_array($imm_studio);
-          echo '<div class="list_element">';
+          echo '<div class="list_element not_single_studio">';
           echo '<a href="studioutente.php?idst='.$row['idstudio'].'" class="element_content"> <span>Titolo: '.$row['titolo'].'</span><span>Tipologia: '.$row['evento'].'</span><span> Arco temporale: ['.$row['inizio'].' , '.$row['fine'].']</span><span>';
           $rank_query="SELECT SUM(voto) AS rank FROM giudicastudio WHERE studio=".$row['idstudio'];
           $rank_studio=$connessione->query($rank_query);

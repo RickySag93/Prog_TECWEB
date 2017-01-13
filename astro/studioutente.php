@@ -51,15 +51,15 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
           $rank_query="SELECT SUM(voto) AS rank FROM giudicastudio WHERE studio=".$row['idstudio'];
           $rank_studio=$connessione->query($rank_query);
           $rank_row=mysqli_fetch_array($rank_studio);
-    	echo '<div id="rank"><span id="vota">';
+    	echo '<div id="rank">';
       if(isset($_SESSION['usermail'])){
           echo ' <form method="post" action="backend/votastudio.php">
-                 <button name="up"><img src="parti/immagini/up.png"></button> |
+                 <button name="up"><img src="parti/immagini/up.png"></button>
                  <button name="down"><img src="parti/immagini/down.png"></button>
                  <input type="hidden" name="studio" value="'.$idst.'" />
                  </form>';
       }// else non puoi votare
-    	echo '</span><span id="rank_txt">'.$rank_row['rank'].'</span></div>';
+    	echo '<p id="rank_txt">'.$rank_row['rank'].'</p></div>';
       if(isset($_SESSION['usermail'])){
         if(isset($_SESSION['err_commento'])){
           echo $_SESSION['err_commento'];
@@ -71,7 +71,7 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
             <input type="hidden" name="studio" value="'.$idst.'" />
             <button id="comment" name="commenta">Commenta</button>
         </form>
-        </div>';
+        </div><div id="list_comment"><h3>Commenti</h3>';
       }
           $commenti_studio_query= "SELECT astrofilo.username,astrofilo.imgprofilo,commentastudio.commento,commentastudio.datainserimento
                                   FROM commentastudio JOIN astrofilo ON commentastudio.astrofilo=astrofilo.mail
@@ -82,12 +82,12 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
          else{
            while($commenti_row=$commenti_studio->fetch_array(MYSQLI_ASSOC)){
              echo '<div class="big_list_element">
-                   <div class="big_element_content">
-                   <p> '.$commenti_row['username'].': '.$commenti_row['commento'].' '.$commenti_row['datainserimento'].'</p>  </div></div>';
+                   <p> '.$commenti_row['username'].': '.$commenti_row['commento'].' '.$commenti_row['datainserimento'].'</p></div>';
            }
           }
         }else echo '<p>Lo studio non è presente nel database.</p>';
       }
   	}else echo '<p>'.$msg_errore_DB.'</p>';
+    echo '</div>';
       echo file_get_contents("parti/studioutente1.html");
 ?>

@@ -19,7 +19,7 @@
     }else{
       if($result->num_rows > 0){
         while($row=$result->fetch_array(MYSQLI_ASSOC)){
-          echo '<div class="list_element">';
+          echo '<div class="list_element not_single_studio">';
           echo '<a href="fotoutente.php?idft='.$row['idfoto'].'" class="element_foto"><img src="'.$row['immagine'].'"  alt="'.$row['didascalia'].'" /> </a>';
           echo '<a href="fotoutente.php?idft='.$row['idfoto'].'" class="element_content"> <p>'.$row['titolo'].'</p><p> '.$row['didascalia'].'</p><p> In data: '.$row['datainserimento'].'</p><p>';
           $rank_query="SELECT SUM(voto) AS rank FROM giudicafoto WHERE idfoto=".$row['idfoto'];

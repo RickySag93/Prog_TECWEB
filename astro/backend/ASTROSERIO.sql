@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Creato il: Gen 07, 2017 alle 14:15
+-- Creato il: Gen 13, 2017 alle 20:52
 -- Versione del server: 10.1.13-MariaDB
 -- Versione PHP: 7.0.8
 
@@ -264,8 +264,8 @@ INSERT INTO `coinvolto` (`id`, `corpo`, `evento`, `magnitudo`, `altezza`, `azimu
 (2, 'Saturno', 'Osservazione', 3, '45.0000', '45.0000'),
 (3, 'Luna', 'Eclissi solare parziale', -2, '43.0000', '89.0000'),
 (3, 'Sole', 'Eclissi solare parziale', 16, '44.0200', '89.2516'),
-(4, 'Luna', 'Eclissi solare parziale', NULL, NULL, NULL),
-(4, 'Sole', 'Eclissi solare parziale', NULL, NULL, NULL),
+(4, 'Luna', 'Eclissi solare parziale', -2, '43.0000', '89.0000'),
+(4, 'Sole', 'Eclissi solare parziale', 16, '44.0200', '89.2516'),
 (5, 'Luna', 'Eclissi solare parziale', -2, '45.2431', '120.0389'),
 (5, 'Sole', 'Eclissi solare parziale', 20, '43.2431', '110.2754'),
 (7, 'Marte', 'Osservazione', 5, '45.0000', '45.0000'),
@@ -303,7 +303,9 @@ INSERT INTO `commentafoto` (`idcommento`, `astrofilo`, `idfoto`, `commento`, `da
 (1, 'matbo@mail.it', 9, 'Bellissima! Che fotocamera hai usato?', '0000-00-00 00:00:00'),
 (2, 'marrosi@mail.ti', 9, 'Grazie :) Una reflex', '0000-00-00 00:00:00'),
 (4, 'alfmeg@mail.it', 8, 'Vista pure io... stupenda', '2016-12-15 04:19:16'),
-(5, 'andr@mag.com', 10, 'Pazzesco! Pure le lune di giove!!', '0000-00-00 00:00:00');
+(5, 'andr@mag.com', 10, 'Pazzesco! Pure le lune di giove!!', '0000-00-00 00:00:00'),
+(6, 'matbo@mail.it', 10, 'ciao Ã¨Ã¨Ã¨Ã¨ l''una '' - "', '2017-01-11 16:55:07'),
+(7, 'matbo@mail.it', 10, 'forsaaaaaa', '2017-01-11 16:55:26');
 
 -- --------------------------------------------------------
 
@@ -327,7 +329,15 @@ INSERT INTO `commentastudio` (`id`, `astrofilo`, `commento`, `studio`, `datainse
 (1, 'kobe@mail.com', 'Bello, grazie a voi imparo sempre qualcosa. Vi auguro tante belle osservazioni!', 1, '0000-00-00 00:00:00'),
 (2, 'gigione@gigio.it', 'Nelle mie zone il tempo ultimamente &eacute perfetto e io ne sto approfittando. Passo le nottate a fare studi e a scrutare il cielo ;)', 1, '0000-00-00 00:00:00'),
 (3, 'fabe@gmail.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at elit bibendum, semper felis a, rutrum augue. Mauris at ante tellus. Quisque in sem pulvinar, condimentum nulla fringilla, porttitor purus. Aenean mollis sem quis consectetur suscipit. Nulla non tortor sed urna vestibulum posuere in a lorem. Pellentesque nulla quam, sagittis vitae imperdiet vitae, vehicula a ex. Sed vel nibh nec metus accumsan varius. Suspendisse congue eleifend diam, a pharetra lorem facilisis in. Morbi volutpat ac tortor ac tempor. Quisque eget dolor quam. Quisque et tortor eu purus vehicula mattis sed eget quam. Aliquam viverra lorem nec orci gravida, ut dictum mi imperdiet. Curabitur lorem lectus, ullamcorper et mattis ultricies, consectetur at felis. ', 5, '0000-00-00 00:00:00'),
-(4, 'luigibianchi@mail.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at elit bibendum, semper felis a, rutrum augue. Mauris at ante tellus. Quisque in sem pulvinar, condimentum nulla fringilla, porttitor purus. Aenean mollis sem quis consectetur suscipit. Nulla non tortor sed urna vestibulum posuere in a lorem. Pellentesque nulla quam, sagittis vitae imperdiet vitae, vehicula a ex. Sed vel nibh nec metus accumsan varius. Suspendisse congue eleifend diam, a pharetra lorem facilisis in. Morbi volutpat ac tortor ac tempor. Quisque eget dolor quam. Quisque et tortor eu purus vehicula mattis sed eget quam. Aliquam viverra lorem nec orci gravida, ut dictum mi imperdiet. Curabitur lorem lectus, ullamcorper et mattis ultricies, consectetur at felis. ', 5, '0000-00-00 00:00:00');
+(4, 'luigibianchi@mail.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at elit bibendum, semper felis a, rutrum augue. Mauris at ante tellus. Quisque in sem pulvinar, condimentum nulla fringilla, porttitor purus. Aenean mollis sem quis consectetur suscipit. Nulla non tortor sed urna vestibulum posuere in a lorem. Pellentesque nulla quam, sagittis vitae imperdiet vitae, vehicula a ex. Sed vel nibh nec metus accumsan varius. Suspendisse congue eleifend diam, a pharetra lorem facilisis in. Morbi volutpat ac tortor ac tempor. Quisque eget dolor quam. Quisque et tortor eu purus vehicula mattis sed eget quam. Aliquam viverra lorem nec orci gravida, ut dictum mi imperdiet. Curabitur lorem lectus, ullamcorper et mattis ultricies, consectetur at felis. ', 5, '0000-00-00 00:00:00'),
+(25, 'matbo@mail.it', 'ciao regÃ ', 8, '2017-01-11 15:46:06'),
+(28, 'matbo@mail.it', 'regÃ Ã  Ã¬ Ã² piÃ¹', 8, '2017-01-11 15:49:23'),
+(29, 'matbo@mail.it', 'l''evento', 8, '2017-01-11 15:54:37'),
+(30, 'matbo@mail.it', 'l''eventÃ¨l''q l''uno!!', 8, '2017-01-11 15:56:04'),
+(31, 'matbo@mail.it', 'Â°#@Ã²Ã¹Ã¬Ã¬^^"'' '''' '' "" " $5 %Ã Ã¨Ã©', 8, '2017-01-11 15:57:44'),
+(34, 'matbo@mail.it', 'deededed,,.hgdÃ¨+', 8, '2017-01-11 16:37:13'),
+(35, 'matbo@mail.it', 'iao macachi!!', 8, '2017-01-11 16:54:12'),
+(36, 'lucver@mail.com', 'Non finiva mai!', 3, '2017-01-13 20:40:57');
 
 -- --------------------------------------------------------
 
@@ -570,11 +580,14 @@ CREATE TABLE `giudicafoto` (
 --
 
 INSERT INTO `giudicafoto` (`votante`, `idfoto`, `voto`, `datainserimento`) VALUES
-('astrosam@mail.com', 9, 5, '0000-00-00 00:00:00'),
-('marrosi@mail.ti', 7, 4, '0000-00-00 00:00:00'),
-('marrosi@mail.ti', 8, 4, '0000-00-00 00:00:00'),
-('matbo@mail.it', 7, 3, '0000-00-00 00:00:00'),
-('matbo@mail.it', 9, 5, '0000-00-00 00:00:00');
+('astrosam@mail.com', 9, 1, '0000-00-00 00:00:00'),
+('fabe@gmail.com', 10, 1, '2017-01-09 16:11:37'),
+('marrosi@mail.ti', 7, 1, '0000-00-00 00:00:00'),
+('marrosi@mail.ti', 8, 1, '0000-00-00 00:00:00'),
+('matbo@mail.it', 7, 1, '2017-01-09 14:55:10'),
+('matbo@mail.it', 8, -1, '2017-01-09 14:51:45'),
+('matbo@mail.it', 9, 1, '2017-01-11 19:02:18'),
+('matbo@mail.it', 10, 1, '2017-01-09 14:45:19');
 
 -- --------------------------------------------------------
 
@@ -598,7 +611,12 @@ INSERT INTO `giudicastudio` (`votante`, `studio`, `voto`, `datainserimento`) VAL
 ('fabe@gmail.com', 1, 4, '0000-00-00 00:00:00'),
 ('gigione@gigio.it', 5, 1, '2016-12-13 03:00:00'),
 ('kobe@mail.com', 1, 3, '0000-00-00 00:00:00'),
-('kobe@mail.com', 5, 1, '2016-12-23 08:46:20');
+('kobe@mail.com', 5, 1, '2016-12-23 08:46:20'),
+('matbo@mail.it', 2, 1, '2017-01-13 20:40:04'),
+('matbo@mail.it', 3, 1, '2017-01-13 20:40:22'),
+('matbo@mail.it', 4, 1, '2017-01-09 15:26:49'),
+('matbo@mail.it', 7, 1, '2017-01-11 19:13:58'),
+('matbo@mail.it', 8, 1, '2017-01-11 20:31:14');
 
 -- --------------------------------------------------------
 
@@ -910,11 +928,11 @@ CREATE TABLE `studia` (
 INSERT INTO `studia` (`idstudio`, `astrofilo`, `titolo`, `evento`, `appunti`, `inizio`, `fine`, `datainserimento`) VALUES
 (1, 'gigione@gigio.it', 'Giove e la sua macchia', 'Osservazione', 'Sto osservando Giove. Rispetto all''anno scorso, pare che la grande macchia rossa si sia rimpicciolita leggermente. &eacute il quinto pianeta del sistema solare in ordine di distanza dal Sole ed il pi&uacute grande di tutto il sistema planetario: la sua massa corrisponde a 2,468 volte la somma di quelle di tutti gli altri pianeti messi insieme. &Eacute; classificato, al pari di Saturno, Urano e Nettuno, come gigante gassoso.\nGiove ha una composizione simile a quella del Sole: infatti &eacute costituito principalmente da idrogeno ed elio con piccole quantit&aacute di altri composti, quali ammoniaca, metano ed acqua. Si ritiene che il pianeta possegga una struttura pluristratificata, con un nucleo solido, presumibilmente di natura rocciosa e costituito da carbonio e silicati di ferro, sopra il quale gravano un mantello di idrogeno metallico ed una vasta copertura atmosferica che esercitano su di esso altissime pressioni.', '2015-08-04 22:32:00', '2015-08-04 22:38:11', '2015-08-13 11:30:00'),
 (2, 'gigione@gigio.it', 'Ammirando saturno', 'Osservazione', 'Saturno &eacute il sesto pianeta del Sistema solare in ordine di distanza dal Sole ed il secondo pianeta pi&uacute massiccio dopo Giove. Saturno, con Giove, Urano e Nettuno, &eacute classificato come gigante gassoso, con un raggio medio 9,5 volte quello della Terra e una massa 95 volte superiore a quella terrestre. Il nome deriva dall''omonimo dio della mitologia romana, omologo del titano greco Crono. Il suo simbolo astronomico &eacute una rappresentazione stilizzata della falce del dio dell''agricoltura e dello scorrere del tempo (in greco, Kronos).\n\nSaturno &eacute composto per il 95% da idrogeno e per il 3% da elio a cui seguono gli altri elementi. Il nucleo, consistente in silicati e ghiacci, &eacute circondato da uno spesso strato di idrogeno metallico e quindi di uno strato esterno gassoso.\n\nI venti nell''atmosfera di Saturno possono raggiungere i 1800 km/h, risultando significativamente pi&uacute veloci di quelli su Giove e leggermente meno veloci di quelli che spirano nell''atmosfera di Nettuno.\n\nSaturno ha un esteso e vistoso sistema di anelli che consiste principalmente in particelle di ghiacci e polveri di silicati. Della sessantina di lune conosciute che orbitano intorno al pianeta, Titano &eacute la maggiore e l''unica luna del sistema solare ad avere un''atmosfera significativa.\n\n', '2015-08-12 20:32:00', '2015-08-12 21:15:47', '2015-08-13 11:29:00'),
-(3, 'lucver@mail.com', 'Eclissi del 2009', 'Eclissi solare parziale', NULL, '2009-12-31 19:20:02', '2009-12-31 19:29:25', '2015-09-11 00:00:00'),
-(4, 'lucver@mail.com', 'Eclissi del 2015', 'Eclissi solare parziale', '', '2015-09-28 14:44:01', '2015-09-28 14:53:49', '2015-09-29 00:00:00'),
+(3, 'lucver@mail.com', 'Eclissi del luglio 2009, la pi&uacute; lunga di sempre.', 'Eclissi solare parziale', 'Ancora una volta il Sole si &eacute; spento per una manciata di minuti lungo una fascia che ha attraversato parte dell''Asia sud-orientale, una delle aree pi&uacute; popolose della terra. La luna, interpostasi tra la Terra e il Sole, ha oscurato la luce di quest''ultimo per un tratto lungo circa 10.000 chilometri. Lungo questo percorso il Sole &eacute; stato via via oscurato per tempi sempre pi&uacute; lunghi per arrivare ad una duranta massima di totale buio di 6 minuti e 39 secondi. &Eacute; l''eclissi pi&uacute; lunga del secolo. Ci&oacute; &eacute; conseguenza del fatto che il Sole si trova a meno di 3 settimane dall''afelio (il punto pi&uacute; distante tra la Terra e il Sole) e quindi ha le dimensioni pi&uacute; piccole dell''intero anno, mentre la Luna &eacute; abbastanza vicina al perigeo (il punto di minore distanza dalla Terra) e quindi ha le maggiori dimensioni apparenti. ', '2009-07-22 19:20:02', '2009-07-22 19:29:25', '2015-09-11 00:00:00'),
+(4, 'lucver@mail.com', 'Eclissi del marzo 2015', 'Eclissi solare parziale', 'L''eclissi solare del 20 marzo 2015, conosciuta anche come eclissi solare dell''equinozio 2015, &eacute; un evento astronomico che ha avuto luogo il suddetto giorno dalle 7:40 alle 11:50, con il massimo intorno alle ore 9:46.  Questa &eacute; la nona eclissi totale del ventunesimo secolo e complessivamente l''undicesimo passaggio dell''ombra della Luna sulla Terra (in questo secolo).  La precedente eclissi solare visibile in Europa fu quella dell''11 agosto 1999, mentre la prossima avverr&aacute; il 21 agosto 2017.', '2015-03-20 07:40:01', '2015-03-20 11:50:49', '2015-09-29 00:00:00'),
 (5, 'matbo@mail.it', 'Eclissi Solare di Settembre 2015', 'Eclissi solare parziale', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at elit bibendum, semper felis a, rutrum augue. Mauris at ante tellus. Quisque in sem pulvinar, condimentum nulla fringilla, porttitor purus. Aenean mollis sem quis consectetur suscipit. Nulla non tortor sed urna vestibulum posuere in a lorem. Pellentesque nulla quam, sagittis vitae imperdiet vitae, vehicula a ex. Sed vel nibh nec metus accumsan varius. Suspendisse congue eleifend diam, a pharetra lorem facilisis in. Morbi volutpat ac tortor ac tempor. Quisque eget dolor quam. Quisque et tortor eu purus vehicula mattis sed eget quam. Aliquam viverra lorem nec orci gravida, ut dictum mi imperdiet. Curabitur lorem lectus, ullamcorper et mattis ultricies, consectetur at felis. ', '2015-09-28 14:43:23', '2015-09-28 14:52:31', '0000-00-00 00:00:00'),
 (7, 'matbo@mail.it', 'Dopo Saturno, ecco Marte!', 'Osservazione', 'Marte &eacute il quarto pianeta del sistema solare in ordine di distanza dal Sole e l''ultimo dei pianeti di tipo terrestre dopo Mercurio, Venere e la Terra. Viene chiamato il Pianeta rosso a causa del suo colore caratteristico dovuto alle grandi quantit&aacute di ossido di ferro che lo ricoprono.\n\nPur presentando un''atmosfera molto rarefatta e temperature medie superficiali piuttosto basse, il pianeta &eacute il pi&uacute simile alla Terra tra quelli del sistema solare. Nonostante le sue dimensioni siano intermedie fra quelle del nostro pianeta e della Luna (il raggio equatoriale &eacute di 3397 km, circa la met&aacute di quello della Terra e la massa poco pi&uacute di un decimo), presenta inclinazione dell''asse di rotazione e durata del giorno simili a quelle terrestri. Inoltre, la sua superficie presenta formazioni vulcaniche, valli, calotte polari e deserti sabbiosi, oltre a formazioni geologiche che suggeriscono la presenza, in un lontano passato, di un''idrosfera. Tuttavia, la presenza di acqua, anche nel lontano passato, &eacute stata recentemente messa in discussione a causa della formazione lavica della Valles Marineris. Tra l''altro, la superficie del pianeta appare fortemente craterizzata a causa della quasi totale assenza di agenti erosivi (soprattutto attivit&aacute geologica, atmosferica e idrosferica) e dalla totale assenza di tettonica delle placche in grado di formare e poi modellare le strutture tettoniche. Infine, la bassissima densit&aacute dell''atmosfera non &eacute in grado di consumare buona parte delle meteoriti, che quindi raggiungono il suolo con maggior frequenza che non sulla Terra.', '2015-08-12 21:23:00', '2015-08-12 21:50:47', '0000-00-00 00:00:00'),
-(8, 'matbo@mail.it', 'Cassiopea, cos&iacute lontana...', 'Osservazione', 'Cassiopea (in latino Cassiopeia) è una costellazione settentrionale, raffigurante Cassiopea, la leggendaria regina di Etiopia. &Eacute una delle 88 costellazioni moderne, ed era anche una delle 48 costellazioni elencate da Tolomeo.\n\nDi facile riconoscimento grazie alla sua figura a zig-zag, &eacute caratteristica specialmente delle notti stellate autunnali, sebbene dall''emisfero nord sia ben osservabile per quasi tutto l''anno; &eacute attraversata dalla Via Lattea ed &eacute quindi molto ricca di ammassi stellari e fitti campi stellari.\n\nSe osservassimo il Sole da Alfa Centauri, la stella pi&uacute vicina, esso apparirebbe in Cassiopea.\nCassiopea &eacute una delle costellazioni più caratteristiche e pi&uacute riconoscibili del cielo settentrionale. Poich&egrave &eacute molto vicina al polo nord celeste, rimane visibile nel cielo per tutta la notte in tutta la fascia temperata dell''emisfero boreale (una tale costellazione viene detta circumpolare); nell''emisfero australe &eacute visibile solo dalle zone tropicali. Rispetto al polo nord celeste, si trova opposta al Grande Carro: nell''emisfero boreale, quando Cassiopea &eacute alta nel cielo, il Grande Carro &eacute basso sull''orizzonte.', '2016-07-01 00:00:00', '2016-07-01 00:34:00', '0000-00-00 00:00:00');
+(8, 'matbo@mail.it', 'Cassiopea, cos&iacute; lontana...', 'Osservazione', 'Cassiopea (in latino Cassiopeia) &eacute; una costellazione settentrionale, raffigurante Cassiopea, la leggendaria regina di Etiopia. &Eacute; una delle 88 costellazioni moderne, ed era anche una delle 48 costellazioni elencate da Tolomeo.\n\nDi facile riconoscimento grazie alla sua figura a zig-zag, &eacute caratteristica specialmente delle notti stellate autunnali, sebbene dall''emisfero nord sia ben osservabile per quasi tutto l''anno; &eacute; attraversata dalla Via Lattea ed &eacute; quindi molto ricca di ammassi stellari e fitti campi stellari.\n\nSe osservassimo il Sole da Alfa Centauri, la stella pi&uacute; vicina, esso apparirebbe in Cassiopea.\nCassiopea &eacute; una delle costellazioni pi&uacute; caratteristiche e pi&uacute; riconoscibili del cielo settentrionale. Poich&egrave; &eacute; molto vicina al polo nord celeste, rimane visibile nel cielo per tutta la notte in tutta la fascia temperata dell''emisfero boreale (una tale costellazione viene detta circumpolare); nell''emisfero australe &eacute; visibile solo dalle zone tropicali. Rispetto al polo nord celeste, si trova opposta al Grande Carro: nell''emisfero boreale, quando Cassiopea &eacute; alta nel cielo, il Grande Carro &eacute; basso sull''orizzonte.', '2016-07-01 00:00:00', '2016-07-01 00:34:00', '0000-00-00 00:00:00');
 
 --
 -- Trigger `studia`
@@ -1270,12 +1288,12 @@ ALTER TABLE `avvenimenti`
 -- AUTO_INCREMENT per la tabella `commentafoto`
 --
 ALTER TABLE `commentafoto`
-  MODIFY `idcommento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idcommento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT per la tabella `commentastudio`
 --
 ALTER TABLE `commentastudio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 --
 -- AUTO_INCREMENT per la tabella `foto`
 --
