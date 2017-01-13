@@ -16,7 +16,7 @@
   // AVVENIMENTI PASSATI: quelli finiti. Dal piu` recente al meno recente.
   echo file_get_contents("parti/eventi1.html");
   if($errore_DB==FALSE){
-   if(!$result=$connessione->query("SELECT * FROM avvenimenti WHERE fine<'$datetime_now' ORDER BY fine DESC LIMIT 5")){
+   if(!$result=$connessione->query("SELECT * FROM avvenimenti WHERE fine<'$datetime_now' ORDER BY fine DESC")){
      //echo "<p>Errore della query: ".$connessione->error.".</p>";
      echo '<p>Abbiamo riscontrato dei problemi nel visualizzare gli eventi passati.</p>';
    }else{
@@ -31,7 +31,7 @@
   echo file_get_contents("parti/eventi2.html");
   // AVVENIMENTI FUTURI: quelli non ancora finiti. Dal piu` prossimo al piu` distante
  if($errore_DB==FALSE){
-  if(!$result=$connessione->query("SELECT * FROM avvenimenti WHERE fine>'$datetime_now'ORDER BY inizio LIMIT 5")){
+  if(!$result=$connessione->query("SELECT * FROM avvenimenti WHERE fine>'$datetime_now'ORDER BY inizio")){
     echo '<p>Abbiamo riscontrato dei problemi nel visualizzare gli eventi futuri.</p>';
     //	echo "Errore della query: ".$connessione->error.".";
 	}else{

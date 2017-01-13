@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Creato il: Gen 13, 2017 alle 20:52
+-- Creato il: Gen 13, 2017 alle 21:51
 -- Versione del server: 10.1.13-MariaDB
 -- Versione PHP: 7.0.8
 
@@ -303,9 +303,7 @@ INSERT INTO `commentafoto` (`idcommento`, `astrofilo`, `idfoto`, `commento`, `da
 (1, 'matbo@mail.it', 9, 'Bellissima! Che fotocamera hai usato?', '0000-00-00 00:00:00'),
 (2, 'marrosi@mail.ti', 9, 'Grazie :) Una reflex', '0000-00-00 00:00:00'),
 (4, 'alfmeg@mail.it', 8, 'Vista pure io... stupenda', '2016-12-15 04:19:16'),
-(5, 'andr@mag.com', 10, 'Pazzesco! Pure le lune di giove!!', '0000-00-00 00:00:00'),
-(6, 'matbo@mail.it', 10, 'ciao Ã¨Ã¨Ã¨Ã¨ l''una '' - "', '2017-01-11 16:55:07'),
-(7, 'matbo@mail.it', 10, 'forsaaaaaa', '2017-01-11 16:55:26');
+(5, 'andr@mag.com', 10, 'Pazzesco! Pure le lune di giove!!', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -330,13 +328,6 @@ INSERT INTO `commentastudio` (`id`, `astrofilo`, `commento`, `studio`, `datainse
 (2, 'gigione@gigio.it', 'Nelle mie zone il tempo ultimamente &eacute perfetto e io ne sto approfittando. Passo le nottate a fare studi e a scrutare il cielo ;)', 1, '0000-00-00 00:00:00'),
 (3, 'fabe@gmail.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at elit bibendum, semper felis a, rutrum augue. Mauris at ante tellus. Quisque in sem pulvinar, condimentum nulla fringilla, porttitor purus. Aenean mollis sem quis consectetur suscipit. Nulla non tortor sed urna vestibulum posuere in a lorem. Pellentesque nulla quam, sagittis vitae imperdiet vitae, vehicula a ex. Sed vel nibh nec metus accumsan varius. Suspendisse congue eleifend diam, a pharetra lorem facilisis in. Morbi volutpat ac tortor ac tempor. Quisque eget dolor quam. Quisque et tortor eu purus vehicula mattis sed eget quam. Aliquam viverra lorem nec orci gravida, ut dictum mi imperdiet. Curabitur lorem lectus, ullamcorper et mattis ultricies, consectetur at felis. ', 5, '0000-00-00 00:00:00'),
 (4, 'luigibianchi@mail.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at elit bibendum, semper felis a, rutrum augue. Mauris at ante tellus. Quisque in sem pulvinar, condimentum nulla fringilla, porttitor purus. Aenean mollis sem quis consectetur suscipit. Nulla non tortor sed urna vestibulum posuere in a lorem. Pellentesque nulla quam, sagittis vitae imperdiet vitae, vehicula a ex. Sed vel nibh nec metus accumsan varius. Suspendisse congue eleifend diam, a pharetra lorem facilisis in. Morbi volutpat ac tortor ac tempor. Quisque eget dolor quam. Quisque et tortor eu purus vehicula mattis sed eget quam. Aliquam viverra lorem nec orci gravida, ut dictum mi imperdiet. Curabitur lorem lectus, ullamcorper et mattis ultricies, consectetur at felis. ', 5, '0000-00-00 00:00:00'),
-(25, 'matbo@mail.it', 'ciao regÃ ', 8, '2017-01-11 15:46:06'),
-(28, 'matbo@mail.it', 'regÃ Ã  Ã¬ Ã² piÃ¹', 8, '2017-01-11 15:49:23'),
-(29, 'matbo@mail.it', 'l''evento', 8, '2017-01-11 15:54:37'),
-(30, 'matbo@mail.it', 'l''eventÃ¨l''q l''uno!!', 8, '2017-01-11 15:56:04'),
-(31, 'matbo@mail.it', 'Â°#@Ã²Ã¹Ã¬Ã¬^^"'' '''' '' "" " $5 %Ã Ã¨Ã©', 8, '2017-01-11 15:57:44'),
-(34, 'matbo@mail.it', 'deededed,,.hgdÃ¨+', 8, '2017-01-11 16:37:13'),
-(35, 'matbo@mail.it', 'iao macachi!!', 8, '2017-01-11 16:54:12'),
 (36, 'lucver@mail.com', 'Non finiva mai!', 3, '2017-01-13 20:40:57');
 
 -- --------------------------------------------------------
