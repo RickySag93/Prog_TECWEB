@@ -32,6 +32,10 @@ html {
     border:0;
   }
 
+a:focus {
+  border: 1px dotted yellow;
+
+}
   #content {        /*  contenuto della pagina, non riguarda i lati, viene escluso il menu fixed  */
     background-color: #edeeef;
     min-height:100%;
@@ -85,7 +89,7 @@ html {
   	transition: 0.3s;
   }
 
-  #content_menu a:hover {
+  #content_menu a:hover,a:active {
       background-color: #595959;
       color:white;
       font-weight: bold;
@@ -96,6 +100,9 @@ html {
 	  transition:0.3s;
   }
 
+  #content_menu a:focus {
+    border: 1px dotted yellow;
+  }
   #tornasu {
     position: absolute;
     margin-top: 0.5em;
@@ -436,7 +443,7 @@ color:white;
     margin-right: auto;
 }
 
-#content .list_element:hover{
+#content .list_element:hover, #content .list_element:active{
   border: 4px solid black;
 
 }
