@@ -443,7 +443,7 @@ color:white;
     margin-right: auto;
 }
 
-#content .list_element:hover, #content .list_element:active{
+#content .not_single_studio:hover, #content .not_single_studio:active{
   border: 4px solid black;
 
 }
