@@ -23,6 +23,7 @@
 			// while stampa immagini
       while($row=$result->fetch_array(MYSQLI_ASSOC)){
         echo '<img src="'.$row['immagine'].'" class="imgslide" alt="'.$row['didascalia'].'" />';
+        echo '<div class="slide_didasc"> <p class="p_slide">'.$row['didascalia'].'</p></div>';
       }
 			$result->free();
 		}
