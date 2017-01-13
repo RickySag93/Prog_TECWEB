@@ -256,14 +256,31 @@ a:focus {
   margin-top: 2em;
   margin-left: auto;
   margin-right: auto;
-  height: 35em;
+  height: 38em;
+}
+.slideshow a:focus{
+    border: 0;
 }
 
-.imgslide {
+.imgslide{
   width: 100%;
-  height: 90%;
+  height: 30em;
   z-index: 0;
-  display:none;
+}
+
+.slide_didasc{
+  position:absolute;
+  bottom:4em;
+  background-color:black;
+  width:100%;
+  height:4em;
+}
+#content .p_slide{
+  position:absolute;
+  padding:0;
+  top:0;
+  left:0;
+  color:white;
 }
 
 .arrowbar{
@@ -271,7 +288,7 @@ position:absolute;
 bottom:0;
 background-color:black;
 width:100%;
-height:5em;
+height:4em;
 
 }
 
