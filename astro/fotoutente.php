@@ -60,7 +60,7 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
               <input type="hidden" name="foto" value="'.$idft.'" />
               <button id="comment" name="commenta">Commenta</button>
           </form>
-          </div><div id="list_comment">';
+          </div><div id="list_comment"><h3>Commenti</h3>';
         }
         $commenti_foto_query= "SELECT astrofilo.username,astrofilo.imgprofilo,commentafoto.commento,commentafoto.datainserimento
                        FROM commentafoto JOIN astrofilo ON commentafoto.astrofilo=astrofilo.mail

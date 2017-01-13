@@ -71,7 +71,7 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
             <input type="hidden" name="studio" value="'.$idst.'" />
             <button id="comment" name="commenta">Commenta</button>
         </form>
-        </div><div id="list_comment">';
+        </div><div id="list_comment"><h3>Commenti</h3>';
       }
           $commenti_studio_query= "SELECT astrofilo.username,astrofilo.imgprofilo,commentastudio.commento,commentastudio.datainserimento
                                   FROM commentastudio JOIN astrofilo ON commentastudio.astrofilo=astrofilo.mail

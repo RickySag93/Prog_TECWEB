@@ -381,14 +381,15 @@ color:white;
 /* FINE REGISTRAZIONE */
 
 
-#foto{
-  margin-top:2em;
+#foto {
   display: block;
   margin: auto;
   max-width: 750px;
+  height: 100%;
+  width: 100%;
   min-height:50px;
   min-width: 50px;
-  margin-bottom:2em;
+  margin-bottom: 2em;
 }
 
 #rank {
@@ -456,8 +457,12 @@ color:white;
   margin-right: auto;
 }
 
-#list_comment {
+#list_comment h3 {
+  width: 80%;
   margin-top: 5em;
+  margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #box_comment textarea {
@@ -470,7 +475,7 @@ color:white;
   padding-left: 0.5em;
 }
 
-.list_element a{
+.list_element a {
     display:block;
     text-decoration:none;
 }
@@ -511,10 +516,11 @@ color:white;
 #content .element_content p, #content .big_list_element p{
   margin-top: 0.2em;
   padding-top: 0.1em;
+  padding-left: 0.3em;
+  padding-bottom: 0.3em;
   margin-left: 0;
   margin-right: 0;
   width:100%;
-  padding-right: 10%;
 }
 
 #content .element_content span{
