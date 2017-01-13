@@ -36,12 +36,12 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
     	echo '<div id="rank">';
       if(isset($_SESSION['usermail'])){
         echo '<form method="post" action="backend/votafoto.php">
-                 <div><button name="up"><img src="parti/immagini/up.png" alt="mi piace"/></button> 
+                 <button name="up"><img src="parti/immagini/up.png" alt="mi piace"/></button>
                  <button name="down"><img src="parti/immagini/down.png" alt=" non mi piace"/></button>
-                 <input type="hidden" name="foto" value="'.$idft.'"/></div>
+                 <input type="hidden" name="foto" value="'.$idft.'"/>
                  </form>';
       }// else non puoi votare
-    	echo '<span id="rank_txt">'.$rank_row['rank'].'</span></div>';
+    	echo '<p id="rank_txt">'.$rank_row['rank'].'</p></div>';
       echo '
     	 <div class="big_list_element didascalia_el">
             <div class="big_element_content">
@@ -56,12 +56,11 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
 
            echo '<div id="box_comment">
           <form method="post" action="backend/commentafoto.php">
-              <h4>Commenti</h4>
               <textarea name="commento"></textarea>
               <input type="hidden" name="foto" value="'.$idft.'" />
               <button id="comment" name="commenta">Commenta</button>
           </form>
-          </div>';
+          </div><div id="list_comment">';
         }
         $commenti_foto_query= "SELECT astrofilo.username,astrofilo.imgprofilo,commentafoto.commento,commentafoto.datainserimento
                        FROM commentafoto JOIN astrofilo ON commentafoto.astrofilo=astrofilo.mail
@@ -73,15 +72,14 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
           while($commenti_row=$commenti_foto->fetch_array(MYSQLI_ASSOC)){
             echo '
                <div class="big_list_element">
-               <div class="big_element_content">
-               <p>'.$commenti_row['username'].': '.$commenti_row['commento'].' '.$commenti_row['datainserimento'].'</p>
-               </div>
+               <p> '.$commenti_row['username'].' in data '.$commenti_row['datainserimento'].' scrive:</p><p> '.$commenti_row['commento'].' </p>
                </div>';
          }
        }
      }else echo '<p>La foto non è presente nel database.</p>';
     }
    }else echo '<p>'.$msg_errore_DB.'</p>';
+   echo '</div>';
    echo file_get_contents("parti/fotoutente1.html");
 
 ?>
