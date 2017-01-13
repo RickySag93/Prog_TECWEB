@@ -21,18 +21,17 @@ function leftDivs(){
 
 function rightDivs(){
   plusDivs(1);
-
 }
 
 function plusDivs(n) {
-  showDivs(slideIndex += n,true);
+  showDivs(slideIndex += n);
 }
 
 function initDivs(){
-  showDivs(1,false);
+  showDivs(1);
 }
 
-function showDivs(n,isNotOnLoad) {
+function showDivs(n) {
   var i;
   var x = document.querySelectorAll(".imgslide");
   var tot=x.length;
@@ -42,9 +41,6 @@ function showDivs(n,isNotOnLoad) {
      x[i].style.display = "none";
   }
   x[slideIndex-1].style.display = "block";
-  if(isNotOnLoad){
-    x[slideIndex-1].focus();
-  }
   var g=document.getElementById("number");
   g.innerHTML="".concat(slideIndex,"/",tot);
 }
