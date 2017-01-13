@@ -72,7 +72,7 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
           while($commenti_row=$commenti_foto->fetch_array(MYSQLI_ASSOC)){
             echo '
                <div class="big_list_element">
-               <p> '.$commenti_row['username'].' in data '.$commenti_row['datainserimento'].' scrive:</p><p> '.$commenti_row['commento'].' </p>
+               <p> '.$commenti_row['username'].' scrive:</p><p> '.$commenti_row['commento'].' <span id="data_ora">'.$commenti_row['datainserimento'].' </span></p>
                </div>';
          }
        }

@@ -46,8 +46,7 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
           }
           echo '</div></div>'; // il secondo div è stato aperto nel file parti/studioutente0.html
           echo '<div class="big_list_element">
-                <div class="big_element_content">
-                <span>'.$row['appunti'].'</span> </div> </div>';
+                <p>'.$row['appunti'].'</p> </div>';
           $rank_query="SELECT SUM(voto) AS rank FROM giudicastudio WHERE studio=".$row['idstudio'];
           $rank_studio=$connessione->query($rank_query);
           $rank_row=mysqli_fetch_array($rank_studio);
@@ -82,7 +81,7 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
          else{
            while($commenti_row=$commenti_studio->fetch_array(MYSQLI_ASSOC)){
              echo '<div class="big_list_element">
-                   <p> '.$commenti_row['username'].': '.$commenti_row['commento'].' '.$commenti_row['datainserimento'].'</p></div>';
+                   <p> '.$commenti_row['username'].' scrive:</p><p> '.$commenti_row['commento'].' <span id="data_ora">'.$commenti_row['datainserimento'].' </span></p></div>';
            }
           }
         }else echo '<p>Lo studio non è presente nel database.</p>';
