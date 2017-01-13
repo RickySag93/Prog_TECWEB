@@ -32,14 +32,10 @@ html {
     border:0;
   }
 
-a:focus {
-  border: 1px dotted yellow;
-
-}
   #content {        /*  contenuto della pagina, non riguarda i lati, viene escluso il menu fixed  */
     background-color: #edeeef;
     min-height:100%;
-    padding-bottom: 9.375em;
+    padding-bottom: 10em;
   }
 
 
@@ -89,7 +85,7 @@ a:focus {
   	transition: 0.3s;
   }
 
-  #content_menu a:hover,a:active {
+  #content_menu a:hover {
       background-color: #595959;
       color:white;
       font-weight: bold;
@@ -100,9 +96,6 @@ a:focus {
 	  transition:0.3s;
   }
 
-  #content_menu a:focus {
-    border: 1px dotted yellow;
-  }
   #tornasu {
     position: absolute;
     margin-top: 0.5em;
@@ -398,23 +391,36 @@ color:white;
   margin-bottom:2em;
 }
 
-#rank{
-  margin:auto;
-  width:80%;
+#rank {
+  margin: auto;
+  width: 80%;
   background-color: #000;
+  height: 3em;
+  margin-bottom: 2em;
+}
+
+#rank button  {
+  background: white;
+  margin-top: 0.2em;
+  margin-left: 5%;
+}
+
+#rank img {
+  height: 70%;
+  width: 70%;
+}
+
+#rank form {
+  display: inline;
+}
+
+#content #rank_txt {
+  font-size: 1.5em;
+  width: 0;
+  padding-top: 0.35em;;
+  margin-right: 5%;
+  float: right;
   color: white;
-  height: 1.875em;
-  margin-bottom:2em;
-}
-
-#vota{
-  float:left;
-  padding-left:5%;
-}
-
-#rank_txt{
- float:right;
- padding-right:5%;
 }
 
 #content p {
@@ -443,16 +449,15 @@ color:white;
     margin-right: auto;
 }
 
-#content .not_single_studio:hover, #content .not_single_studio:active{
-  border: 4px solid black;
-
-}
-
 #box_comment {
   margin-top: 4em;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+
+#list_comment {
+  margin-top: 5em;
 }
 
 #box_comment textarea {
@@ -496,21 +501,14 @@ color:white;
 
 #content .big_list_element{
     width: 80%;
+    max-width:100%;
     border: 1px solid black;
     margin-left: auto;
     margin-right: auto;
     display: block;
 }
 
-.big_element_content{
-  max-width:100%;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-
-#content .element_content p, #content .big_element_content p{
+#content .element_content p, #content .big_list_element p{
   margin-top: 0.2em;
   padding-top: 0.1em;
   margin-left: 0;
@@ -523,7 +521,7 @@ color:white;
   display:block;
 }
 
-#content .big_element_content span{
+#content .big_element_element span{
     padding-top: 0px;
     margin-left: 0;
     margin-right: 0;
@@ -538,7 +536,7 @@ color:white;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  height: 7em;
+  height: 8em;
   color: white;
 }
 
