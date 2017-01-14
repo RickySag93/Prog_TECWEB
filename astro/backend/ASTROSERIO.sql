@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Creato il: Gen 14, 2017 alle 16:42
+-- Creato il: Gen 14, 2017 alle 17:15
 -- Versione del server: 10.1.13-MariaDB
 -- Versione PHP: 7.0.8
 
@@ -237,7 +237,12 @@ INSERT INTO `avvenimenti` (`idavvenimento`, `tipo`, `inizio`, `fine`) VALUES
 (6, 'Eclissi lunare totale', '2019-06-21 05:09:30', '2019-06-21 05:16:11'),
 (7, 'Eclissi lunare totale', '2000-01-21 04:38:45', '2000-01-21 04:49:31'),
 (8, 'Eclissi lunare totale', '2001-01-09 20:13:46', '2001-01-09 20:29:46'),
-(9, 'Eclissi lunare parziale', '2023-10-23 20:08:06', '2023-10-23 20:18:06');
+(9, 'Eclissi lunare parziale', '2023-10-23 20:08:06', '2023-10-23 20:18:06'),
+(10, 'Eclissi lunare parziale', '2010-06-26 08:55:00', '2010-06-26 10:16:00'),
+(11, 'Eclissi lunare parziale', '2010-12-21 05:28:00', '2010-12-21 06:32:00'),
+(12, 'Eclissi lunare totale', '2022-05-16 01:36:00', '2022-05-16 03:29:00'),
+(13, 'Eclissi lunare totale', '2025-03-14 07:01:00', '2025-03-14 07:01:00'),
+(14, 'Eclissi lunare totale', '2011-06-15 17:23:00', '2011-06-15 19:23:00');
 
 -- --------------------------------------------------------
 
@@ -1283,7 +1288,7 @@ ALTER TABLE `telescopio`
 -- AUTO_INCREMENT per la tabella `avvenimenti`
 --
 ALTER TABLE `avvenimenti`
-  MODIFY `idavvenimento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `idavvenimento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT per la tabella `commentafoto`
 --
