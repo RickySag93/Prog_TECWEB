@@ -18,6 +18,7 @@
       echo '<p>Abbiamo riscontrato dei problemi nel visualizzare le foto.</p>';
     }else{
       if($result->num_rows > 0){
+        echo '<h2>Ecco tutte le nostre foto.</h2>';
         while($row=$result->fetch_array(MYSQLI_ASSOC)){
           echo '<div class="list_element not_single_studio">';
           echo '<a href="fotoutente.php?idft='.$row['idfoto'].'" class="element_foto"><img src="'.$row['immagine'].'"  alt="'.$row['didascalia'].'" /> </a>';
@@ -29,8 +30,8 @@
           echo '</p></a></div>';
         }
   			$result->free();
-      }else echo "Nessuna foto";
+      }else echo '<p>Nessuna foto</p>';
   	 }
-   }else echo '<p>'.$msg_errore_DB.'</p>';
+   }else echo $msg_errore_DB;
     echo file_get_contents("parti/listafoto1.html");
 ?>

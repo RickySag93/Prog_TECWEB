@@ -76,9 +76,9 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
                </div>';
          }
        }
-     }else echo '<p>La foto non è presente nel database.</p>';
+     }else echo '<p><strong>La foto che cerchi non esiste. </strong><a href="listafoto.php">Torna alla lista delle foto</a></p>';
     }
-   }else echo '<p>'.$msg_errore_DB.'</p>';
+   }else echo $msg_errore_DB;
    echo '</div>';
    echo file_get_contents("parti/fotoutente1.html");
 
