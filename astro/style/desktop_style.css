@@ -172,20 +172,26 @@ a:focus {
   }
 
   #modulo_reg, #box_login {
-    width: 55em;
+    width: 100%;
     margin-top: 2em;
-    margin-left: 10%;
+  }
+
+  #modulo_reg fieldset, #box_login fieldset {
+    margin-left: 20%;
+  }
+
+#content #box_login p {
+  margin-left: 20%;
   }
 
   #modulo_reg input, #box_login input {
-    height: 1.5625em;
+    height: 1.6em;
     margin-bottom: 0.5em;
   }
 
   #modulo_reg label, #box_login label {
     width: 20%;
     min-width: 150px;
-    margin-left: 3em;
     margin-right: 2em;
     float: left;
   }
@@ -346,9 +352,11 @@ color:white;
 
 /* PAGINA REGISTRAZIONE */
 
-#modulo_reg h1, #box_login h1 {
-  text-align: center;
-  margin-bottom: 3em;
+#aiuti_reg {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 5em;
 }
 
 #modulo_reg legend, #box_login legend {
@@ -366,7 +374,7 @@ color:white;
   padding: 5px 5px 3px 22px;
   font-size: 1em;
   border: 1px solid #ccc;
-  width: 19em;
+  width: 15em;
   line-height: 2.2em;
 }
 
@@ -662,7 +670,6 @@ color:white;
     HOME MOBILE
 */
 
-
     body {
       font-family: Verdana, Helvetica, Georgia, sans-serif;
       color: #000000;                   /*  colore del testo su tutta la pagina    */
@@ -687,6 +694,7 @@ color:white;
       clear: both;
       padding-top: 0.5em;
       height: 10em;
+      width: 100%;
     }
 
     #header h1 {
@@ -707,7 +715,7 @@ color:white;
 
 
     #modulo_reg label, #box_login label {
-      width: 18em;
+      width: 14.3em;
     }
 
     #button_reg, #log_b {
