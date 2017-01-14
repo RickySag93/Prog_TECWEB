@@ -84,9 +84,9 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
                    <p> '.$commenti_row['username'].' scrive:</p><p> '.$commenti_row['commento'].' <span id="data_ora">'.$commenti_row['datainserimento'].' </span></p></div>';
            }
           }
-        }else echo '<p>Lo studio non è presente nel database.</p>';
+        }else echo '<p><strong>Lo studio che cerchi non esiste. </strong><a href="listastudi.php">Torna alla lista degli studi</a></p>';
       }
-  	}else echo '<p>'.$msg_errore_DB.'</p>';
+  	}else echo $msg_errore_DB;
     echo '</div>';
       echo file_get_contents("parti/studioutente1.html");
 ?>

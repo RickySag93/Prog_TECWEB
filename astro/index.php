@@ -60,7 +60,7 @@ if($errore_DB==FALSE){
 			$result->free();
 		}
 	}
-}else echo '<p>'.$msg_errore_DB.'</p>';
+}else echo $msg_errore_DB;
   echo file_get_contents("parti/index3.html");
 
 ?>
