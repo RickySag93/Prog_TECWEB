@@ -194,7 +194,7 @@ a:focus {
     margin-left: 50%;
   }
 
-}
+} /*fine desktop */
 
 #header h1 {
   color: white;
@@ -541,7 +541,6 @@ color:white;
 
 .element_content {
 	height:7.5em;
-  max-width:100%;
 }
 
 
@@ -666,6 +665,7 @@ color:white;
     body {
       font-family: Verdana, Helvetica, Georgia, sans-serif;
       color: #000000;                   /*  colore del testo su tutta la pagina    */
+      overflow-x: hidden;
     }
 
     a img {
@@ -676,6 +676,7 @@ color:white;
       background-color: #edeeef;
       min-height:100%;
       padding-bottom: 9.375em;
+      width: auto;
     }
 
     #logo_home {
@@ -687,6 +688,7 @@ color:white;
       clear: both;
       padding-top: 0.5em;
       height: 10em;
+      width: auto;
     }
 
     #header h1 {
@@ -746,22 +748,18 @@ color:white;
     }
 
     #content .list_element{
-        border: 0;
         margin-left: 5%;
         margin-right: 5%;
-        width: 100%;
-        height: 10em;
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
+        width: 90%;
+        height: 15em;
+        border: 1px solid black;
     }
 
     #content .big_list_element {
-      border: 0;
       margin-left: 5%;
       margin-right: 5%;
-      width: 100%;
-      border-top: 1px solid black;
-      border-bottom: 1px solid black;
+      width: 90%;
+      border: 1px solid black;
     }
 
     #eventi_pre, #eventi_next {     /*singolo contenitore degli eventi */
