@@ -200,7 +200,7 @@ a:focus {
     margin-left: 50%;
   }
 
-}
+} /*fine desktop */
 
 #header h1 {
   color: white;
@@ -236,7 +236,6 @@ a:focus {
 }
 
 #content #breadcrumb p {
-  width: 100%;
   color:white;
   margin-left: 0;
   margin-right: 0;
@@ -549,7 +548,6 @@ color:white;
 
 .element_content {
 	height:7.5em;
-  max-width:100%;
 }
 
 
@@ -670,9 +668,11 @@ color:white;
     HOME MOBILE
 */
 
+
     body {
       font-family: Verdana, Helvetica, Georgia, sans-serif;
       color: #000000;                   /*  colore del testo su tutta la pagina    */
+      min-width: 380px;
     }
 
     a img {
@@ -683,6 +683,7 @@ color:white;
       background-color: #edeeef;
       min-height:100%;
       padding-bottom: 9.375em;
+      width: 100%;
     }
 
     #logo_home {
@@ -726,10 +727,11 @@ color:white;
     #content_menu a {
       color: white;
       background-color: #28313f;
-      padding: 1em;
+      padding-top: 1em;
+      padding-bottom: 1em;
       border: 0px solid black;
       height: 1em;
-      width: 100%;
+      width: auto;
       text-align: center;
       text-decoration: none;
       display: block;
@@ -754,22 +756,18 @@ color:white;
     }
 
     #content .list_element{
-        border: 0;
         margin-left: 5%;
         margin-right: 5%;
-        width: 100%;
+        width: 90%;
         height: 10em;
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
+        border: 1px solid black;
     }
 
     #content .big_list_element {
-      border: 0;
       margin-left: 5%;
       margin-right: 5%;
-      width: 100%;
-      border-top: 1px solid black;
-      border-bottom: 1px solid black;
+      width: 90%;
+      border: 1px solid black;
     }
 
     #eventi_pre, #eventi_next {     /*singolo contenitore degli eventi */
