@@ -230,7 +230,6 @@ a:focus {
 }
 
 #content #breadcrumb p {
-  width: 100%;
   color:white;
   margin-left: 0;
   margin-right: 0;
@@ -662,10 +661,10 @@ color:white;
 */
 
 
-    body {
+    html,body {
       font-family: Verdana, Helvetica, Georgia, sans-serif;
       color: #000000;                   /*  colore del testo su tutta la pagina    */
-      overflow-x: hidden;
+      min-width: 380px;
     }
 
     a img {
@@ -676,7 +675,7 @@ color:white;
       background-color: #edeeef;
       min-height:100%;
       padding-bottom: 9.375em;
-      width: auto;
+      width: 100%;
     }
 
     #logo_home {
@@ -688,7 +687,7 @@ color:white;
       clear: both;
       padding-top: 0.5em;
       height: 10em;
-      width: auto;
+      width: 100%;
     }
 
     #header h1 {
@@ -720,10 +719,11 @@ color:white;
     #content_menu a {
       color: white;
       background-color: #28313f;
-      padding: 1em;
+      padding-top: 1em;
+      padding-bottom: 1em;
       border: 0px solid black;
       height: 1em;
-      width: 100%;
+      width: auto;
       text-align: center;
       text-decoration: none;
       display: block;
@@ -751,7 +751,7 @@ color:white;
         margin-left: 5%;
         margin-right: 5%;
         width: 90%;
-        height: 15em;
+        height: 10em;
         border: 1px solid black;
     }
 
