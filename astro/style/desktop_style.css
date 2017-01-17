@@ -81,7 +81,6 @@ a:focus {
     padding: 1em;
     border: 0px solid black;
     height: 1.25em;
-    width: 3.5em;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -222,7 +221,7 @@ a:focus {
   float: right;
 }
 
-#content h2 {
+#content h2, #content h3 {
   text-align: center;
   margin-top: 1em;
   margin-bottom: 2em;
@@ -267,7 +266,18 @@ a:focus {
     border: 0;
 }
 
+#content .p_slide {
+  padding: 0;
+  padding-top: 0.5em;
+  color: white;
+  width: 100%;
+  font-style: italic;
+  text-align: center;
+  font-size: 1.4em;
+}
+
 .imgslide{
+  display: none;
   width: 100%;
   height: 30em;
   z-index: 0;
@@ -280,13 +290,6 @@ a:focus {
   width:100%;
   height:4em;
 }
-#content .p_slide{
-  position:absolute;
-  padding:0;
-  top:0;
-  left:0;
-  color:white;
-}
 
 .arrowbar{
 position:absolute;
@@ -297,42 +300,34 @@ height:4em;
 
 }
 
-
-#slidebuttonleft{
+#slidebuttonleft, #slidebuttonright{
   z-index: 0;
   position:absolute;
   width:10%;
   height:100%;
   border-color:white;
   cursor:pointer;
+}
+
+#slidebuttonleft {
   border-right: 4px solid gray;
 }
 
-#slidebuttonleft img{
+#slidebuttonright{
+  border-left: 4px solid gray;
+  right:0;
+}
+
+
+#slidebuttonleft img, #slidebuttonright img{
   z-index: 0;
   position:absolute;
   width:90%;
   height:95%;
-}
-
-#slidebuttonright{
-  z-index: 0;
-  position:absolute;
-  right:0;
-  width:10%;
-  height:100%;
-  border-color:white;
-  cursor:pointer;
-  border-left: 4px solid gray;
 }
 
 #slidebuttonright img{
-  z-index: 0;
-  position:absolute;
   right:0;
-  width:90%;
-  height:95%;
-
 }
 
 #number{
