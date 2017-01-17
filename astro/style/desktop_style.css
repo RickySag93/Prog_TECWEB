@@ -32,10 +32,6 @@ html {
     border:0;
   }
 
-#home_m {
-  display: none;
-}
-
 a:focus {
   border: 1px dotted yellow;
 }
@@ -106,6 +102,11 @@ a:focus {
   #content_menu a:focus {
   border: 1px dotted yellow;
 }
+
+#content_menu #home_m {
+  display: none;
+}
+
 
   #tornasu {
     position: absolute;
@@ -252,6 +253,7 @@ a:focus {
   font-style: italic;
 }
 
+/* Inizio slideshow*/
 
 .slideshow {
   width: 80%;
@@ -281,6 +283,10 @@ a:focus {
   width: 100%;
   height: 30em;
   z-index: 0;
+}
+
+.imgslide_a{
+  display: none;
 }
 
 .slide_didasc{
@@ -340,7 +346,7 @@ right:49%;
 color:white;
 }
 
-
+/* fine slideshow*/
 
 /* FINE HOME */
 
@@ -719,7 +725,7 @@ color:white;
     	margin-right: 15%;
     }
 
-    #content_menu a {
+    #content_menu a,#content_menu #home_m {
       color: white;
       background-color: #28313f;
       padding-top: 1em;
