@@ -50,7 +50,7 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
           $rank_query="SELECT SUM(voto) AS rank FROM giudicastudio WHERE studio=".$row['idstudio'];
           $rank_studio=$connessione->query($rank_query);
           $rank_row=mysqli_fetch_array($rank_studio);
-    	echo '<div id="rank">';
+    	echo '<p>Vota subito!</p><div id="rank">';
       if(isset($_SESSION['usermail'])){
           echo ' <form method="post" action="backend/votastudio.php">
                  <button name="up"><img src="parti/immagini/up.png"></button>
@@ -81,7 +81,7 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
          else{
            while($commenti_row=$commenti_studio->fetch_array(MYSQLI_ASSOC)){
              echo '<div class="big_list_element">
-                   <p> '.$commenti_row['username'].' scrive:</p><p> '.$commenti_row['commento'].' <span id="data_ora">'.$commenti_row['datainserimento'].' </span></p></div>';
+                   <p><span id="user_comment"> '.$commenti_row['username'].'</span> scrive in data <span id="data_ora">'.$commenti_row['datainserimento'].'</span> : </p><p> '.$commenti_row['commento'].' </p></div>';
            }
           }
         }else echo '<p><strong>Lo studio che cerchi non esiste. </strong><a href="listastudi.php">Torna alla lista degli studi</a></p>';

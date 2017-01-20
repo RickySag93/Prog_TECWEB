@@ -43,11 +43,9 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
       }// else non puoi votare
     	echo '<p id="rank_txt">'.$rank_row['rank'].'</p></div>';
       echo '
-    	 <div class="big_list_element didascalia_el">
-            <div class="big_element_content">
+            <div class="big_list_element">
               <p> '.$row['didascalia'].'  </p>
-            </div>
-        </div>';
+            </div>';
         if(isset($_SESSION['usermail'])){
           if(isset($_SESSION['err_commento'])){
             echo $_SESSION['err_commento'];
@@ -72,7 +70,7 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
           while($commenti_row=$commenti_foto->fetch_array(MYSQLI_ASSOC)){
             echo '
                <div class="big_list_element">
-               <p> '.$commenti_row['username'].' scrive:</p><p> '.$commenti_row['commento'].' <span id="data_ora">'.$commenti_row['datainserimento'].' </span></p>
+                <p id="user_comment"> '.$commenti_row['username'].' scrive:</p><p> '.$commenti_row['commento'].' <span id="data_ora">'.$commenti_row['datainserimento'].' </span></p>
                </div>';
          }
        }
