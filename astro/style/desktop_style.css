@@ -514,6 +514,15 @@ color:white;
   color:
 }
 
+#content #p_voto {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
 #content #data_ora {
   font-size: 0.8em;
 }
@@ -537,9 +546,13 @@ color:white;
   width: 100%;
 }
 
-
 .element_content {
 	height:7.5em;
+}
+
+#p_didasc {
+  font-size: 1.2em;
+  font-style: italic;
 }
 
 #content .big_list_element{
@@ -621,13 +634,12 @@ color:white;
   MAPPA DEL SITO                           */
 
  #mappa {
-   height: 20em;
    margin-top: 6em;
-   margin-left: 2em;
+   margin-left: 5em;
  }
 
  #home_link {
-   font-size: 1.3em;
+   font-size: 1.4em;
  }
 
   #mappa ul {
@@ -636,6 +648,7 @@ color:white;
   }
 
   #mappa li {
+    font-size: 1.1em;
     margin-top: 1em;
   }
 
