@@ -50,11 +50,11 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
           $rank_query="SELECT SUM(voto) AS rank FROM giudicastudio WHERE studio=".$row['idstudio'];
           $rank_studio=$connessione->query($rank_query);
           $rank_row=mysqli_fetch_array($rank_studio);
-    	echo '<p>Vota subito!</p><div id="rank">';
+    	echo '<p id="p_voto">Vota subito!</p><div id="rank">';
       if(isset($_SESSION['usermail'])){
           echo ' <form method="post" action="backend/votastudio.php">
-                 <button name="up"><img src="parti/immagini/up.png"></button>
-                 <button name="down"><img src="parti/immagini/down.png"></button>
+                 <button name="up"><img src="parti/immagini/up.png" alt="mi piace"></button>
+                 <button name="down"><img src="parti/immagini/down.png" alt="non mi piace"></button>
                  <input type="hidden" name="studio" value="'.$idst.'" />
                  </form>';
       }// else non puoi votare
