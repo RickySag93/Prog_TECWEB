@@ -1,8 +1,8 @@
 <?php
    include "connessione.php";
    if($errore_DB==FALSE){
-    $password=$_POST['psw'];
-    $r_password=$_POST['rpsw'];
+    $password=$_POST['password'];
+    $r_password=$_POST['ripetiPassword'];
     $usermail=$_POST['email'];
     $nome=$_POST['nome'];
     $cognome=$_POST['cognome'];
@@ -23,9 +23,9 @@
                }else if(!$res_us->num_rows){// se l'username non è in uso...
                    if(preg_match($pwd_pattern,$password)){// se la pwd rispetta...
                       // Tutto ok! Inseriamo...
-                      $_POST['psw']=md5($_POST['psw']); // criptiamo la password
-                      $_POST['rpsw']=md5($_POST['rpsw']);
-                      $password=$_POST['psw'];
+                      $_POST['password']=md5($_POST['password']); // criptiamo la password
+                      $_POST['ripetiPassword']=md5($_POST['ripetiPassword']);
+                      $password=$_POST['password'];
                       $ins="INSERT INTO astrofilo(mail,nome,cognome,username,password) VALUES('$usermail','$nome','$cognome','$username','$password')";
                       if(!$connessione->query($ins)){
                         session_start();

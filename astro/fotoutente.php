@@ -33,21 +33,20 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
         $rank_row=mysqli_fetch_array($rank_foto);
 
     	echo'<h2>'.$row['titolo'].'</h2><img id="foto" src="'.$row['immagine'].'"  alt="'.$row['didascalia'].'" />';
-    	echo '<div id="rank">';
+      echo '
+            <div class="big_list_element">
+              <p id=p_didasc> '.$row['didascalia'].'  </p>
+            </div>';
+    	echo '<p id="p_voto">Vota subito!</p><div id="rank">';
       if(isset($_SESSION['usermail'])){
         echo '<form method="post" action="backend/votafoto.php">
                  <button name="up"><img src="parti/immagini/up.png" alt="mi piace"/></button>
-                 <button name="down"><img src="parti/immagini/down.png" alt=" non mi piace"/></button>
+                 <button name="down"><img src="parti/immagini/down.png" alt="non mi piace"/></button>
                  <input type="hidden" name="foto" value="'.$idft.'"/>
                  </form>';
       }// else non puoi votare
+
     	echo '<p id="rank_txt">'.$rank_row['rank'].'</p></div>';
-      echo '
-    	 <div class="big_list_element didascalia_el">
-            <div class="big_element_content">
-              <p> '.$row['didascalia'].'  </p>
-            </div>
-        </div>';
         if(isset($_SESSION['usermail'])){
           if(isset($_SESSION['err_commento'])){
             echo $_SESSION['err_commento'];
@@ -72,8 +71,7 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
           while($commenti_row=$commenti_foto->fetch_array(MYSQLI_ASSOC)){
             echo '
                <div class="big_list_element">
-               <p> '.$commenti_row['username'].' scrive:</p><p> '.$commenti_row['commento'].' <span id="data_ora">'.$commenti_row['datainserimento'].' </span></p>
-               </div>';
+               <p><span id="user_comment"> '.$commenti_row['username'].'</span> scrive in data <span id="data_ora">'.$commenti_row['datainserimento'].'</span> : </p><p> '.$commenti_row['commento'].' </p></div>';
          }
        }
      }else echo '<p><strong>La foto che cerchi non esiste. </strong><a href="listafoto.php">Torna alla lista delle foto</a></p>';
