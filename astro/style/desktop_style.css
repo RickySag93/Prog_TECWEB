@@ -68,6 +68,10 @@ html {
     margin-left: 15%;  /* distanzio il contenitore del menu dal logo, allineato con l'header */
   }
 
+  #content_menu ul {
+	 list-style-type: none;
+  }
+
   #content_menu a {  /* bottoni del menu*/
     float: left;
     color: white;              /*colore del testo link*/
@@ -86,7 +90,7 @@ html {
   	transition: 0.3s;
   }
 
-  #content_menu a:hover,#content_menu a:active{
+  #content_menu a:hover, #content_menu a:active{
       background-color: #595959;
       color:white;
       font-weight: bold;
@@ -463,12 +467,8 @@ color:white;
     margin-right: auto;
   }
 
-.first{
-  margin-top: 18%;
-}
-
-  .center_me{
-    display:block;
+  .p_rsucc{
+    margin-bottom: 1.2em;
     font-size: 1.5em;
     text-align: center;
   }
@@ -575,13 +575,6 @@ color:white;
   display:block;
 }
 
-#content .big_element_element span{
-    padding-top: 0px;
-    margin-left: 0;
-    margin-right: 0;
-    width:100%;
-    color:black;
-}
 
 #footer {
   background-color: #000;
