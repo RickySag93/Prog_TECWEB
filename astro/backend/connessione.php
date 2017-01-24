@@ -20,10 +20,11 @@
     */
     //error_reporting(E_ERROR | E_PARSE);
 
-    $host="127.0.0.1";
-    $user="root";
-    $pwd="";
-    $db="ASTROSERIO";
+    $host="localhost";
+    $user="mbottaro";
+    $pwd="toosie5eimooW6ai";
+    $db="mbottaro";
+   
    $connessione=new mysqli($host,$user,$pwd,$db);
    $msg_errore_DB="";
    $errore_DB=FALSE;
