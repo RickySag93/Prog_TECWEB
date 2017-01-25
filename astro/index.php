@@ -42,6 +42,7 @@ if($errore_DB==FALSE){
       while($row=$result->fetch_array(MYSQLI_ASSOC)){
         echo "<p>".$row['tipo'].", in data ".$row['inizio']."</p>";
       }
+      echo '<p class="link_eventi"><a href="eventi.php">Visualizza tutti gli eventi</a></p>';
       $result->free();
     }
   }
@@ -57,6 +58,7 @@ if($errore_DB==FALSE){
 			while($row=$result->fetch_array(MYSQLI_ASSOC)){
 				echo "<p>".$row['tipo'].", in data ".$row['inizio']."</p>";
 			}
+        echo '<p class="link_eventi"><a href="eventi.php">Visualizza tutti gli eventi</a></p>';
 			$result->free();
 		}
 	}
