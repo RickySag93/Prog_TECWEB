@@ -22,13 +22,13 @@ function rightButtonDivs(e) {
 
 
 
-function leftDivs(e) {
-  e.preventDefault();
+function leftDivs(event) {
+  event.preventDefault ? event.preventDefault() : (event.returnValue = false);
     plusDivs(-1);
 }
 
-function rightDivs(e) {
-    e.preventDefault();
+function rightDivs(event) {
+    event.preventDefault ? event.preventDefault() : (event.returnValue = false);
     plusDivs(1);
 }
 
