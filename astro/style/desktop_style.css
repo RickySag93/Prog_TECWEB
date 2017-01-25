@@ -527,7 +527,6 @@ color:white;
 .user_comment {
   font-style: italic;
   font-weight: bold;
-  color:
 }
 
 #content #p_voto {
@@ -762,19 +761,15 @@ color:white;
       -ms-transition: 0;
       -webkit-transition:0;
       -moz-transition: 0;
-      transition: 0;
   }
 
 
     #content_menu a:hover, #content_menu a:active{
-        background-color: none;
-        color:none;
         font-weight: normal;
         font-size: 1em;
   	  -ms-transition: 0;
   	  -webkit-transition: 0;
   	  -moz-transition: 0;
-  	  transition:0;
     }
 
     #tornasu {
