@@ -1,7 +1,7 @@
 <?php
 
      //PARAMETRI IN LOCALE(cioè botta)
-       $host="127.0.01";
+       $host="127.0.0.1";
        $user="root";
        $pwd="";
        $db="ASTROSERIO";
