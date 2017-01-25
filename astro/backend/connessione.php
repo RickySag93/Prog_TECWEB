@@ -1,11 +1,11 @@
 <?php
-   /*
-    * PARAMETRI IN LOCALE(cioè botta)
+
+     //PARAMETRI IN LOCALE(cioè botta)
        $host="127.0.01";
        $user="root";
        $pwd="";
        $db="ASTROSERIO";
-
+/*
     * PARAMETRI IN REMOTO
        $host="localhost";
        $user="mbottaro";
@@ -20,11 +20,7 @@
     */
     //error_reporting(E_ERROR | E_PARSE);
 
-    $host="localhost";
-    $user="mbottaro";
-    $pwd="toosie5eimooW6ai";
-    $db="mbottaro";
-   
+
    $connessione=new mysqli($host,$user,$pwd,$db);
    $msg_errore_DB="";
    $errore_DB=FALSE;
