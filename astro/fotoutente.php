@@ -35,9 +35,11 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
     	echo'<h2>'.$row['titolo'].'</h2><img id="foto" src="'.$row['immagine'].'"  alt="'.$row['didascalia'].'" />';
       echo '
             <div class="big_list_element">
-              <p id=p_didasc> '.$row['didascalia'].'  </p>
+              <p id="p_didasc"> '.$row['didascalia'].'  </p>
             </div>';
-    	echo '<p id="p_voto">Vota subito!</p><div id="rank">';
+            if(isset($_SESSION['usermail']))
+              echo '<p id="p_voto">Vota subito!</p>';
+      echo '<div id="rank">';
       if(isset($_SESSION['usermail'])){
         echo '<form method="post" action="backend/votafoto.php">
                  <button name="up"><img src="parti/immagini/up.png" alt="mi piace"/></button>
@@ -46,7 +48,7 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
                  </form>';
       }// else non puoi votare
 
-    	echo '<p id="rank_txt">'.$rank_row['rank'].'</p></div>';
+        echo '<p id="rank_txt"> <span xml:lang="en">Rank</span>: '.$rank_row['rank'].'</p></div>';
         if(isset($_SESSION['usermail'])){
           if(isset($_SESSION['err_commento'])){
             echo $_SESSION['err_commento'];
@@ -55,12 +57,13 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
 
            echo '<div id="box_comment">
           <form method="post" action="backend/commentafoto.php">
-              <textarea name="commento"></textarea>
+              <textarea name="commento"cols="1" rows="1"></textarea>
               <input type="hidden" name="foto" value="'.$idft.'" />
               <button id="comment" name="commenta">Commenta</button>
           </form>
-          </div><div id="list_comment"><h3>Commenti</h3>';
+          </div><div id="list_comment">';
         }
+          echo '<h3>Commenti</h3>';
         $commenti_foto_query= "SELECT astrofilo.username,astrofilo.imgprofilo,commentafoto.commento,commentafoto.datainserimento
                        FROM commentafoto JOIN astrofilo ON commentafoto.astrofilo=astrofilo.mail
                        WHERE commentafoto.idfoto='$idft'
@@ -71,13 +74,14 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
           while($commenti_row=$commenti_foto->fetch_array(MYSQLI_ASSOC)){
             echo '
                <div class="big_list_element">
-               <p><span id="user_comment"> '.$commenti_row['username'].'</span> scrive in data <span id="data_ora">'.$commenti_row['datainserimento'].'</span> : </p><p> '.$commenti_row['commento'].' </p></div>';
+               <p><span class="user_comment"> '.$commenti_row['username'].'</span> scrive in data <span class="data_ora">'.$commenti_row['datainserimento'].'</span> : </p><p> '.$commenti_row['commento'].' </p></div>';
          }
        }
      }else echo '<p><strong>La foto che cerchi non esiste. </strong><a href="listafoto.php">Torna alla lista delle foto</a></p>';
     }
    }else echo $msg_errore_DB;
-   echo '</div>';
+   if(isset($_SESSION['usermail']))
+    echo '</div>';
    echo file_get_contents("parti/fotoutente1.html");
 
 ?>
