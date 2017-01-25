@@ -42,9 +42,11 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
       echo '<div id="rank">';
       if(isset($_SESSION['usermail'])){
         echo '<form method="post" action="backend/votafoto.php">
+        <fieldset>
                  <button name="up"><img src="parti/immagini/up.png" alt="mi piace"/></button>
                  <button name="down"><img src="parti/immagini/down.png" alt="non mi piace"/></button>
                  <input type="hidden" name="foto" value="'.$idft.'"/>
+                 </fieldset>
                  </form>';
       }// else non puoi votare
 

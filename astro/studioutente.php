@@ -57,8 +57,8 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
       if(isset($_SESSION['usermail'])){
           echo ' <form method="post" action="backend/votastudio.php">
           <fieldset>
-                 <button class="down_b" name="up"><img src="parti/immagini/up.png" alt="mi piace" /></button>
-                 <button class="down_b" name="down"><img src="parti/immagini/down.png" alt="non mi piace" /></button>
+                 <button name="up"><img src="parti/immagini/up.png" alt="mi piace" /></button>
+                 <button name="down"><img src="parti/immagini/down.png" alt="non mi piace" /></button>
                  <input type="hidden" name="studio" value="'.$idst.'" />
                  </fieldset>
                  </form>';

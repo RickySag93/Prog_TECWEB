@@ -221,7 +221,6 @@ html {
 #profilo a {
   font-size: 1.1em;
   color: #efe597;
-  text-decoration: none;
   float: right;
 }
 
@@ -375,10 +374,7 @@ color:white;
 }
 
 #rank fieldset {
-  display: inline
-}
-
-.down_b {
+  width: 50%;
   display: inline-block;
 }
 
@@ -391,6 +387,11 @@ color:white;
   border: 1px solid #ccc;
   width: 15em;
 }
+
+#eventi h3 {
+  margin-top: 4em;
+}
+
 
 #modulo_reg label, #box_login label {
   display: block;
