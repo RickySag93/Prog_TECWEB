@@ -69,6 +69,16 @@ html {
     margin-left: 15%;  /* distanzio il contenitore del menu dal logo, allineato con l'header */
   }
 
+  #menu #main_content{
+    position:absolute;
+    left:0;
+    color:#28313f;
+
+  }
+  #menu #main_content:focus{
+    color:white;
+  }
+
   #content_menu ul {
 	 list-style-type: none;
   }
