@@ -47,7 +47,7 @@ a img {
     display: inline-block;
 }
 
-a:focus #logo_home, a:focus #tornasu, #slidebuttonleft:focus, #slidebuttonright:focus {
+a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
     border: 1px dotted yellow;
 }
 
@@ -129,13 +129,6 @@ a:focus #logo_home, a:focus #tornasu, #slidebuttonleft:focus, #slidebuttonright:
     display: none;
 }
 
-#tornasu {
-    position: absolute;
-    margin-top: 0.5em;
-    right: 0;
-    width: 4em;
-    height: 4em;
-}
 
 #header {
     background-color: #274f8e;
@@ -792,9 +785,6 @@ a:focus #logo_home, a:focus #tornasu, #slidebuttonleft:focus, #slidebuttonright:
         -ms-transition: 0;
         -webkit-transition: 0;
         -moz-transition: 0;
-    }
-    #tornasu {
-        display: none;
     }
     #eventi {
         /* contenitore degli eventi prec e succ*/
