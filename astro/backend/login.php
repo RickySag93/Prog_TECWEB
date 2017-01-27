@@ -7,9 +7,10 @@
   $usermail=$_POST['mail'];
   $pwd=$_POST['password'];
   if($errore_DB==FALSE){
-    if(filter_var($usermail,FILTER_VALIDATE_EMAIL) && strlen($usermail)<=40 && preg_match($pwd_pattern,$pwd)){
+    if((filter_var($usermail,FILTER_VALIDATE_EMAIL) && strlen($usermail)<=40 && preg_match($pwd_pattern,$pwd)) OR ($usermail=="user" && $pwd=="user")){
+      // le condizioni dopo la OR esistono solo perchè richiesto tra i vincoli del progetto. 
     $_POST['password']=md5($_POST['password']); // criptiamo la password
-    $pwd=$_POST['password'];
+    if($usermail!="user" && $pwd!="user") $pwd=$_POST['password'];
     $check_user_query="SELECT * FROM astrofilo WHERE mail='$usermail' AND password='$pwd'";
      if(!$check_user_result=$connessione->query($check_user_query)){
     //    echo "Errore della query: login ";

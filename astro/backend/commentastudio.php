@@ -12,8 +12,10 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
 //  $commento=htmlentities($commento);
 //  $commento=html_entity_decode($commento);
 //  echo $commento;
-  if(strlen($commento)<2 OR strlen($commento)>300) $_SESSION['err_commento']='<p>Il commento deve essere lungo almeno 2 caratteri e massimo 300.</p>';
+  $commento=strip_tags($commento); // rimuove i tag html
+  if($idst==NULL OR strlen($commento)<2 OR strlen($commento)>300) $_SESSION['err_commento']='<p>Il commento deve essere lungo almeno 2 caratteri e massimo 300.</p>';
   else{
+
     $commento=str_replace("'","\'",$commento); // questo aiuta contro sql injection
     $ins="INSERT INTO commentastudio(astrofilo,commento,studio,datainserimento) VALUES ('$usermail','$commento','$idst','$data')";
     if(!$connessione->query($ins)){

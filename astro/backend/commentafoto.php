@@ -9,10 +9,11 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
   $data=date("Y-m-d H:i:s");
   $commento=$_POST['commento'];
 //  echo $commento;
-//  $commento=htmlentities($commento);
+  $commento=htmlentities($commento);
 //  $commento=html_entity_decode($commento);
 //  echo $commento;
-  if(strlen($commento)<2 OR strlen($commento)>300) $_SESSION['err_commento']='<p>Il commento deve essere lungo almeno 2 caratteri e massimo 300.</p>';
+  $commento=strip_tags($commento); // rimuove i tag html
+  if($idft==NULL OR strlen($commento)<2 OR strlen($commento)>300) $_SESSION['err_commento']='<p>Il commento deve essere lungo almeno 2 caratteri e massimo 300.</p>';
   else{
     $commento=str_replace("'","\'",$commento); // questo aiuta contro sql injection
     $ins="INSERT INTO commentafoto(astrofilo,idfoto,commento,datainserimento) VALUES ('$usermail','$idft','$commento','$data')";
