@@ -33,8 +33,8 @@
                         header('Location: ../registrazione.php');
                       }else{
                         session_start();
-                         $_SESSION['err']='<span class="center_me first">Registrazione avvenuta con successo! </span>
-                         <span class="center_me"><a href="index.php">Torna in <span xml:lang="en">Home</span></a></span>';
+                         $_SESSION['err']='<p class="p_rsucc">Registrazione avvenuta con successo! </p>
+                         <p class="p_rsucc"><a href="index.php">Torna in <span xml:lang="en">Home</span></a></p>';
                          header('Location: ../login.php');
                        }
                    }else{//password non valida

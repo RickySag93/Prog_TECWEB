@@ -22,7 +22,7 @@
 		 if($result->num_rows>0){
 			// while stampa immagini
       while($row=$result->fetch_array(MYSQLI_ASSOC)){
-        echo '<a class="imgslide_a" href="fotoutente.php?idft='.$row['idfoto'].'"><img src="'.$row['immagine'].'" class="imgslide" alt="'.$row['didascalia'].'" /></a>';
+        echo '<a class="imgslide_a" tabindex="0" href="fotoutente.php?idft='.$row['idfoto'].'"><img src="'.$row['immagine'].'" class="imgslide" alt="'.$row['didascalia'].'" /></a>';
         echo '<div class="slide_didasc"> <p class="p_slide">'.$row['didascalia'].'</p></div>';
       }
 			$result->free();
@@ -42,6 +42,7 @@ if($errore_DB==FALSE){
       while($row=$result->fetch_array(MYSQLI_ASSOC)){
         echo "<p>".$row['tipo'].", in data ".$row['inizio']."</p>";
       }
+      echo '<p class="link_eventi"><a href="eventi.php">Visualizza tutti gli eventi</a></p>';
       $result->free();
     }
   }
@@ -57,6 +58,7 @@ if($errore_DB==FALSE){
 			while($row=$result->fetch_array(MYSQLI_ASSOC)){
 				echo "<p>".$row['tipo'].", in data ".$row['inizio']."</p>";
 			}
+        echo '<p class="link_eventi"><a href="eventi.php">Visualizza tutti gli eventi</a></p>';
 			$result->free();
 		}
 	}

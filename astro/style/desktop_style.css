@@ -9,9 +9,6 @@ html {
   min-height: 100%;
 }
 
-
-@media screen and (min-width: 921px) {  /* VERSIONE DESKTOP */
-
   body {
     font-family: Verdana, Helvetica, Georgia, sans-serif;
     max-width: 70%;
@@ -46,8 +43,16 @@ html {
     width: 4.375em;
     height: 4.375em;
     margin-left: 15%;
+    display: inline-block;
   }
 
+  a:focus #logo_home, a:focus #tornasu, #slidebuttonleft:focus,  #slidebuttonright:focus {
+    border: 1px dotted yellow;
+  }
+
+#button_login a:focus {
+  border: 2px dotted black;
+}
 
 #content_menu {
     width: 70%;
@@ -58,7 +63,6 @@ html {
     background-color: #28313f;
     position: fixed;
     left: 0;
-    min-width: 46em;
     width: 100%;
     height: 4.6875em;
     z-index: 2;
@@ -66,6 +70,20 @@ html {
 
   #content_menu {        /* contenitore degli elementi del menu, ossia i bottoni per i link*/
     margin-left: 15%;  /* distanzio il contenitore del menu dal logo, allineato con l'header */
+  }
+
+  #menu #main_content{
+    position:absolute;
+    left:0;
+    color:#28313f;
+
+  }
+  #menu #main_content:focus{
+    color:white;
+  }
+
+  #content_menu ul {
+	 list-style-type: none;
   }
 
   #content_menu a {  /* bottoni del menu*/
@@ -86,7 +104,7 @@ html {
   	transition: 0.3s;
   }
 
-  #content_menu a:hover,#content_menu a:active{
+  #content_menu a:hover, #content_menu a:active{
       background-color: #595959;
       color:white;
       font-weight: bold;
@@ -117,7 +135,6 @@ html {
   #header {
     background-color: #274f8e;
     clear: both;
-    min-width: 46em;
     margin-left: auto;
     margin-right: auto;
     padding-top: 5em;
@@ -146,6 +163,13 @@ html {
     margin-bottom: 1em;
     margin-left: 7%;
     float: left;
+  }
+
+  #content #eventi_pre .link_eventi, #content #eventi_next .link_eventi {
+    font-size: 1.3em;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
   }
 
   #eventi_pre, #eventi_next {     /*singolo contenitore degli eventi */
@@ -193,7 +217,6 @@ html {
     margin-left: 40%;
   }
 
-} /*fine desktop */
 
 #header h1 {
   color: white;
@@ -209,9 +232,8 @@ html {
 }
 
 #profilo a {
-  font-size: 0.9em;
+  font-size: 1.1em;
   color: #efe597;
-  text-decoration: none;
   float: right;
 }
 
@@ -360,8 +382,13 @@ color:white;
   display: none;
 }
 
-#modulo_reg fieldset, #box_login fieldset {
+#modulo_reg fieldset, #box_login fieldset, #rank fieldset, #box_comment fieldset {
   border: 0;
+}
+
+#rank fieldset {
+  width: 50%;
+  display: inline-block;
 }
 
 #modulo_reg input, #box_login input {
@@ -373,6 +400,11 @@ color:white;
   border: 1px solid #ccc;
   width: 15em;
 }
+
+#eventi h3 {
+  margin-top: 4em;
+}
+
 
 #modulo_reg label, #box_login label {
   display: block;
@@ -386,7 +418,7 @@ color:white;
   margin-top: 3em;
 }
 
-#button_reg, #log_b, #button_login button, #comment {
+#button_reg, #log_b, #button_login a, #comment {
   background: #e6e6dc;
   font-size: 1em;
   color: #900;
@@ -404,7 +436,7 @@ color:white;
   display: block;
 }
 
-#button_login button {
+#button_login a {
   float: right;
   margin-right: 1em;
   margin-bottom: 2em;
@@ -429,7 +461,7 @@ color:white;
   width: 80%;
   background-color: #000;
   height: 3em;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 
 #rank button  {
@@ -449,9 +481,10 @@ color:white;
 
 #content #rank_txt {
   font-size: 1.5em;
-  width: 0;
-  padding-top: 0.35em;;
-  margin-right: 8%;
+  padding-top: 0.35em;
+  margin-right: 10%;
+  width: auto;
+  margin-left: 0;
   float: right;
   color: white;
 }
@@ -463,12 +496,8 @@ color:white;
     margin-right: auto;
   }
 
-.first{
-  margin-top: 18%;
-}
-
-  .center_me{
-    display:block;
+  .p_rsucc{
+    margin-bottom: 1.2em;
     font-size: 1.5em;
     text-align: center;
   }
@@ -508,10 +537,9 @@ color:white;
   padding-left: 0.5em;
 }
 
-#user_comment {
+.user_comment {
   font-style: italic;
   font-weight: bold;
-  color:
 }
 
 #content #p_voto {
@@ -523,11 +551,11 @@ color:white;
   font-size: 1.2em;
 }
 
-#content #data_ora {
+#content .data_ora {
   font-size: 0.8em;
 }
 
-#content .not_single_studio:hover, #content .not_single_studio:active{
+#content .not_single_studio:hover, #content .not_single_studio:active, #content .element_content:focus {
   border: 4px solid black;
 }
 
@@ -575,13 +603,6 @@ color:white;
   display:block;
 }
 
-#content .big_element_element span{
-    padding-top: 0px;
-    margin-left: 0;
-    margin-right: 0;
-    width:100%;
-    color:black;
-}
 
 #footer {
   background-color: #000;
@@ -635,20 +656,20 @@ color:white;
 
  #mappa {
    margin-top: 6em;
-   margin-left: 5em;
+   margin-left: 20%;
  }
 
  #home_link {
-   font-size: 1.4em;
+   font-size: 1.7em;
  }
 
   #mappa ul {
-    list-style-type: none;
+
     margin-left: 2em;
   }
 
   #mappa li {
-    font-size: 1.1em;
+    font-size: 1.25em;
     margin-top: 1em;
   }
 
@@ -656,6 +677,21 @@ color:white;
 @media screen and (max-width: 1400px){
   .slideshow {
     width: 100%;
+    height: 100%;
+  }
+
+  .imgslide {
+    width: 100%;
+    height: 79%;
+  }
+
+  .slide_didasc{
+    bottom: 10.5%;
+    height: 10.5%;
+  }
+
+  .arrowbar{
+  height: 10.5%;
   }
 }
 
@@ -673,6 +709,10 @@ color:white;
       font-family: Verdana, Helvetica, Georgia, sans-serif;
       color: #000000;                   /*  colore del testo su tutta la pagina    */
       min-width: 380px;
+      max-width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      background-image: none;
     }
 
     a img {
@@ -682,13 +722,29 @@ color:white;
     #content {        /*  contenuto della pagina, non riguarda i lati, viene escluso il menu fixed  */
       background-color: #edeeef;
       min-height:100%;
-      padding-bottom: 9.375em;
       width: 100%;
     }
 
     #logo_home {
       display: none;
     }
+
+      #menu {
+                   /* contenitore del menu fixed con gli elementi del menu più il logo a sinistra*/
+        background-color: #28313f;
+        position: static;
+        z-index: 0;
+        height: auto;
+      }
+
+      #content_menu {        /* contenitore degli elementi del menu, ossia i bottoni per i link*/
+        margin-left: 0;  /* distanzio il contenitore del menu dal logo, allineato con l'header */
+        width: 100%;
+      }
+
+      #content_menu ul {
+    	 list-style-type: none;
+      }
 
     #header {
       background-color: #274f8e;
@@ -717,6 +773,8 @@ color:white;
       width: 13.8em;
       margin-left: auto;
       margin-right: auto;
+      min-width: 0;
+      float: none;
     }
 
     #button_reg, #log_b {
@@ -725,34 +783,37 @@ color:white;
     }
 
     #content_menu a,#content_menu #home_m {
-      color: white;
-      background-color: #28313f;
-      padding-top: 1em;
-      padding-bottom: 1em;
-      border: 0px solid black;
-      height: 1em;
-      width: auto;
-      text-align: center;
-      text-decoration: none;
+      margin-top: 0;
+      float: none;
       display: block;
-      font-size: 1em;
+      -ms-transition: 0;
+      -webkit-transition:0;
+      -moz-transition: 0;
   }
+
+
+    #content_menu a:hover, #content_menu a:active{
+        font-weight: normal;
+        font-size: 1em;
+  	  -ms-transition: 0;
+  	  -webkit-transition: 0;
+  	  -moz-transition: 0;
+    }
 
     #tornasu {
       display: none;
     }
 
+    #eventi {               /* contenitore degli eventi prec e succ*/
+      height: 100%
+    }
+
     .contorno {                        /* contenitore che contiene il contorno per gli eventi*/
+      float: none;
       width: 70%;
       max-width: 22em;
-      height: 28em;
-      padding: 0.2em;
-      color: white;
-      background-color: black;
       margin-right: auto;
       margin-left: auto;
-      margin-top: 2em;
-      margin-bottom: 1em;
     }
 
     #content .list_element{
@@ -775,24 +836,7 @@ color:white;
       height: auto;
     }
 
-    #eventi_pre, #eventi_next {     /*singolo contenitore degli eventi */
-        background-color: #fff;
-        border: 1px solid black;
-        height: 26.55em;
-        max-width:99%;
-        overflow-y:auto;
-        color:black;
-    }
 
-    #content #eventi_pre p, #content #eventi_next p {
-      padding-bottom: 5px;
-      padding-left: 2px;
-      border-bottom: 1px solid black;
-      padding-top: 0px;
-      margin-left: 0;
-      margin-right: 0;
-      width:100%;
-    }
 
 
 /*
