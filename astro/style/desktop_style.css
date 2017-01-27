@@ -50,6 +50,9 @@ html {
     border: 1px dotted yellow;
   }
 
+#button_login a:focus {
+  border: 2px dotted black;
+}
 
 #content_menu {
     width: 70%;
@@ -415,7 +418,7 @@ color:white;
   margin-top: 3em;
 }
 
-#button_reg, #log_b, #button_login button, #comment {
+#button_reg, #log_b, #button_login a, #comment {
   background: #e6e6dc;
   font-size: 1em;
   color: #900;
@@ -433,7 +436,7 @@ color:white;
   display: block;
 }
 
-#button_login button {
+#button_login a {
   float: right;
   margin-right: 1em;
   margin-bottom: 2em;
@@ -653,20 +656,20 @@ color:white;
 
  #mappa {
    margin-top: 6em;
-   margin-left: 5em;
+   margin-left: 20%;
  }
 
  #home_link {
-   font-size: 1.4em;
+   font-size: 1.7em;
  }
 
   #mappa ul {
-    list-style-type: none;
+
     margin-left: 2em;
   }
 
   #mappa li {
-    font-size: 1.1em;
+    font-size: 1.25em;
     margin-top: 1em;
   }
 
@@ -674,6 +677,21 @@ color:white;
 @media screen and (max-width: 1400px){
   .slideshow {
     width: 100%;
+    height: 100%;
+  }
+
+  .imgslide {
+    width: 100%;
+    height: 79%;
+  }
+
+  .slide_didasc{
+    bottom: 10.5%;
+    height: 10.5%;
+  }
+
+  .arrowbar{
+  height: 10.5%;
   }
 }
 
