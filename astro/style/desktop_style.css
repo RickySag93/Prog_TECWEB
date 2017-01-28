@@ -434,7 +434,7 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
     display: block;
 }
 
-#comment {
+#comment, noscript a {
     display: block;
 }
 
