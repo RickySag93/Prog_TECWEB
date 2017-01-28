@@ -21,6 +21,11 @@
 	  }else if(!$connessione->connect_errno){
 		 if($result->num_rows>0){
 			// while stampa immagini
+      echo '<noscript>';
+      while($row=$result->fetch_array(MYSQLI_ASSOC)){ // while che si sostituisce alle immagini in caso non vada javascript
+        echo '<a href="fotoutente.php?idft='.$row['idfoto'].'">alt="'.$row['didascalia'].'"</a>';
+      }
+      echo '</noscript>';
       while($row=$result->fetch_array(MYSQLI_ASSOC)){
         echo '<a class="imgslide_a" tabindex="0" href="fotoutente.php?idft='.$row['idfoto'].'"><img src="'.$row['immagine'].'" class="imgslide" alt="'.$row['didascalia'].'" /></a>';
         echo '<div class="slide_didasc"> <p class="p_slide">'.$row['didascalia'].'</p></div>';
