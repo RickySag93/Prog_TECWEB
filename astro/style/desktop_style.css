@@ -680,6 +680,7 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
     .slideshow {
         width: 100%;
         height:auto;
+        min-height: 10em;
     }
     .slideshow .slide_didasc {
         bottom: 10.5%;
@@ -689,8 +690,8 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
         height: 10.5%;
     }
     .imgslide{
+      position: static;
       height: 79%;
-      bottom:21%;
     }
 }
 
