@@ -1,14 +1,14 @@
 <?php
-/*
+
      //PARAMETRI IN LOCALE(cioè botta)
        $host="127.0.0.1";
        $user="root";
        $pwd="";
        $db="ASTROSERIO";
-       * */
+
 /*
-    * PARAMETRI IN REMOTO*/
-       $host="localhost";
+     //PARAMETRI IN REMOTO*/
+    /*   $host="localhost";
        $user="mbottaro";
        $pwd="toosie5eimooW6ai";
        $db="mbottaro";

@@ -679,19 +679,7 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
 @media screen and (max-width: 1400px) {
     .slideshow {
         width: 100%;
-        height:auto;
-        min-height: 10em;
-    }
-    .slideshow .slide_didasc {
-        bottom: 10.5%;
-        height: 10.5%;
-    }
-    .slideshow .arrowbar {
-        height: 10.5%;
-    }
-    .imgslide{
-      position: static;
-      height: 79%;
+        min-width: 400px;
     }
 }
 
@@ -818,11 +806,27 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
         width: 90%;
         height: auto;
     }
-    
+
 #eventi_pre, #eventi_next {
     /*singolo contenitore degli eventi */
     height: 93%;
-   
+
+}
+.slideshow{
+  height:25em;
+}
+.imgslide{
+  height:18em;
+}
+.arrowbar{
+  height: 3.5em;
+}
+.slide_didasc{
+  bottom:3.5em;
+  height:3.5em;
+}
+#content .p_slide{
+  font-size:  1.2em;
 }
     /*
   FINE HOME
