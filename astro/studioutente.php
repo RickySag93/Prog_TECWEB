@@ -22,7 +22,8 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
                   FROM studia JOIN astrofilo ON studia.astrofilo=astrofilo.mail
                   WHERE studia.idstudio='$idst'";
     if(!$result=$connessione->query($data_studio)){
-      echo "Errore della query: ".$connessione->error.".";
+      //echo "Errore della query: ".$connessione->error.".";
+        echo '<p>Abbiamo riscontrato dei problemi nel visualizzare lo studio.</p>';
     }else{
       if($result->num_rows > 0){ // potrebbe essere passato l'id di uno studio non esistente.
         // Questo controllo impedisce di "visualizzare" studi inesistenti

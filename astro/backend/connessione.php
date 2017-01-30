@@ -1,17 +1,17 @@
 <?php
-
+/*
      //PARAMETRI IN LOCALE(cioè botta)
        $host="127.0.0.1";
        $user="root";
        $pwd="";
        $db="ASTROSERIO";
+       * */
 /*
-    * PARAMETRI IN REMOTO
+    * PARAMETRI IN REMOTO*/
        $host="localhost";
        $user="mbottaro";
        $pwd="toosie5eimooW6ai";
        $db="mbottaro";
-    * */
     /*
     In fase di sviluppo, debug e test dev'essere disabilitato il metodo error_reporting().
     Questo metodo non stampa gli eventuali warning generati. Alla consegna, invece, il metodo dovrà essere abilitato.

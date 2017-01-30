@@ -77,6 +77,7 @@ function showDivs(n) {
     x[slideIndex - 1].style.display = "block";
     y[slideIndex - 1].style.display = "block";
     z[slideIndex - 1].style.display = "block";
+    x[slideIndex - 1].focus();
     var g = document.getElementById("number");
     g.innerHTML = "".concat(slideIndex, "/", tot);
 }

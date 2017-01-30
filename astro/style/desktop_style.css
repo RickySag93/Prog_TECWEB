@@ -36,7 +36,7 @@ a img {
     /*  contenuto della pagina, non riguarda i lati, viene escluso il menu fixed  */
     background-color: #edeeef;
     min-height: 100%;
-    padding-bottom: 10em;
+    padding-bottom: 11em;
 }
 
 #logo_home {
@@ -62,7 +62,7 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
 #menu {
     /* contenitore del menu fixed con gli elementi del menu più il logo a sinistra*/
     background-color: #28313f;
-    position: fixed;
+    position: absolute;
     left: 0;
     width: 100%;
     height: 4.6875em;
@@ -612,7 +612,7 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    height: 8em;
+    height: 11em;
     color: white;
 }
 
@@ -722,6 +722,7 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
         background-color: #edeeef;
         min-height: 100%;
         width: 100%;
+        padding-bottom: 11em;
     }
     #logo_home {
         display: none;
@@ -795,6 +796,7 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
         /* contenitore che contiene il contorno per gli eventi*/
         float: none;
         width: 70%;
+        height: 20em;
         max-width: 22em;
         margin-right: auto;
         margin-left: auto;
@@ -816,6 +818,12 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
         width: 90%;
         height: auto;
     }
+    
+#eventi_pre, #eventi_next {
+    /*singolo contenitore degli eventi */
+    height: 93%;
+   
+}
     /*
   FINE HOME
 */
