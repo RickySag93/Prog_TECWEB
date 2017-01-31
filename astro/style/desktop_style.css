@@ -155,7 +155,7 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
 .contorno {
     /* contenitore che contiene il contorno per gli eventi*/
     width: 38%;
-    height: 28.125em;
+    height: auto;
     padding: 0.1875em;
     color: white;
     background-color: black;
@@ -176,9 +176,8 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
     /*singolo contenitore degli eventi */
     background-color: #fff;
     border: 1px solid black;
-    height: 26.875em;
+    height: 93%;
     max-width: 99%;
-    overflow-y: auto;
     padding-right: 0.125em;
     color: black;
 }
