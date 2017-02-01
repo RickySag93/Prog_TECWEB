@@ -24,7 +24,7 @@ DELIMITER $$
 --
 -- Procedures
 --
-CREATE DEFINER=`mbottaro`@`localhost` PROCEDURE `eventistudiatigruppo` (IN `nogr` VARCHAR(40), IN `cigr` VARCHAR(40))  IF nogr='TUTTI' THEN
+CREATE  PROCEDURE `eventistudiatigruppo` (IN `nogr` VARCHAR(40), IN `cigr` VARCHAR(40))  IF nogr='TUTTI' THEN
 
 SELECT gruppo.nome,gruppo.citta,studia.evento,studia.inizio, studia.fine
 FROM studia NATURAL JOIN parte NATURAL JOIN gruppo
@@ -37,7 +37,7 @@ FROM studia JOIN parte ON studia.astrofilo=parte.astrofilo JOIN coinvolto ON stu
 WHERE gruppo.nome=nogr AND gruppo.citta=cigr;
 END IF$$
 
-CREATE DEFINER=`mbottaro`@`localhost` PROCEDURE `locrankmin` (IN `minimo` INT)  NO SQL
+CREATE  PROCEDURE `locrankmin` (IN `minimo` INT)  NO SQL
 SELECT nomeloc, provloc,AVG(voto) AS rank
 FROM giudica
 GROUP BY nomeloc,provloc
@@ -46,7 +46,7 @@ HAVING rank>=minimo$$
 --
 -- Functions
 --
-CREATE DEFINER=`mbottaro`@`localhost` FUNCTION `migliorgruppo` () RETURNS VARCHAR(83) CHARSET latin1 BEGIN
+CREATE  FUNCTION `migliorgruppo` () RETURNS VARCHAR(83) CHARSET latin1 BEGIN
 
     DECLARE x varchar(40);
     DECLARE y varchar(40);
@@ -57,19 +57,19 @@ CREATE DEFINER=`mbottaro`@`localhost` FUNCTION `migliorgruppo` () RETURNS VARCHA
     WHERE numero = (SELECT MAX(numero)
                     FROM gruppistudi)
     LIMIT 1;
-    
+
     SELECT citta INTO y
     FROM gruppistudi
     WHERE numero = (SELECT MAX(numero)
                     FROM gruppistudi)
     LIMIT 1;
-    
+
     SET z=CONCAT(x,' - ', y);
     RETURN z;
 
 END$$
 
-CREATE DEFINER=`mbottaro`@`localhost` FUNCTION `numstudiastr` (`usr` VARCHAR(20)) RETURNS INT(4) BEGIN
+CREATE  FUNCTION `numstudiastr` (`usr` VARCHAR(20)) RETURNS INT(4) BEGIN
     DECLARE num int;
     SELECT COUNT(username)
     INTO num
@@ -79,20 +79,20 @@ CREATE DEFINER=`mbottaro`@`localhost` FUNCTION `numstudiastr` (`usr` VARCHAR(20)
     RETURN num;
 END$$
 
-CREATE DEFINER=`mbottaro`@`localhost` FUNCTION `primostudio` (`ev` VARCHAR(40), `cor` VARCHAR(40)) RETURNS VARCHAR(40) CHARSET latin1 BEGIN
+CREATE  FUNCTION `primostudio` (`ev` VARCHAR(40), `cor` VARCHAR(40)) RETURNS VARCHAR(40) CHARSET latin1 BEGIN
     DECLARE t DATETIME;
     CREATE TEMPORARY TABLE supp(
         corpo varchar(40),
         evento varchar(40),
         inizio datetime
     );
-    
+
     INSERT INTO supp(corpo,evento,inizio)
     SELECT coinvolto.corpo,studia.evento,inizio
     FROM coinvolto JOIN studia ON coinvolto.id=studia.idstudio
     ORDER BY inizio ASC;
- 
-    SELECT inizio 
+
+    SELECT inizio
     INTO t
     FROM supp
     WHERE evento=ev
@@ -389,9 +389,9 @@ CREATE TRIGGER `eliminaeventodacorpo` BEFORE DELETE ON `corpo` FOR EACH ROW BEGI
     );
 
     INSERT supp(ID)
-    SELECT id 
+    SELECT id
     FROM coinvolto
-    WHERE corpo=c;    
+    WHERE corpo=c;
 
     DELETE FROM coinvolto
     WHERE id IN (SELECT ID
@@ -559,7 +559,7 @@ INSERT INTO `giudica` (`nomeloc`, `provloc`, `astrofilo`, `voto`) VALUES
 --
 DELIMITER $$
 CREATE TRIGGER `ControlloVotoI` BEFORE INSERT ON `giudica` FOR EACH ROW BEGIN
-	IF NEW.voto < 1 THEN 
+	IF NEW.voto < 1 THEN
 		SET NEW.voto = 1;
 	ELSEIF NEW.voto > 5 THEN
 		SET NEW.voto = 5;
@@ -569,7 +569,7 @@ $$
 DELIMITER ;
 DELIMITER $$
 CREATE TRIGGER `ControlloVotoU` BEFORE UPDATE ON `giudica` FOR EACH ROW BEGIN
-	IF NEW.voto < 1 OR NEW.voto > 5 THEN 
+	IF NEW.voto < 1 OR NEW.voto > 5 THEN
 		SET NEW.voto = OLD.voto;
 	END IF;
 END
@@ -970,7 +970,7 @@ DELIMITER $$
 CREATE TRIGGER `checkdatastudia1` BEFORE INSERT ON `studia` FOR EACH ROW BEGIN
     IF NEW.inizio > NEW.fine THEN
         SET NEW.fine=ADDTIME(NEW.inizio,'0:1:1');
-    END IF; 
+    END IF;
 END
 $$
 DELIMITER ;
@@ -978,7 +978,7 @@ DELIMITER $$
 CREATE TRIGGER `checkdatastudia2` BEFORE UPDATE ON `studia` FOR EACH ROW BEGIN
     IF NEW.inizio > NEW.fine THEN
         SET NEW.fine=ADDTIME(NEW.inizio,'0:1:1');
-    END IF; 
+    END IF;
 END
 $$
 DELIMITER ;
@@ -1010,7 +1010,7 @@ INSERT INTO `telescopio` (`modello`, `marca`, `tipo`) VALUES
 --
 DROP TABLE IF EXISTS `counteveastr`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`mbottaro`@`localhost` SQL SECURITY DEFINER VIEW `counteveastr`  AS  select `eveastr`.`astrofilo` AS `astrofilo`,`eveastr`.`evento` AS `evento`,count(0) AS `num` from `eveastr` group by `eveastr`.`astrofilo`,`eveastr`.`evento` ;
+CREATE ALGORITHM=UNDEFINED  SQL SECURITY DEFINER VIEW `counteveastr`  AS  select `eveastr`.`astrofilo` AS `astrofilo`,`eveastr`.`evento` AS `evento`,count(0) AS `num` from `eveastr` group by `eveastr`.`astrofilo`,`eveastr`.`evento` ;
 
 -- --------------------------------------------------------
 
@@ -1019,7 +1019,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`mbottaro`@`localhost` SQL SECURITY DEFINER V
 --
 DROP TABLE IF EXISTS `eveastr`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`mbottaro`@`localhost` SQL SECURITY DEFINER VIEW `eveastr`  AS  select `astrofilo`.`username` AS `astrofilo`,`studia`.`evento` AS `evento` from (`studia` join `astrofilo` on((`studia`.`astrofilo` = `astrofilo`.`mail`))) group by `studia`.`astrofilo`,`studia`.`evento`,`studia`.`inizio`,`studia`.`fine` ;
+CREATE ALGORITHM=UNDEFINED  SQL SECURITY DEFINER VIEW `eveastr`  AS  select `astrofilo`.`username` AS `astrofilo`,`studia`.`evento` AS `evento` from (`studia` join `astrofilo` on((`studia`.`astrofilo` = `astrofilo`.`mail`))) group by `studia`.`astrofilo`,`studia`.`evento`,`studia`.`inizio`,`studia`.`fine` ;
 
 -- --------------------------------------------------------
 
@@ -1028,7 +1028,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`mbottaro`@`localhost` SQL SECURITY DEFINER V
 --
 DROP TABLE IF EXISTS `fotobyrank`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`mbottaro`@`localhost` SQL SECURITY DEFINER VIEW `fotobyrank`  AS  select `giudicafoto`.`idfoto` AS `idfoto`,avg(`giudicafoto`.`voto`) AS `rank` from `giudicafoto` group by `giudicafoto`.`idfoto` order by avg(`giudicafoto`.`voto`) desc ;
+CREATE ALGORITHM=UNDEFINED  SQL SECURITY DEFINER VIEW `fotobyrank`  AS  select `giudicafoto`.`idfoto` AS `idfoto`,avg(`giudicafoto`.`voto`) AS `rank` from `giudicafoto` group by `giudicafoto`.`idfoto` order by avg(`giudicafoto`.`voto`) desc ;
 
 -- --------------------------------------------------------
 
@@ -1037,7 +1037,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`mbottaro`@`localhost` SQL SECURITY DEFINER V
 --
 DROP TABLE IF EXISTS `gruppistudi`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`mbottaro`@`localhost` SQL SECURITY DEFINER VIEW `gruppistudi`  AS  select `numstudi`.`gruppo` AS `gruppo`,`numstudi`.`citta` AS `citta`,sum(`numstudi`.`num`) AS `numero` from `numstudi` group by `numstudi`.`gruppo`,`numstudi`.`citta` ;
+CREATE ALGORITHM=UNDEFINED  SQL SECURITY DEFINER VIEW `gruppistudi`  AS  select `numstudi`.`gruppo` AS `gruppo`,`numstudi`.`citta` AS `citta`,sum(`numstudi`.`num`) AS `numero` from `numstudi` group by `numstudi`.`gruppo`,`numstudi`.`citta` ;
 
 -- --------------------------------------------------------
 
@@ -1046,7 +1046,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`mbottaro`@`localhost` SQL SECURITY DEFINER V
 --
 DROP TABLE IF EXISTS `locoss`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`mbottaro`@`localhost` SQL SECURITY DEFINER VIEW `locoss`  AS  select distinct `giudica`.`provloc` AS `prov`,`giudica`.`nomeloc` AS `loc` from (`giudica` left join `localita` on((`localita`.`nome` = `giudica`.`nomeloc`))) where (`localita`.`prov` = `giudica`.`provloc`) ;
+CREATE ALGORITHM=UNDEFINED  SQL SECURITY DEFINER VIEW `locoss`  AS  select distinct `giudica`.`provloc` AS `prov`,`giudica`.`nomeloc` AS `loc` from (`giudica` left join `localita` on((`localita`.`nome` = `giudica`.`nomeloc`))) where (`localita`.`prov` = `giudica`.`provloc`) ;
 
 -- --------------------------------------------------------
 
@@ -1055,7 +1055,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`mbottaro`@`localhost` SQL SECURITY DEFINER V
 --
 DROP TABLE IF EXISTS `locoss2`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`mbottaro`@`localhost` SQL SECURITY DEFINER VIEW `locoss2`  AS  select `locoss`.`prov` AS `prov`,count(0) AS `tot` from `locoss` group by `locoss`.`prov` ;
+CREATE ALGORITHM=UNDEFINED  SQL SECURITY DEFINER VIEW `locoss2`  AS  select `locoss`.`prov` AS `prov`,count(0) AS `tot` from `locoss` group by `locoss`.`prov` ;
 
 -- --------------------------------------------------------
 
@@ -1064,7 +1064,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`mbottaro`@`localhost` SQL SECURITY DEFINER V
 --
 DROP TABLE IF EXISTS `mediagiudizi`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`mbottaro`@`localhost` SQL SECURITY DEFINER VIEW `mediagiudizi`  AS  select `giudica`.`astrofilo` AS `astrofilo`,avg(`giudica`.`voto`) AS `media` from `giudica` group by `giudica`.`astrofilo` ;
+CREATE ALGORITHM=UNDEFINED  SQL SECURITY DEFINER VIEW `mediagiudizi`  AS  select `giudica`.`astrofilo` AS `astrofilo`,avg(`giudica`.`voto`) AS `media` from `giudica` group by `giudica`.`astrofilo` ;
 
 -- --------------------------------------------------------
 
@@ -1073,7 +1073,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`mbottaro`@`localhost` SQL SECURITY DEFINER V
 --
 DROP TABLE IF EXISTS `numcor`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`mbottaro`@`localhost` SQL SECURITY DEFINER VIEW `numcor`  AS  select `coinvolto`.`evento` AS `ev`,`studia`.`inizio` AS `ini`,`studia`.`fine` AS `fin`,`studia`.`idstudio` AS `studio`,count(0) AS `num` from (`coinvolto` join `studia` on((`coinvolto`.`id` = `studia`.`idstudio`))) group by `coinvolto`.`evento`,`studia`.`inizio`,`studia`.`fine` ;
+CREATE ALGORITHM=UNDEFINED  SQL SECURITY DEFINER VIEW `numcor`  AS  select `coinvolto`.`evento` AS `ev`,`studia`.`inizio` AS `ini`,`studia`.`fine` AS `fin`,`studia`.`idstudio` AS `studio`,count(0) AS `num` from (`coinvolto` join `studia` on((`coinvolto`.`id` = `studia`.`idstudio`))) group by `coinvolto`.`evento`,`studia`.`inizio`,`studia`.`fine` ;
 
 -- --------------------------------------------------------
 
@@ -1082,7 +1082,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`mbottaro`@`localhost` SQL SECURITY DEFINER V
 --
 DROP TABLE IF EXISTS `numstudi`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`mbottaro`@`localhost` SQL SECURITY DEFINER VIEW `numstudi`  AS  select `studia`.`astrofilo` AS `astrofilo`,`gruppo`.`nome` AS `gruppo`,`gruppo`.`citta` AS `citta`,count(0) AS `num` from ((`studia` join `parte` on((`studia`.`astrofilo` = `parte`.`astrofilo`))) join `gruppo` on((`parte`.`idgr` = `gruppo`.`idgr`))) group by `studia`.`astrofilo`,`gruppo`.`nome`,`gruppo`.`citta` ;
+CREATE ALGORITHM=UNDEFINED  SQL SECURITY DEFINER VIEW `numstudi`  AS  select `studia`.`astrofilo` AS `astrofilo`,`gruppo`.`nome` AS `gruppo`,`gruppo`.`citta` AS `citta`,count(0) AS `num` from ((`studia` join `parte` on((`studia`.`astrofilo` = `parte`.`astrofilo`))) join `gruppo` on((`parte`.`idgr` = `gruppo`.`idgr`))) group by `studia`.`astrofilo`,`gruppo`.`nome`,`gruppo`.`citta` ;
 
 -- --------------------------------------------------------
 
@@ -1091,7 +1091,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`mbottaro`@`localhost` SQL SECURITY DEFINER V
 --
 DROP TABLE IF EXISTS `numtelescopi`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`mbottaro`@`localhost` SQL SECURITY DEFINER VIEW `numtelescopi`  AS  select `analizzato`.`telescopio` AS `modello`,count(`analizzato`.`telescopio`) AS `num` from `analizzato` group by `analizzato`.`telescopio` ;
+CREATE ALGORITHM=UNDEFINED  SQL SECURITY DEFINER VIEW `numtelescopi`  AS  select `analizzato`.`telescopio` AS `modello`,count(`analizzato`.`telescopio`) AS `num` from `analizzato` group by `analizzato`.`telescopio` ;
 
 -- --------------------------------------------------------
 
@@ -1100,7 +1100,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`mbottaro`@`localhost` SQL SECURITY DEFINER V
 --
 DROP TABLE IF EXISTS `relazioni`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`mbottaro`@`localhost` SQL SECURITY DEFINER VIEW `relazioni`  AS  select `parte`.`astrofilo` AS `astro1`,`p`.`astrofilo` AS `astro2` from (`parte` join `parte` `p` on((`parte`.`idgr` = `p`.`idgr`))) where (`parte`.`astrofilo` <> `p`.`astrofilo`) ;
+CREATE ALGORITHM=UNDEFINED  SQL SECURITY DEFINER VIEW `relazioni`  AS  select `parte`.`astrofilo` AS `astro1`,`p`.`astrofilo` AS `astro2` from (`parte` join `parte` `p` on((`parte`.`idgr` = `p`.`idgr`))) where (`parte`.`astrofilo` <> `p`.`astrofilo`) ;
 
 -- --------------------------------------------------------
 
@@ -1109,7 +1109,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`mbottaro`@`localhost` SQL SECURITY DEFINER V
 --
 DROP TABLE IF EXISTS `sommagiudizi`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`mbottaro`@`localhost` SQL SECURITY DEFINER VIEW `sommagiudizi`  AS  select `giudica`.`astrofilo` AS `astrofilo`,avg(`giudica`.`voto`) AS `tot` from `giudica` group by `giudica`.`astrofilo` ;
+CREATE ALGORITHM=UNDEFINED  SQL SECURITY DEFINER VIEW `sommagiudizi`  AS  select `giudica`.`astrofilo` AS `astrofilo`,avg(`giudica`.`voto`) AS `tot` from `giudica` group by `giudica`.`astrofilo` ;
 
 --
 -- Indexes for dumped tables

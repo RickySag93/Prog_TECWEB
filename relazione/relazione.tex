@@ -53,7 +53,6 @@
 	\includegraphics[scale=0.3]{images/unipd_logo.png}\\[1cm] % Include a department/university logo - this will require the graphicx package
 	\textsc{\Large Relazione progetto per il corso di tecnologie web}\\[0.5cm] % Major heading such as course name
 	\textsc{\large Corso di Laurea in Informatica, A.A. 2016-2017}\\[0.5cm] % Minor heading such as course title
-	
 	%----------------------------------------------------------------------------------------
 	%	TITLE SECTION
 	%----------------------------------------------------------------------------------------
@@ -100,7 +99,10 @@
 	\vfill % Fill the rest of the page with whitespace
 	
 	\end{titlepage}
-	
+	\newpage
+	\textsc{\Large Link al sito\\ }link\\[0.5cm]
+	\textsc{\Large Mail del referente:\\ }mattia.bottaro@studenti.unipd.it\\[0.5cm]
+	\textsc{\Large Login User: }\\[0.5cm]
 	\newpage
 	\tableofcontents
 	\listoffigures
@@ -140,7 +142,7 @@
 	\includegraphics[scale=0.3]{images/tritanopia.jpg}\\[1cm] \caption{Utente affetto da tritanopia}
 	\end{figure}
 	\begin{figure}
-	\includegraphics[scale=0.3]{images/test2.png}\\[1cm] \caption{pagine per la registrazione al sito} \end{figure}
+	\includegraphics[scale=0.3]{images/test2.png}\\[1cm] \caption{pagine per la registrazione al sito vista da un utente normale} \end{figure}
 	\begin{figure}
 	\includegraphics[scale=0.3]{images/deuteranopia2.jpg}\\[1cm] \caption{Utente affetto da deuteranopia} \end{figure}
 	\begin{figure}
@@ -151,7 +153,7 @@
 	\subsection{Screen reader}
 	\subsection{Aiuti per la navigazione}
 	\section{Struttura}
-	\section{Presentazione}
+	\section{Presentazione}	
 	\section{Comportamento}
 	\section{PHP}
 	\subsection{Utilizzo}
@@ -230,7 +232,26 @@
 	
 	\section{Gestione dei dati}
 	Per l'organizzazione e memorizzazione dei dati si è fatto affidamento su un DB MySQL. Il DB in questione era stato presentato come progetto per il corso di Basi di dati dell'A.A. 2015-2016 e valutato con 29-30/30 (il voto preciso non è stato comunicato). Il DB è stato quindi esteso/adattato alle esigenze del sito. Tuttavia, alcune relazioni non sono utili al sito, in quanto in origine il DB non era pensato per questo progetto. Nonostante ciò, questo non va a discapito dell'efficienza delle query. Non essendo lo scopo del corso, questa sezione non verrà troppo approfondita, ma verrà comunque fornito uno schema.
-	
+	In figura 9 è raffigurato la schema ER della versione iniziale del DB(quella consegnata per il corso di Basi di Dati). In figura 10, invece, sono raffigurate le aggiunte fatte al DB per supportare delle funzionalità del sito.
+	Di seguito è riportato un elenco delle principali tabelle utilizzate:
+	\newpage
+	\begin{itemize}
+		\item astrofilo: contiene i dati di registrazione dell'utente;
+		\item evento: contiene i tipi d'evento che possono essere studiati;
+		\item avvenimento: contiene gli eventi che avverranno o sono avvenuti;
+		\item corpo: contiene i tipi di corpo studiabili;
+		\item studia: contiene i dati degli studi;
+		\item foto: contiene i dati sulle foto;
+		\item giudicastudio(foto): contiene i voti dati dagli astrofili a tutti gli studi(foto);
+		\item commentastudio(foto): contiene i commenti degli astrofili di ogni studio(foto);
+	\end{itemize}
+	\begin{figure}
+		\includegraphics[scale=0.2]{images/ERR-FINITO.png}\\[1cm] \caption{DB iniziale.}
+	\end{figure}
+	\begin{figure}
+		\includegraphics[scale=0.35]{images/DBplus.png}\\[1cm] \caption{Aggiunte al DB iniziale}
+	\end{figure}
+	\newpage
 	\section{Test}
 	
 	
