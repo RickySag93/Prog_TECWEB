@@ -180,6 +180,7 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
     max-width: 99%;
     padding-right: 0.125em;
     color: black;
+    overflow-y: auto;
 }
 
 #content #eventi_pre p, #content #eventi_next p {
@@ -678,7 +679,6 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
 @media screen and (max-width: 1400px) {
     .slideshow {
         width: 100%;
-        min-width: 400px;
     }
 }
 
@@ -815,6 +815,7 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
   height:25em;
 }
 .imgslide{
+
   height:18em;
 }
 .arrowbar{

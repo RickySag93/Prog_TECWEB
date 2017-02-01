@@ -71,7 +71,8 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
                        WHERE commentafoto.idfoto='$idft'
                        ORDER BY commentafoto.datainserimento DESC";
        if(!$commenti_foto=$connessione->query($commenti_foto_query))
-         echo "Errore della query: ".$connessione->error.".";
+         //echo "Errore della query: ".$connessione->error.".";
+         echo "<p>Impossibile visualizzare i commenti. </p>";
        else{
           while($commenti_row=$commenti_foto->fetch_array(MYSQLI_ASSOC)){
             echo '
