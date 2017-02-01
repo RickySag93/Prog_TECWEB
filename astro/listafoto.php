@@ -21,7 +21,7 @@
         echo '<h2>Ecco tutte le nostre foto.</h2>';
         while($row=$result->fetch_array(MYSQLI_ASSOC)){
           echo '<div class="list_element not_single_studio">';
-          echo '<a href="fotoutente.php?idft='.$row['idfoto'].'" class="element_foto"><img src="'.$row['immagine'].'"  alt="'.$row['didascalia'].'" /> </a>';
+          echo '<a href="fotoutente.php?idft='.$row['idfoto'].'" class="element_foto" tabindex="-1"><img src="'.$row['immagine'].'"  alt="'.$row['didascalia'].'" /> </a>';
           echo '<a href="fotoutente.php?idft='.$row['idfoto'].'" class="element_content"> <span>'.$row['titolo'].'</span><span> '.$row['didascalia'].'</span><span> In data: '.$row['datainserimento'].'</span><span>';
           $rank_query="SELECT SUM(voto) AS rank FROM giudicafoto WHERE idfoto=".$row['idfoto'];
           $rank_studio=$connessione->query($rank_query);
