@@ -39,179 +39,200 @@
 \usepackage[colorinlistoftodos]{todonotes}
 
 \begin{document}
-\[\begin{titlepage}
-
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
-
-\center % Center everything on the page
- 
-%----------------------------------------------------------------------------------------
-%	HEADING SECTIONS
-%----------------------------------------------------------------------------------------
-
-\textsc{\LARGE Università degli studi di Padova}\\[1.5cm] % Name of your university/college
-\includegraphics[scale=0.3]{images/unipd_logo.png}\\[1cm] % Include a department/university logo - this will require the graphicx package
-\textsc{\Large Relazione progetto per il corso di tecnologie web}\\[0.5cm] % Major heading such as course name
-\textsc{\large A.A. 2016-2017}\\[0.5cm] % Minor heading such as course title
-
-%----------------------------------------------------------------------------------------
-%	TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\HRule \\[0.4cm]
-{ \huge \bfseries ASTROPORT}\\[0.4cm] % Title of your document
-\HRule \\[1.5cm]
- 
-%----------------------------------------------------------------------------------------
-%	AUTHOR SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{minipage}{0.4\textwidth}
-\begin{flushleft} \large
-\emph{Studenti:}\\
-Mattia Bottaro \#1097723 \\--------\\ Andrea Magnan \#1096609 \\--------\\ Riccardo Saggese \#1051333 \\--------\\ Matteo Slanzi \\ \#1100866
-\end{flushleft}
-\end{minipage}
-~
-\begin{minipage}{0.4\textwidth}
-\begin{flushright} \large
-\emph{Docente:} \\
-Ombretta Gaggi
-\end{flushright}
-\end{minipage}\\[2cm]
-
-% If you don't want a supervisor, uncomment the two lines below and remove the section above
-%\Large \emph{Author:}\\
-%John \textsc{Smith}\\[3cm] % Your name
-
-%----------------------------------------------------------------------------------------
-%	DATE SECTION
-%----------------------------------------------------------------------------------------
-
-%{\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
-
-%----------------------------------------------------------------------------------------
-%	LOGO SECTION
-%----------------------------------------------------------------------------------------
-
- 
-%----------------------------------------------------------------------------------------
-
-\vfill % Fill the rest of the page with whitespace
-
-\end{titlepage}
-
-\newpage
-\tableofcontents
-\listoffigures
-\listoftables
-\newpage
-
-
-\section{Abstract}
-Il progetto sviluppato si propone di implementare un sito che ha come scopo quello di divulgare i principali eventi astronomici osservabili dalla terra.
-Il sito vuole quindi essere un riferimento per gli astrofili, i quali potranno consultare studi e foto, oltre a informarsi sugli eventi astronomici passati e futuri. \\
-Le categorie di utenti che possono utilizzare il sito sono:
-\begin{itemize}
+	\begin{titlepage}
+	
+	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+	
+	\center % Center everything on the page
+	
+	%----------------------------------------------------------------------------------------
+	%	HEADING SECTIONS
+	%----------------------------------------------------------------------------------------
+	
+	\textsc{\LARGE Università degli studi di Padova}\\[1.5cm] % Name of your university/college
+	\includegraphics[scale=0.3]{images/unipd_logo.png}\\[1cm] % Include a department/university logo - this will require the graphicx package
+	\textsc{\Large Relazione progetto per il corso di tecnologie web}\\[0.5cm] % Major heading such as course name
+	\textsc{\large Corso di Laurea in Informatica, A.A. 2016-2017}\\[0.5cm] % Minor heading such as course title
+	
+	%----------------------------------------------------------------------------------------
+	%	TITLE SECTION
+	%----------------------------------------------------------------------------------------
+	
+	\HRule \\[0.4cm]
+	{ \huge \bfseries ASTROPORT}\\[0.4cm] % Title of your document
+	\HRule \\[1.5cm]
+	
+	%----------------------------------------------------------------------------------------
+	%	AUTHOR SECTION
+	%----------------------------------------------------------------------------------------
+	
+	\begin{minipage}{0.4\textwidth}
+	\begin{flushleft} \large
+	\emph{Studenti:}\\
+	Mattia Bottaro \#1097723 \\--------\\ Andrea Magnan \#1096609 \\--------\\ Riccardo Saggese \#1051333 \\--------\\ Matteo Slanzi \\ \#1100866
+	\end{flushleft}
+	\end{minipage}
+	~
+	\begin{minipage}{0.4\textwidth}
+	\begin{flushright} \large
+	\emph{Docente:} \\
+	Ombretta Gaggi
+	\end{flushright}
+	\end{minipage}\\[2cm]
+	
+	% If you don't want a supervisor, uncomment the two lines below and remove the section above
+	%\Large \emph{Author:}\\
+	%John \textsc{Smith}\\[3cm] % Your name
+	
+	%----------------------------------------------------------------------------------------
+	%	DATE SECTION
+	%----------------------------------------------------------------------------------------
+	
+	%{\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
+	
+	%----------------------------------------------------------------------------------------
+	%	LOGO SECTION
+	%----------------------------------------------------------------------------------------
+	
+	
+	%----------------------------------------------------------------------------------------
+	
+	\vfill % Fill the rest of the page with whitespace
+	
+	\end{titlepage}
+	
+	\newpage
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	\newpage
+	
+	
+	\section{Abstract}
+	Il progetto sviluppato si propone di implementare un sito che ha come scopo quello di divulgare i principali eventi astronomici osservabili dalla terra.
+	Il sito vuole quindi essere un riferimento per gli astrofili, i quali potranno consultare studi e foto, oltre a informarsi sugli eventi astronomici passati e futuri. \\
+	Le categorie di utenti che possono utilizzare il sito sono:
+	\begin{itemize}
 	\item utenti non loggati;
 	\item utenti loggati.
-\end{itemize}
-Il sito è stato sviluppato rispettando gli
-standard W3C, la separazione tra struttura, presentazione, comportamento
-e le regole di accessibilità richieste.
-
-\section{Materiale Consegnato}
-\section{Il sito}
-\section{Utenti destinatari}
-\section{Accessibilità}
- \subsection{Separazione contenuto, struttura e presentazione}
- \subsection{Schema colori}
- \subsection{Tag}
- \subsection{Screen reader}
- \subsection{Aiuti per la navigazione}
-\section{Struttura}
-\section{Presentazione}
-\section{Comportamento}
-\section{PHP}
-\subsection{Utilizzo}
-Il PHP viene utilizzato per:
- \begin{itemize}
- 	\item reperire dati dal database(DB) e stamparli;
- 	\item elaborare dati, presi in input o dal DB, e/o inserirli nel DB.
- \end{itemize} 
- 
- Al primo punto appartengono le pagine che si occupano di leggere dati dal DB e stamparli.
- Al secondo punto appartengono le pagine che si occupano puramente di elaborare e/o inserire dati nel DB. Queste pagine sono prive di una GUI, e pertanto non consultabili dagli utenti. Apposite istruzioni di reindirizzamento permettono ciò.
- 
- Al primo punto appartengono le pagine nella cartella ....astro/...., che sono:
- \begin{itemize}
- 	\item \textit{index.php}, che recupera e visualizza le immagini con i miglior rank nel DB e al più 10 tra eventi passati e prossimi;
- 	\item \textit{listafoto.php}, che recupera e visualizza le principali informazioni su tutte le foto presenti nel DB;
- 	\item \textit{listastudi.php}, analoga a listafoto.php;
- 	\item \textit{fotoutente.php?idft=x}, che recupera e visualizza l'immagine(e relative informazioni) con id=x. Inoltre, permette agli utenti loggati di votarla e commentarla;
- 	\item \textit{studioutente.php?idst=x}, analoga a \textit{fotoutente.php?idft=x};
- 	\item \textit{eventi.php}, che recupera e visualizza gli eventi passati e futuri nel DB;
- 	\item \textit{registrazione.php}, che permette all'utente non loggato di inserire i dati per la registrazione al sito. Questa funzione non è disponibile agli utenti loggati;
- 	\item \textit{login.php}, che permette all'utente non loggato di effettuare l'accesso. Questa funzione non è disponibile agli utenti loggati.
- \end{itemize}
- 
- Al secondo punto appartengono le pagine nella cartella ....../astro/backend, che sono:
- \begin{itemize}
- 	\item \textit{connessione.php}, che tenta la connessione al server e al DB in esso alloggiato. In caso la connessione fallisca, un opportuno messaggio d'errore verrà visualizzato;
- 	\item \textit{login.php}, che dati mail e password, verifica il tentativo di accesso di un utente, permettendolo o meno. Al fine di proteggersi da SQL injection, la query viene somministrata al DB se e solo se i parametri soddisfano specifiche espressioni regolari. In caso l'accesso non abbia successo (la query ritorna un insieme vuoto o i parametri non soddisfano le regex) viene visualizzato un unico messaggio d'errore;
- 	\item \textit{logout.php}, che distrugge la sessione;
- 	\item \textit{registrauser.php}, che dati i parametri di registrazione, verifica se rispettano certe espressioni regolari e se possono essere inserite nel DB (ad esempio non possono esistere due mail uguali). In caso ciò non sia possibile, vengono visualizzati i relativi messaggi d'errore;
- 	\item \textit{commentafoto.php}, che dato l'id di una foto e un commento inserito da un utente loggato, inserisce nel database il relativo commento(associato all'utente che ha commentato la foto);
- 	\item \textit{commentastudio.php}, analoga al punto precedente;
- 	\item \textit{votafoto.php}, analoga a \textit{commentafoto.php}, ma avendo come soggetto un voto e non un commento. Il voto può essere +1 o -1 e, in caso l'utente loggato voti più di una volta la stessa foto, viene eliminato il voto dato precedentemente e inserito quello corrente;
- 	\item \textit{votastudio.php}, analoga al punto precedente;
- \end{itemize}
- 
-Il comportamento delle pagine del sito varia se l'utente è loggato o meno. Questo è reso possibile tramite l'utilizzo delle sessioni. Infatti, se l'accesso ha successo, viene avviata una sessione che memorizza l'utente loggato. Al logout, giustamente, questa sessione viene distrutta. Il comportamento delle pagine varia anche in base ad alcune azioni dell'utente sul database sul quale il sito si appoggia. Ad esempio, vengono segnalati degli errori in caso l'accesso non vada a buon fine.
-
- \subsection{Utente non loggato}
- L'utente non loggato può:
- \begin{itemize}
- 	\item usare lo slideshow nella pagina iniziale;
- 	\item consultare gli eventi passati e futuri memorizzati nel database;
- 	\item consultare la lista delle foto presenti nel database e, tramite pagine apposite, consultare ogni singola foto;
- 	\item consultare la lista degli studi presenti nel database e, tramite pagine apposite, consultare ogni singolo studio;
- 	\item consultare la pagina di about, descrittiva dello scopo del sito;
- 	\item registrarsi al sito;
- 	\item effettuare l'accesso.
- \end{itemize}
- \subsection{Utente loggato}
- L'utente loggato può:
- \begin{itemize}
- 	\item fare quello che può fare un utente non loggato, tranne:
- 	\begin{itemize}
- 		\item registrarsi al sito;
- 		\item effettuare l'accesso;
- 	\end{itemize}
- 	\item commentare e votare ogni foto;
- 	\item commentare e votare ogni studio;
- 	\item effettuare il logout.
- \end{itemize}
- 
- \subsection{Sessioni}
- Le sessioni sono usate per due motivi:
- \begin{itemize}
- 	\item verificare se l'utente è loggato o meno;
- 	\item generare determinati messaggi d'errore.
- \end{itemize}
- Nel primo caso, quando un utente effettua l'accesso, viene memorizzata la relativa mail(che lo identifica). In caso, tramite sessione, si deduca che l'utente è loggato, vengono erogate le funzionalità aggiuntive. \\ \\
- Nel secondo caso, vengono generati degli opportuni messaggi d'errore relativi ai seguenti casi:
- \begin{itemize}
- 	\item l'utente non loggato tenta di registrarsi con dei parametri non validi; viene quindi segnalata l'irregolarità relativa al parametro errato;
- 	\item l'utente non loggato tenta di effettuare l'accesso con dei parametri non validi; viene quindi segnalata l'irregolarità relativa al parametro errato;
- 	\item l'utente loggato tenta di inserire un commento non valido; viene quindi segnalata l'irregolarità relativa al parametro errato.
- \end{itemize}
-
-\section{Gestione dei dati}
-Per l'organizzazione e memorizzazione dei dati si è fatto affidamento su un DB MySQL. Il DB in questione era stato presentato come progetto per il corso di Basi di dati dell'A.A. 2015-2016 e valutato con 29-30/30 (il voto preciso non è stato comunicato). Il DB è stato quindi esteso/adattato alle esigenze del sito. Tuttavia, alcune relazioni non sono utili al sito, in quanto in origine il DB non era pensato per questo progetto. Nonostante ciò, questo non va a discapito dell'efficienza delle query. Non essendo lo scopo del corso, questa sezione non verrà troppo approfondita, ma verrà comunque fornito uno schema.
-
-\section{Test}
-
-
-\]
+	\end{itemize}
+	Il sito è stato sviluppato rispettando gli
+	standard W3C, la separazione tra struttura, presentazione, comportamento
+	e le regole di accessibilità richieste.
+	
+	\section{Materiale Consegnato}
+	\section{Il sito}
+	\section{Utenti destinatari}
+	\section{Accessibilità}
+	\subsection{Separazione contenuto, struttura e presentazione}
+	\subsection{Schema colori}
+	Siamo stati attenti ai colori.
+	\begin{figure}
+	\includegraphics[scale=0.3]{images/test.png}\\[1cm] \caption{pagina lista delle foto vista da un utente normale.}
+	\end{figure}
+	\begin{figure}
+	\includegraphics[scale=0.3]{images/deuteranopia.jpg}\\[1cm] \caption{Utente affetto da deuteranopia}
+	\end{figure}
+	\begin{figure}
+	\includegraphics[scale=0.3]{images/protanopia.jpg}\\[1cm] \caption{Utente affetto da protanopia}
+	\end{figure}
+	\begin{figure}
+	\includegraphics[scale=0.3]{images/tritanopia.jpg}\\[1cm] \caption{Utente affetto da tritanopia}
+	\end{figure}
+	\begin{figure}
+	\includegraphics[scale=0.3]{images/test2.png}\\[1cm] \caption{pagine per la registrazione al sito} \end{figure}
+	\begin{figure}
+	\includegraphics[scale=0.3]{images/deuteranopia2.jpg}\\[1cm] \caption{Utente affetto da deuteranopia} \end{figure}
+	\begin{figure}
+	\includegraphics[scale=0.3]{images/protanopia2.jpg}\\[1cm] \caption{Utente affetto da protanopia} \end{figure}
+	\begin{figure}
+	\includegraphics[scale=0.3]{images/tritanopia2.jpg}\\[1cm] \caption{Utente affetto da tritanopia} \end{figure}
+	\subsection{Tag}
+	\subsection{Screen reader}
+	\subsection{Aiuti per la navigazione}
+	\section{Struttura}
+	\section{Presentazione}
+	\section{Comportamento}
+	\section{PHP}
+	\subsection{Utilizzo}
+	Il PHP viene utilizzato per:
+	\begin{itemize}
+	\item reperire dati dal database(DB) e stamparli;
+	\item elaborare dati, presi in input o dal DB, e/o inserirli nel DB.
+	\end{itemize} 
+	
+	Al primo punto appartengono le pagine che si occupano di leggere dati dal DB e stamparli.
+	Al secondo punto appartengono le pagine che si occupano puramente di elaborare e/o inserire dati nel DB. Queste pagine sono prive di una GUI, e pertanto non consultabili dagli utenti. Apposite istruzioni di reindirizzamento permettono ciò.
+	
+	Al primo punto appartengono le pagine nella cartella ....astro/...., che sono:
+	\begin{itemize}
+	\item \textit{index.php}, che recupera e visualizza le immagini con i miglior rank nel DB e al più 10 tra eventi passati e prossimi;
+	\item \textit{listafoto.php}, che recupera e visualizza le principali informazioni su tutte le foto presenti nel DB;
+	\item \textit{listastudi.php}, analoga a listafoto.php;
+	\item \textit{fotoutente.php?idft=x}, che recupera e visualizza l'immagine(e relative informazioni) con id=x. Inoltre, permette agli utenti loggati di votarla e commentarla;
+	\item \textit{studioutente.php?idst=x}, analoga a \textit{fotoutente.php?idft=x};
+	\item \textit{eventi.php}, che recupera e visualizza gli eventi passati e futuri nel DB;
+	\item \textit{registrazione.php}, che permette all'utente non loggato di inserire i dati per la registrazione al sito. Questa funzione non è disponibile agli utenti loggati;
+	\item \textit{login.php}, che permette all'utente non loggato di effettuare l'accesso. Questa funzione non è disponibile agli utenti loggati.
+	\end{itemize}
+	
+	Al secondo punto appartengono le pagine nella cartella ....../astro/backend, che sono:
+	\begin{itemize}
+	\item \textit{connessione.php}, che tenta la connessione al server e al DB in esso alloggiato. In caso la connessione fallisca, un opportuno messaggio d'errore verrà visualizzato;
+	\item \textit{login.php}, che dati mail e password, verifica il tentativo di accesso di un utente, permettendolo o meno. Al fine di proteggersi da SQL injection, la query viene somministrata al DB se e solo se i parametri soddisfano specifiche espressioni regolari. In caso l'accesso non abbia successo (la query ritorna un insieme vuoto o i parametri non soddisfano le regex) viene visualizzato un unico messaggio d'errore;
+	\item \textit{logout.php}, che distrugge la sessione;
+	\item \textit{registrauser.php}, che dati i parametri di registrazione, verifica se rispettano certe espressioni regolari e se possono essere inserite nel DB (ad esempio non possono esistere due mail uguali). In caso ciò non sia possibile, vengono visualizzati i relativi messaggi d'errore;
+	\item \textit{commentafoto.php}, che dato l'id di una foto e un commento inserito da un utente loggato, inserisce nel database il relativo commento(associato all'utente che ha commentato la foto);
+	\item \textit{commentastudio.php}, analoga al punto precedente;
+	\item \textit{votafoto.php}, analoga a \textit{commentafoto.php}, ma avendo come soggetto un voto e non un commento. Il voto può essere +1 o -1 e, in caso l'utente loggato voti più di una volta la stessa foto, viene eliminato il voto dato precedentemente e inserito quello corrente;
+	\item \textit{votastudio.php}, analoga al punto precedente;
+	\end{itemize}
+	
+	Il comportamento delle pagine del sito varia se l'utente è loggato o meno. Questo è reso possibile tramite l'utilizzo delle sessioni. Infatti, se l'accesso ha successo, viene avviata una sessione che memorizza l'utente loggato. Al logout, giustamente, questa sessione viene distrutta. Il comportamento delle pagine varia anche in base ad alcune azioni dell'utente sul database sul quale il sito si appoggia. Ad esempio, vengono segnalati degli errori in caso l'accesso non vada a buon fine.
+	
+	\subsection{Utente non loggato}
+	L'utente non loggato può:
+	\begin{itemize}
+	\item usare lo slideshow nella pagina iniziale;
+	\item consultare gli eventi passati e futuri memorizzati nel database;
+	\item consultare la lista delle foto presenti nel database e, tramite pagine apposite, consultare ogni singola foto;
+	\item consultare la lista degli studi presenti nel database e, tramite pagine apposite, consultare ogni singolo studio;
+	\item consultare la pagina di about, descrittiva dello scopo del sito;
+	\item registrarsi al sito;
+	\item effettuare l'accesso.
+	\end{itemize}
+	\subsection{Utente loggato}
+	L'utente loggato può:
+	\begin{itemize}
+	\item fare quello che può fare un utente non loggato, tranne:
+	\begin{itemize}
+	\item registrarsi al sito;
+	\item effettuare l'accesso;
+	\end{itemize}
+	\item commentare e votare ogni foto;
+	\item commentare e votare ogni studio;
+	\item effettuare il logout.
+	\end{itemize}
+	
+	\subsection{Sessioni}
+	Le sessioni sono usate per due motivi:
+	\begin{itemize}
+	\item verificare se l'utente è loggato o meno;
+	\item generare determinati messaggi d'errore.
+	\end{itemize}
+	Nel primo caso, quando un utente effettua l'accesso, viene memorizzata la relativa mail(che lo identifica). In caso, tramite sessione, si deduca che l'utente è loggato, vengono erogate le funzionalità aggiuntive. \\ \\
+	Nel secondo caso, vengono generati degli opportuni messaggi d'errore relativi ai seguenti casi:
+	\begin{itemize}
+	\item l'utente non loggato tenta di registrarsi con dei parametri non validi; viene quindi segnalata l'irregolarità relativa al parametro errato;
+	\item l'utente non loggato tenta di effettuare l'accesso con dei parametri non validi; viene quindi segnalata l'irregolarità relativa al parametro errato;
+	\item l'utente loggato tenta di inserire un commento non valido; viene quindi segnalata l'irregolarità relativa al parametro errato.
+	\end{itemize}
+	
+	\section{Gestione dei dati}
+	Per l'organizzazione e memorizzazione dei dati si è fatto affidamento su un DB MySQL. Il DB in questione era stato presentato come progetto per il corso di Basi di dati dell'A.A. 2015-2016 e valutato con 29-30/30 (il voto preciso non è stato comunicato). Il DB è stato quindi esteso/adattato alle esigenze del sito. Tuttavia, alcune relazioni non sono utili al sito, in quanto in origine il DB non era pensato per questo progetto. Nonostante ciò, questo non va a discapito dell'efficienza delle query. Non essendo lo scopo del corso, questa sezione non verrà troppo approfondita, ma verrà comunque fornito uno schema.
+	
+	\section{Test}
+	
+	
+	
 \end{document}
