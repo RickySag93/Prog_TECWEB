@@ -129,7 +129,6 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
     display: none;
 }
 
-
 #header {
     background-color: #274f8e;
     clear: both;
@@ -369,8 +368,6 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
 /* fine slideshow*/
 
 
-
-
 /* PAGINA REGISTRAZIONE */
 
 #aiuti_reg {
@@ -604,7 +601,8 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
 #content .element_content span {
     display: block;
 }
-#content .element_content #inline{
+
+#content .element_content #inline {
     padding-left: 0;
     display: inline;
 }
@@ -648,6 +646,7 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
     text-transform: uppercase;
     font-size: 1.1em;
 }
+
 
 /*.nascosta {
     display: none
@@ -808,29 +807,26 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
         width: 90%;
         height: auto;
     }
-
-#eventi_pre, #eventi_next {
-    /*singolo contenitore degli eventi */
-    height: 93%;
-
-}
-.slideshow{
-  height:25em;
-}
-.imgslide{
-
-  height:18em;
-}
-.arrowbar{
-  height: 3.5em;
-}
-.slide_didasc{
-  bottom:3.5em;
-  height:3.5em;
-}
-#content .p_slide{
-  font-size:  1.2em;
-}
+    #eventi_pre, #eventi_next {
+        /*singolo contenitore degli eventi */
+        height: 93%;
+    }
+    .slideshow {
+        height: 25em;
+    }
+    .imgslide {
+        height: 18em;
+    }
+    .arrowbar {
+        height: 3.5em;
+    }
+    .slide_didasc {
+        bottom: 3.5em;
+        height: 3.5em;
+    }
+    #content .p_slide {
+        font-size: 1.2em;
+    }
     /*
   FINE HOME
 */
