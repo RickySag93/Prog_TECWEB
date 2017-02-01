@@ -176,6 +176,12 @@
 	\section{Struttura}
 	\section{Presentazione}	
 	\section{Comportamento}
+	Per gestire la parte relativa al comportamento è stato usato JavaScript. In particolare sono stati fatti i seguenti script:
+	\begin{itemize}
+	\item \textit{controlli.js}: questo script esegue controlli lato client sui dati inseriti durante la registrazione in \textit{registrazione.php}. Tali controlli avvengono ogni volta che l'utente lascia un textfield di inserimento dati tramite l'utilizzo dell'evento \textit{onblur}. Se i dati inseriti non sono validi allora comparirà un messaggio d'errore specifico e ad esso verrà dato il \textit{focus};
+	\item \textit{homeslide.js}: questo script permette l'utilizzo dello slideshow presente in \textit{index.php}. È possibile navigare tra le foto dello slideshow utilizzando i pulsanti ai lati, sia con il mouse che con la tastiera, premendo il tasto invio. Per ogni foto dello slideshow è presente inoltre una sua didascalia, la sua posizione rispetto al numero di foto presenti nello slideshow, e un link che porta alla corrispondente foto in \textit{fotoutente.php}. 
+	\end{itemize}
+	\newpage
 	\section{PHP}
 	\subsection{Utilizzo}
 	Il PHP viene utilizzato per:
