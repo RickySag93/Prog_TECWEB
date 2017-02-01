@@ -501,9 +501,10 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
 }
 
 #content .list_element {
+    display:block;
     margin-top: 0.5em;
     width: 80%;
-    height: 8em;
+    height: 9em;
     border: 1px solid black;
     margin-left: auto;
     margin-right: auto;
@@ -553,15 +554,13 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
     font-size: 0.8em;
 }
 
-#content .not_single_studio:hover, #content .not_single_studio:active, #content .element_content:focus {
+#content .not_single_studio:hover, #content .not_single_studio:active, #content .not_single_studio:focus {
     border: 4px solid black;
 }
 
-.list_element a {
-    display: block;
-}
-
-.element_foto {
+#content .list_element .element_foto {
+    padding-left: 0;
+    margin-top: 0;
     border-right: 1px solid black;
     height: 100%;
     width: 7.8125em;
@@ -575,6 +574,7 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
 
 .element_content {
     height: 7.5em;
+    margin-top: 0;
 }
 
 #p_didasc {
@@ -602,7 +602,7 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
     display: block;
 }
 
-#content .element_content #inline {
+#content .element_content .inline {
     padding-left: 0;
     display: inline;
 }
@@ -790,7 +790,9 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
         margin-right: auto;
         margin-left: auto;
     }
+
     #content .list_element {
+        display: block;
         margin-left: 5%;
         margin-right: 5%;
         width: 90%;

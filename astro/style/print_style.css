@@ -292,7 +292,7 @@ a img {
     display: block;
 }
 
-#content .element_content #inline {
+#content .element_content .inline {
     padding-left: 0;
     display: inline;
 }
@@ -363,10 +363,11 @@ a img {
 }
 
 #content .list_element {
-    page-break-inside: avoid;
+  page-break-inside: avoid;
+    display:block;
     margin-top: 0.5em;
     width: 80%;
-    height: 8em;
+    height: 9em;
     border: 1px solid black;
     margin-left: auto;
     margin-right: auto;
@@ -417,11 +418,10 @@ a img {
     font-size: 0.8em;
 }
 
-.list_element a {
-    display: block;
-}
 
-.element_foto {
+#content .list_element .element_foto {
+    padding-left: 0;
+    margin-top: 0;
     border-right: 1px solid black;
     height: 100%;
     width: 7.8125em;
@@ -435,6 +435,7 @@ a img {
 
 .element_content {
     height: 7.5em;
+    margin-top: 0;
 }
 
 #p_didasc {
