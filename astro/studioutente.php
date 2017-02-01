@@ -86,7 +86,8 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
                                   WHERE commentastudio.studio='$idst'
                                   ORDER BY commentastudio.datainserimento DESC";
          if(!$commenti_studio=$connessione->query($commenti_studio_query))
-           echo "Errore della query: ".$connessione->error.".";
+          // echo "Errore della query: ".$connessione->error.".";
+          echo "<p>Impossibile visualizzare i commenti. </p>";
          else{
            while($commenti_row=$commenti_studio->fetch_array(MYSQLI_ASSOC)){
              echo '<div class="big_list_element">
