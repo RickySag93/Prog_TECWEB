@@ -369,7 +369,6 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
 /* fine slideshow*/
 
 
-/* FINE HOME */
 
 
 /* PAGINA REGISTRAZIONE */
@@ -605,6 +604,10 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
 #content .element_content span {
     display: block;
 }
+#content .element_content #inline{
+    padding-left: 0;
+    display: inline;
+}
 
 #footer {
     background-color: #000;
@@ -646,7 +649,7 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
     font-size: 1.1em;
 }
 
-.nascosta {
+/*.nascosta {
     display: none
 }
 
