@@ -1,4 +1,3 @@
-
 * {
     padding: 0em;
     margin: 0em;
@@ -28,8 +27,9 @@ body {
 /*
     SEZIONE HOME
 */
-a{
-  color:black;
+
+a {
+    color: black;
 }
 
 a img {
@@ -44,7 +44,7 @@ a img {
 
 #menu {
     /* contenitore del menu fixed con gli elementi del menu più il logo a sinistra*/
-    display:none;
+    display: none;
 }
 
 #header {
@@ -179,7 +179,6 @@ a img {
 }
 
 
-
 /* Inizio slideshow*/
 
 .slideshow {
@@ -192,7 +191,6 @@ a img {
     margin-right: auto;
     height: 34em;
 }
-
 
 #content .p_slide {
     padding: 0;
@@ -222,7 +220,7 @@ a img {
 }
 
 .arrowbar {
-    display:none;
+    display: none;
 }
 
 
@@ -292,6 +290,11 @@ a img {
 
 #comment, noscript a {
     display: block;
+}
+
+#content .element_content #inline {
+    padding-left: 0;
+    display: inline;
 }
 
 #button_login a {
@@ -414,7 +417,6 @@ a img {
     font-size: 0.8em;
 }
 
-
 .list_element a {
     display: block;
 }
@@ -462,7 +464,7 @@ a img {
 }
 
 #footer {
-  display: none;
+    display: none;
 }
 
 .nascosta {
