@@ -100,9 +100,10 @@
 	
 	\end{titlepage}
 	\newpage
+	\section{Informazioni utili}
 	\textsc{\Large Link al sito\\ }link\\[0.5cm]
 	\textsc{\Large Mail del referente:\\ }mattia.bottaro@studenti.unipd.it\\[0.5cm]
-	\textsc{\Large Login User: }\\[0.5cm]
+	\textsc{\Large Login User:}\\[0.5cm] mail: user, password: user 
 	\newpage
 	\tableofcontents
 	\listoffigures
@@ -143,7 +144,32 @@
 	\section{Accessibilità}
 	\subsection{Separazione contenuto, struttura e presentazione}
 	\subsection{Schema colori}
-	Siamo stati attenti ai colori.
+	Lo schema dei colori adottato mira a dare meno disagi possibili agli utenti affetti da particolari patologie agli occhi, quali deuteranopia, protanopia e tritanopia. Gli screenshot qui sotto sono una simulazione di come un utente appartenente a questa categoria vede il nostro sito.\\
+	\begin{figure}
+		\includegraphics[scale=0.3]{images/test.png}\\[1cm] \caption{pagina lista delle foto vista da un utente normale.}
+	\end{figure}
+	\begin{figure}
+		\includegraphics[scale=0.3]{images/deuteranopia.jpg}\\[1cm] \caption{Utente affetto da deuteranopia}
+	\end{figure}
+	\begin{figure}
+		\includegraphics[scale=0.3]{images/protanopia.jpg}\\[1cm] \caption{Utente affetto da protanopia}
+	\end{figure}
+	\begin{figure}
+		\includegraphics[scale=0.3]{images/tritanopia.jpg}\\[1cm] \caption{Utente affetto da tritanopia}
+	\end{figure}
+	\begin{figure}
+		\includegraphics[scale=0.3]{images/test2.png}\\[1cm] \caption{pagine per la registrazione al sito vista da un utente normale} \end{figure}
+	\begin{figure}
+		\includegraphics[scale=0.3]{images/deuteranopia2.jpg}\\[1cm] \caption{Utente affetto da deuteranopia}
+	\end{figure}
+	\begin{figure}
+		\includegraphics[scale=0.3]{images/protanopia2.jpg}\\[1cm] \caption{Utente affetto da protanopia} 
+	\end{figure}
+	\begin{figure}
+		\includegraphics[scale=0.3]{images/tritanopia2.jpg}\\[1cm] \caption{Utente affetto da tritanopia} 
+	\end{figure}
+	\newpage
+	Si può notare che lo schema di colori adottato rende le differenze tra screenshot molto basse.\\
 	\subsection{Tag}
 	\subsection{Screen reader}
 	\subsection{Aiuti per la navigazione}
@@ -248,31 +274,42 @@
 	\end{figure}
 	\newpage
 	\section{Test}
-		\begin{figure}
-			\includegraphics[scale=0.3]{images/test.png}\\[1cm] \caption{pagina lista delle foto vista da un utente normale.}
-		\end{figure}
-		\begin{figure}
-			\includegraphics[scale=0.3]{images/deuteranopia.jpg}\\[1cm] \caption{Utente affetto da deuteranopia}
-		\end{figure}
-		\begin{figure}
-			\includegraphics[scale=0.3]{images/protanopia.jpg}\\[1cm] \caption{Utente affetto da protanopia}
-		\end{figure}
-		\begin{figure}
-			\includegraphics[scale=0.3]{images/tritanopia.jpg}\\[1cm] \caption{Utente affetto da tritanopia}
-		\end{figure}
-		\begin{figure}
-			\includegraphics[scale=0.3]{images/test2.png}\\[1cm] \caption{pagine per la registrazione al sito vista da un utente normale} \end{figure}
-		\begin{figure}
-			\includegraphics[scale=0.3]{images/deuteranopia2.jpg}\\[1cm] \caption{Utente affetto da deuteranopia} \end{figure}
-		\begin{figure}
-			\includegraphics[scale=0.3]{images/protanopia2.jpg}\\[1cm] \caption{Utente affetto da protanopia} \end{figure}
-		\begin{figure}
-			\includegraphics[scale=0.3]{images/tritanopia2.jpg}\\[1cm] \caption{Utente affetto da tritanopia} \end{figure}
+	\subsection{Validazione}
+	Per la validazione, è stato usato il validatore online messo a disposizione da W3C. Per validare ogni pagina, si sono seguiti i seguenti passi:
+	\begin{itemize}
+		\item esecuzione del file nel browser;
+		\item copia del codice sorgente(tasto dx + view source code);
+		\item dato in pasto al validatore il codice tramite "validate by input".
+	\end{itemize}
+	Tutte le pagine e i file CSS hanno superato questo test.
+	\subsection{Browser}
+	Senza riscontrare grosse differenze, il sito è stato fatto girare su:
+	\begin{itemize}
+		\item Mozilla Firefox 39.0, 51.0.1;
+		\item Chromium 55.0;
+		\item Google Chrome;
+		\item Internet Explorer;
+		
+	\end{itemize}
+	e sui seguenti sistemi operativi:
+	\begin{itemize}
+		\item Linux Mint 18.1;
+		\item Ubuntu 14.04;
+		\item Windows 10;
+		\item MAC??
+	\end{itemize}
+	\subsubsection{JavaScript}
+	che succede senza JS?
+	\subsubsection{PHP}
+	Sono stati fatti dei test di usabilità nel caso non sia possibile connettersi al DB. Il risultato è che il sito non può offrire le funzionalità che si prefigge, ma resta comunque navigabile.
 	\section{Suddivisione ruoli}
 	Il gruppo si è suddiviso il lavoro in maniera equa sulle parti di struttura, presentazione, comportamento e accessibilità.
-	Ognuno dei membri si è occupato di tutte le parti, tuttavia abbiamo ritenuto intelligente che ogni membro si concentrasse su una specifica parte.
+	Ognuno dei membri si è occupato di tutte le parti, tuttavia abbiamo ritenuto intelligente che ogni membro si concentrasse maggiormente su una specifica parte.
 	I ruoli sono stati così ripartiti:
 	\begin{itemize}
-		\item 
+		\item struttura: tutti i membri del gruppo;
+		\item presentazione: Andrea Magnan, Matteo Slanzi(anche gli altri membri hanno contribuito, ma in forma minore);
+		\item comportamento: Mattia Bottaro(PHP), Andrea Magnan(JS)(anche gli altri membri hanno contribuito, ma in forma minore);
+		\item accessibilità: Riccardo Saggese, Matteo Slanzi(anche gli altri membri hanno contribuito, ma in forma minore)
 	\end{itemize}
 \end{document}
