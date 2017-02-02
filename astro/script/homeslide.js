@@ -23,7 +23,7 @@ function rightButtonDivs(e) {
 
 
 function leftDivs(event) {
-  event.preventDefault ? event.preventDefault() : (event.returnValue = false);
+    event.preventDefault ? event.preventDefault() : (event.returnValue = false);
     plusDivs(-1);
 }
 
@@ -33,11 +33,11 @@ function rightDivs(event) {
 }
 
 function plusDivs(n) {
-    showDivs(slideIndex += n);
+    showDivs(slideIndex += n, false);
 }
 
 function initDivs() {
-    showDivs(1);
+    showDivs(1, true);
     var l = document.getElementById("slidebuttonleft");
     var r = document.getElementById("slidebuttonright");
     if (l.addEventListener) {
@@ -56,7 +56,7 @@ function initDivs() {
     }
 }
 
-function showDivs(n) {
+function showDivs(n, isInit) {
     var i;
     var x = document.querySelectorAll(".imgslide");
     var y = document.querySelectorAll(".slide_didasc");
@@ -77,7 +77,9 @@ function showDivs(n) {
     x[slideIndex - 1].style.display = "block";
     y[slideIndex - 1].style.display = "block";
     z[slideIndex - 1].style.display = "block";
-    x[slideIndex - 1].focus();
+    if (!isInit) {
+        z[slideIndex - 1].focus();
+    }
     var g = document.getElementById("number");
     g.innerHTML = "".concat(slideIndex, "/", tot);
 }
