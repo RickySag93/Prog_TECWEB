@@ -501,7 +501,7 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
 }
 
 #content .list_element {
-    display:block;
+    display: block;
     margin-top: 0.5em;
     width: 80%;
     height: 9em;
@@ -790,7 +790,6 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
         margin-right: auto;
         margin-left: auto;
     }
-
     #content .list_element {
         display: block;
         margin-left: 5%;
