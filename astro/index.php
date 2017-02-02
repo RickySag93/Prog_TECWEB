@@ -29,13 +29,13 @@
         echo '<a class="imgslide_a" tabindex="0" href="fotoutente.php?idft='.$row['idfoto'].'"><img src="'.$row['immagine'].'" class="imgslide" alt="'.$row['didascalia'].'" /></a>';
         echo '<div class="slide_didasc"> <p class="p_slide">'.$row['didascalia'].'</p></div>';
       }
-      echo '<noscript>';
+      echo '<noscript> <div>';
       $j=0;
       while($j<$i){ // while che si sostituisce alle immagini in caso non vada javascript
         echo $link[$j];
         $j++;
       }
-      echo '</noscript>';
+      echo '</div></noscript>';
 			$result->free();
 		}
 	}
