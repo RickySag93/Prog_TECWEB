@@ -81,6 +81,9 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
         </form>
         </div><div id="list_comment">';
       }
+      else {
+        echo '<p><strong>Per votare e commentare devi fare il <a href="login.php"><span xml:lang="en">login</span></a></strong></p>';
+      }
       echo '<h3>Commenti</h3>';
           $commenti_studio_query= "SELECT astrofilo.username,astrofilo.imgprofilo,commentastudio.commento,commentastudio.datainserimento
                                   FROM commentastudio JOIN astrofilo ON commentastudio.astrofilo=astrofilo.mail
