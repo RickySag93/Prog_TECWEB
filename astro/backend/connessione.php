@@ -25,7 +25,7 @@
    $msg_errore_DB="";
    $errore_DB=FALSE;
    if($connessione->connect_errno){
-	   $msg_errore_DB='<p><strong>Abbiamo dei problemi a connetterci con il nostro database. I nostri tecnici stanno facendo il possibile.</strong></p>';
+	   $msg_errore_DB='<p><strong>Abbiamo dei problemi a connetterci con il nostro <span xml:lang="en" >database </span>. I nostri tecnici stanno facendo il possibile.</strong></p>';
      $errore_DB=TRUE;
 	   // qui ci andrebbe uno script che invia una mail a chi deve fixare il problema
    }else{

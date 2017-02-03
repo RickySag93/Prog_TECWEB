@@ -29,37 +29,36 @@
                       $ins="INSERT INTO astrofilo(mail,nome,cognome,username,password) VALUES('$usermail','$nome','$cognome','$username','$password')";
                       if(!$connessione->query($ins)){
                         session_start();
-                        $_SESSION['err']="Spiacenti, abbiamo avuto un problema con il nostro database.";
+                        $_SESSION['err']="Spiacenti, abbiamo avuto un problema con il nostro <span xml:lang='en' >database </span>.";
                         header('Location: ../registrazione.php');
                       }else{
                         session_start();
-                         $_SESSION['err']='<p class="p_rsucc">Registrazione avvenuta con successo! </p>
-                         <p class="p_rsucc"><a href="index.php">Torna in <span xml:lang="en">Home</span></a></p>';
+                         $_SESSION['err']='<p class="p_rsucc">Registrazione avvenuta con successo! </p>';
                          header('Location: ../login.php');
                        }
                    }else{//password non valida
                      session_start();
-                     $_SESSION['err']="La password inserita non è corretta.";
+                     $_SESSION['err']="La <span xml:lang='en' >password </span> inserita non è corretta.";
                      header('Location: ../login.php');
                    }
               }else{// username già in uso
                 session_start();
-                $_SESSION['err']="l'username inserito è già in uso.";
+                $_SESSION['err']="l'<span xml:lang='en' >username </span> inserito è già in uso.";
                 header('Location: ../registrazione.php');
               }
             }else{//username non valido
                session_start();
-               $_SESSION['err']="L'username inserito non è corretto o già in uso.";
+               $_SESSION['err']="L'<span xml:lang='en' >username </span> inserito non è corretto o già in uso.";
                header('Location: ../registrazione.php');
              }
          }else{// mail già in uso
            session_start();
-           $_SESSION['err']="la mail inserita è già in uso.";
+           $_SESSION['err']="la <span xml:lang='en' >mail </span> inserita è già in uso.";
            header('Location: ../registrazione.php');
          }
        }else{// mail non valida
             session_start();
-            $_SESSION['err']="la mail inserita non è corretta.";
+            $_SESSION['err']="la <span xml:lang='en' >mail </span> inserita non è corretta.";
             header('Location: ../registrazione.php');
           }
         }else{// cognome non valido
@@ -88,7 +87,7 @@
       */
     }else{
       session_start();
-      $_SESSION['err']="Le password inserite non sono uguali.";
+      $_SESSION['err']="Le <span xml:lang='en' >password </span> inserite non sono uguali.";
       header('Location: ../registrazione.php');
       //echo "Password distinte";
     }

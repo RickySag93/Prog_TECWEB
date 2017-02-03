@@ -28,7 +28,7 @@
           $rank_query="SELECT SUM(voto) AS rank FROM giudicastudio WHERE studio=".$row['idstudio'];
           $rank_studio=$connessione->query($rank_query);
           $rank_row=mysqli_fetch_array($rank_studio);
-          echo "Rank: ".$rank_row['rank'];
+          echo " <span class='inline' xml:lang='en'> Rank</span> : ".$rank_row['rank'];
           echo '</span></a></div>';
          }
   			$result->free();

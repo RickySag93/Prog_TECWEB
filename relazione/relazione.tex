@@ -53,7 +53,6 @@
 	\includegraphics[scale=0.3]{images/unipd_logo.png}\\[1cm] % Include a department/university logo - this will require the graphicx package
 	\textsc{\Large Relazione progetto per il corso di tecnologie web}\\[0.5cm] % Major heading such as course name
 	\textsc{\large Corso di Laurea in Informatica, A.A. 2016-2017}\\[0.5cm] % Minor heading such as course title
-	
 	%----------------------------------------------------------------------------------------
 	%	TITLE SECTION
 	%----------------------------------------------------------------------------------------
@@ -100,7 +99,11 @@
 	\vfill % Fill the rest of the page with whitespace
 	
 	\end{titlepage}
-	
+	\newpage
+	\section{Informazioni utili}
+	\textsc{\Large Link al sito\\ }link\\[0.5cm]
+	\textsc{\Large Mail del referente:\\ }mattia.bottaro@studenti.unipd.it\\[0.5cm]
+	\textsc{\Large Login User:}\\[0.5cm] mail: user, password: user 
 	\newpage
 	\tableofcontents
 	\listoffigures
@@ -122,36 +125,76 @@
 	
 	\section{Materiale Consegnato}
 	\section{Il sito}
+	
+	Il sito si propone di:
+	\begin{itemize}
+		\item permettere la consultazione degli studi(foto) presenti nel DB a tutti gli utenti;
+		\item permettere la votazione e/o commentare gli studi(foto) presenti nel DB ai soli utenti loggati;
+		\item fornire a tutti gli utenti le date dei principali eventi astronomici, passati e futuri.
+	\end{itemize}
 	\section{Utenti destinatari}
+	Come anticipato nell'\textit{Abstract}, gli utenti destinatari del sito sono tutte quelle persone che hanno un qualche interesse per l'astronomia.
+	In particolare, miriamo a:
+	\begin{itemize}
+		\item utenti che hanno interesse nel sapere quali eventi astronomici ci saranno(o ci sono stati), in quanto nel sito è presente una lista che soddisfa questa esigenza;
+		\item utenti che vogliono imparare qualcosa dell'astronomia, in quanto il sito offre alcuni studi divulgativi su certi eventi astronomici e/o certi corpi celesti.
+		\item utenti che vogliono semplicemente guardare qualche bella foto del cielo, in quanto il sito offre diverse foto alcune delle quali consultabili tramite uno slideshow nella home page.
+		
+	\end{itemize}
 	\section{Accessibilità}
 	\subsection{Separazione contenuto, struttura e presentazione}
 	\subsection{Schema colori}
-	Siamo stati attenti ai colori.
+	Lo schema dei colori adottato mira a dare meno disagi possibili agli utenti affetti da particolari patologie agli occhi, quali deuteranopia, protanopia e tritanopia. Gli screenshot qui sotto sono una simulazione di come un utente appartenente a questa categoria vede il nostro sito.\\
 	\begin{figure}
-	\includegraphics[scale=0.3]{images/test.png}\\[1cm] \caption{pagina lista delle foto vista da un utente normale.}
+		\includegraphics[scale=0.3]{images/test.png}\\[1cm] \caption{pagina lista delle foto vista da un utente normale.}
 	\end{figure}
 	\begin{figure}
-	\includegraphics[scale=0.3]{images/deuteranopia.jpg}\\[1cm] \caption{Utente affetto da deuteranopia}
+		\includegraphics[scale=0.3]{images/deuteranopia.jpg}\\[1cm] \caption{Utente affetto da deuteranopia}
 	\end{figure}
 	\begin{figure}
-	\includegraphics[scale=0.3]{images/protanopia.jpg}\\[1cm] \caption{Utente affetto da protanopia}
+		\includegraphics[scale=0.3]{images/protanopia.jpg}\\[1cm] \caption{Utente affetto da protanopia}
 	\end{figure}
 	\begin{figure}
-	\includegraphics[scale=0.3]{images/tritanopia.jpg}\\[1cm] \caption{Utente affetto da tritanopia}
+		\includegraphics[scale=0.3]{images/tritanopia.jpg}\\[1cm] \caption{Utente affetto da tritanopia}
 	\end{figure}
 	\begin{figure}
-	\includegraphics[scale=0.3]{images/test2.png}\\[1cm] \caption{pagine per la registrazione al sito} \end{figure}
+		\includegraphics[scale=0.3]{images/test2.png}\\[1cm] \caption{pagine per la registrazione al sito vista da un utente normale} \end{figure}
 	\begin{figure}
-	\includegraphics[scale=0.3]{images/deuteranopia2.jpg}\\[1cm] \caption{Utente affetto da deuteranopia} \end{figure}
+		\includegraphics[scale=0.3]{images/deuteranopia2.jpg}\\[1cm] \caption{Utente affetto da deuteranopia}
+	\end{figure}
 	\begin{figure}
-	\includegraphics[scale=0.3]{images/protanopia2.jpg}\\[1cm] \caption{Utente affetto da protanopia} \end{figure}
+		\includegraphics[scale=0.3]{images/protanopia2.jpg}\\[1cm] \caption{Utente affetto da protanopia} 
+	\end{figure}
 	\begin{figure}
-	\includegraphics[scale=0.3]{images/tritanopia2.jpg}\\[1cm] \caption{Utente affetto da tritanopia} \end{figure}
+		\includegraphics[scale=0.3]{images/tritanopia2.jpg}\\[1cm] \caption{Utente affetto da tritanopia} 
+	\end{figure}
+	\newpage
+	Si può notare che lo schema di colori adottato rende le differenze tra screenshot molto basse.\\
 	\subsection{Tag}
 	\subsection{Screen reader}
 	\subsection{Aiuti per la navigazione}
 	\section{Struttura}
-	\section{Presentazione}
+	Ogni pagina \textit{.html} è stata successivamente suddivisa in parti per poter essere ricostruita tramite il \textit{php}.\\ Il codice rispetta le impostazioni del validatore W3C.
+	\subsection{Struttura del sito}
+	Come verrà poi spiegato in maniera dettagliata per ogni pagina, il sito viene suddiviso nelle seguenti aree (sempre raggiungibili tramite il menù):
+	\begin{itemize}
+	\item \textbf{Home:} Qui si ha una panoramica di ciò che offre il sito; si trova una selezione delle migliori foto votate dagli utenti e gli eventi (passati e futuri) che potrebbero venir documentati nel sito.
+	\item \textbf{Foto:} Qui troviamo una lista delle foto caricate dagli utenti.
+	\item \textbf{Eventi:} In questa sezione troviamo le due liste degli eventi suddivisi in \textit{"passati"} e \textit{"futuri"}.
+	\item \textbf{About:} Qui si trova il classico "Lorem ipsum".
+	\item \textbf{Registrati:} Qui si troviamo la pagina di registrazione per i nuovi utenti.
+	\end{itemize}
+	Da ogni pagina è raggiungibile la \textit{"Mappa del sito"} attraverso il link presente nel \textit{footer}.
+	\subsection{Struttura delle pagine}
+	Ogni pagina del sito è differente per i contenuti ma vi sono alcuni elementi che ricorrono in ognuna di esse:
+	\begin{itemize}
+	\item \textbf{Menù:}  Dopo il logo del sito appaiono, nello stesso ordine, il link alle pagine presentate precedentemente.
+	\item \textbf{Header:} Contiene la scritta con i nome del sito ed un pulsante che riconduce alla pagina di \textit{Log-in} (altrimenti un messaggio di benvenuto).
+	\item \textbf{Breadcrumb:} Fa sapere all'utente in che pagina si trova in quel momento descrivendo anche il percorso seguito per arrivarci. 
+	\item \textbf{Footer:} Contiene informazioni sui realizzatori, le certificazione agli standard del sito, un pulsante \textit{"Torna su"} che riporta all'inizio della pagina e il link alla \textit{"Mappa del sito"}.
+	\end{itemize}
+	 
+\section{Presentazione}
 	Per la rappresentazione dell'interfaccia grafica del sito si è rispettato lo standard CSS3. \\
 	I colori usati come tonalità di blu, nero e grigio sono stati scelti per via del tema del nostro sito che è un portale di astronomia. \\
 	L'uso di specifiche proprietà del CSS3 sono state limitate al minimo in modo da essere il più possibile compatibile con versioni di browser meno recenti e permettere un degrado elegante anche in caso di mal funzionamento. \\
@@ -177,6 +220,12 @@
 		\item images la cartella contenente le immagini di presentazione;
 	\end{itemize}
 	\section{Comportamento}
+	Per gestire la parte relativa al comportamento è stato usato JavaScript. In particolare sono stati fatti i seguenti script:
+	\begin{itemize}
+	\item \textit{controlli.js}: questo script esegue controlli lato client sui dati inseriti durante la registrazione in \textit{registrazione.php}. Tali controlli avvengono ogni volta che l'utente lascia un textfield di inserimento dati tramite l'utilizzo dell'evento \textit{onblur}. Se i dati inseriti non sono validi allora comparirà un messaggio d'errore specifico e ad esso verrà dato il \textit{focus};
+	\item \textit{homeslide.js}: questo script permette l'utilizzo dello slideshow presente in \textit{index.php}. È possibile navigare tra le foto dello slideshow utilizzando i pulsanti ai lati, sia con il mouse che con la tastiera, premendo il tasto invio. Per ogni foto dello slideshow è presente inoltre una sua didascalia, la sua posizione rispetto al numero di foto presenti nello slideshow, e un link che porta alla corrispondente foto in \textit{fotoutente.php}. 
+	\end{itemize}
+	\newpage
 	\section{PHP}
 	\subsection{Utilizzo}
 	Il PHP viene utilizzato per:
@@ -254,9 +303,63 @@
 	
 	\section{Gestione dei dati}
 	Per l'organizzazione e memorizzazione dei dati si è fatto affidamento su un DB MySQL. Il DB in questione era stato presentato come progetto per il corso di Basi di dati dell'A.A. 2015-2016 e valutato con 29-30/30 (il voto preciso non è stato comunicato). Il DB è stato quindi esteso/adattato alle esigenze del sito. Tuttavia, alcune relazioni non sono utili al sito, in quanto in origine il DB non era pensato per questo progetto. Nonostante ciò, questo non va a discapito dell'efficienza delle query. Non essendo lo scopo del corso, questa sezione non verrà troppo approfondita, ma verrà comunque fornito uno schema.
-	
+	In figura 9 è raffigurato la schema ER della versione iniziale del DB(quella consegnata per il corso di Basi di Dati). In figura 10, invece, sono raffigurate le aggiunte fatte al DB per supportare delle funzionalità del sito.
+	Di seguito è riportato un elenco delle principali tabelle utilizzate:
+	\newpage
+	\begin{itemize}
+		\item astrofilo: contiene i dati di registrazione dell'utente;
+		\item evento: contiene i tipi d'evento che possono essere studiati;
+		\item avvenimento: contiene gli eventi che avverranno o sono avvenuti;
+		\item corpo: contiene i tipi di corpo studiabili;
+		\item studia: contiene i dati degli studi;
+		\item foto: contiene i dati sulle foto;
+		\item giudicastudio(foto): contiene i voti dati dagli astrofili a tutti gli studi(foto);
+		\item commentastudio(foto): contiene i commenti degli astrofili di ogni studio(foto);
+	\end{itemize}
+	\begin{figure}
+		\includegraphics[scale=0.2]{images/ERR-FINITO.png}\\[1cm] \caption{DB iniziale.}
+	\end{figure}
+	\begin{figure}
+		\includegraphics[scale=0.35]{images/DBplus.png}\\[1cm] \caption{Aggiunte al DB iniziale}
+	\end{figure}
+	\newpage
 	\section{Test}
-	
-	
-	
+	\subsection{Validazione}
+	Per la validazione, è stato usato il validatore online messo a disposizione da W3C. Per validare ogni pagina, si sono seguiti i seguenti passi:
+	\begin{itemize}
+		\item esecuzione del file nel browser;
+		\item copia del codice sorgente(tasto dx + view source code);
+		\item dato in pasto al validatore il codice tramite "validate by input".
+	\end{itemize}
+	Tutte le pagine e i file CSS hanno superato questo test.
+	\subsection{Browser}
+	Senza riscontrare grosse differenze, il sito è stato fatto girare su:
+	\begin{itemize}
+		\item Mozilla Firefox 39.0, 51.0.1;
+		\item Chromium 55.0;
+		\item Google Chrome;
+		\item Internet Explorer;
+		
+	\end{itemize}
+	e sui seguenti sistemi operativi:
+	\begin{itemize}
+		\item Linux Mint 18.1;
+		\item Ubuntu 14.04;
+		\item Windows 10;
+		\item MAC??
+	\end{itemize}
+	\subsubsection{JavaScript}
+	che succede senza JS?
+	\subsubsection{PHP}
+	Sono stati fatti dei test di usabilità nel caso non sia possibile connettersi al DB. Il risultato è che il sito non può offrire le funzionalità che si prefigge, ma resta comunque navigabile.
+	\section{Suddivisione ruoli}
+	Il gruppo si è suddiviso il lavoro in maniera equa sulle parti di struttura, presentazione, comportamento e accessibilità.
+	Ognuno dei membri si è occupato di tutte le parti, tuttavia abbiamo ritenuto intelligente che ogni membro si concentrasse maggiormente su una specifica parte.
+	I ruoli sono stati così ripartiti:
+	\begin{itemize}
+		\item struttura: tutti i membri del gruppo;
+		\item presentazione: Andrea Magnan, Matteo Slanzi(anche gli altri membri hanno contribuito, ma in forma minore);
+		\item comportamento: Mattia Bottaro(PHP), Andrea Magnan(JS)(anche gli altri membri hanno contribuito, ma in forma minore);
+		\item accessibilità: Riccardo Saggese, Matteo Slanzi(anche gli altri membri hanno contribuito, ma in forma minore)
+	\end{itemize}
 \end{document}

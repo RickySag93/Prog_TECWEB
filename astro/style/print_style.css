@@ -1,4 +1,3 @@
-
 * {
     padding: 0em;
     margin: 0em;
@@ -28,8 +27,9 @@ body {
 /*
     SEZIONE HOME
 */
-a{
-  color:black;
+
+a {
+    color: black;
 }
 
 a img {
@@ -44,7 +44,7 @@ a img {
 
 #menu {
     /* contenitore del menu fixed con gli elementi del menu più il logo a sinistra*/
-    display:none;
+    display: none;
 }
 
 #header {
@@ -179,7 +179,6 @@ a img {
 }
 
 
-
 /* Inizio slideshow*/
 
 .slideshow {
@@ -192,7 +191,6 @@ a img {
     margin-right: auto;
     height: 34em;
 }
-
 
 #content .p_slide {
     padding: 0;
@@ -222,7 +220,7 @@ a img {
 }
 
 .arrowbar {
-    display:none;
+    display: none;
 }
 
 
@@ -294,6 +292,11 @@ a img {
     display: block;
 }
 
+#content .element_content .inline {
+    padding-left: 0;
+    display: inline;
+}
+
 #button_login a {
     float: right;
     margin-right: 1em;
@@ -360,10 +363,11 @@ a img {
 }
 
 #content .list_element {
-    page-break-inside: avoid;
+  page-break-inside: avoid;
+    display:block;
     margin-top: 0.5em;
     width: 80%;
-    height: 8em;
+    height: 9em;
     border: 1px solid black;
     margin-left: auto;
     margin-right: auto;
@@ -415,11 +419,9 @@ a img {
 }
 
 
-.list_element a {
-    display: block;
-}
-
-.element_foto {
+#content .list_element .element_foto {
+    padding-left: 0;
+    margin-top: 0;
     border-right: 1px solid black;
     height: 100%;
     width: 7.8125em;
@@ -433,6 +435,7 @@ a img {
 
 .element_content {
     height: 7.5em;
+    margin-top: 0;
 }
 
 #p_didasc {
@@ -462,7 +465,7 @@ a img {
 }
 
 #footer {
-  display: none;
+    display: none;
 }
 
 .nascosta {

@@ -17,6 +17,6 @@
        unset($_SESSION['err']);
      }
      echo file_get_contents("parti/formlogin.html");
-   }else echo '<p><strong>Non puoi effettura il login se hai già effettuato l\'accesso. </strong><a href="backend/logout.php">Disconnettiti</a></p>';
+   }else echo '<p><strong>Non puoi effettuare il <span xml:lang="en"> login </span> se hai già effettuato l\'accesso. </strong><a href="backend/logout.php">Disconnettiti</a></p>';
  }else echo $msg_errore_DB;
    echo file_get_contents("parti/login1.html");
