@@ -73,6 +73,7 @@ $idst=$_REQUEST['idst']; // per i test, dovrà essere passato dalla pagina prece
         echo '<div id="box_comment">
         <form method="post" action="backend/commentastudio.php">
         <fieldset>
+            <label for="commento" id="label_com">Inserisci commento:</label>
             <textarea name="commento" cols="1" rows="1"></textarea>
             <input type="hidden" name="studio" value="'.$idst.'" />
             <button id="comment" name="commenta">Commenta</button>
