@@ -142,9 +142,24 @@
 		
 	\end{itemize}
 	\section{Accessibilità}
-	\subsection{Separazione contenuto, struttura e presentazione}
-	\subsection{Schema colori}
-	Lo schema dei colori adottato mira a dare meno disagi possibili agli utenti affetti da particolari patologie agli occhi, quali deuteranopia, protanopia e tritanopia. Gli screenshot qui sotto sono una simulazione di come un utente appartenente a questa categoria vede il nostro sito.\\
+	Per l'accessibilità sono state seguite le linee guida stabilite dallo standard WCAG 2.0 . Essa verrà esposta secondo le quattro sezioni previste dallo standard: percepibilità, comprensibilità, robustezza.
+	\subsection{Percepibilità}
+	La percepibilità consiste in: 
+	\begin{itemize}
+		\item fornire alternative testuali per qualsiasi contenuto non testuale, in modo che questo possa essere trasformato in altre forme fruibili secondo le necessità degli utenti;
+		\item creare contenuti che possano essere rappresentati in modalità differenti senza perdere informazioni o la struttura;
+		\item rendere più semplice agli utenti la visione dei contenuti.
+	\end{itemize}
+	Come alternative testuali a contenuti non testuali, si è fatto utilizzo di:
+	\begin{itemize}
+		\item attributo \textit{alt} con un appropriato testo sostitutivo a tutte le immagini;
+		\item un tag \textit{label} che descrive la finalità di ogni textfield di ogni form;
+	\end{itemize}
+	I contenuti creati sono anche rappresentati in modi differenti senza perderne informazioni o struttura. Infatti, il sito rimane navigabile anche senza l'utilizzo dei fogli di stile CSS. Questo è stato reso possibile grazie alla massima separazione tra struttura del sito e la sua presentazione.
+	\subsubsection{Uso dei colori}
+	Per rendere il più semplice possibile agli utenti la visione dei contenuti è stato adottato un appropriato schema di colori, il quale garantisce un certo contrasto cromatico.
+	In particolare, miriamo a dare meno disagi possibili agli utenti affetti da particolari patologie agli occhi, quali deuteranopia, protanopia e tritanopia. \\
+	Gli screenshot qui sotto sono una simulazione di come un utente appartenente a questa categoria vede il nostro sito.\\
 	\begin{figure}
 		\includegraphics[scale=0.3]{images/test.png}\\[1cm] \caption{pagina lista delle foto vista da un utente normale.}
 	\end{figure}
@@ -170,9 +185,41 @@
 	\end{figure}
 	\newpage
 	Si può notare che lo schema di colori adottato rende le differenze tra screenshot molto basse.\\
-	\subsection{Tag}
-	\subsection{Screen reader}
-	\subsection{Aiuti per la navigazione}
+	Nessuna indicazione è data tramite l'uso dei colori, ma solo con degli opportuni messaggi facilmente leggibili.
+	
+	\subsection{Usabilità}
+	Il sito rispetta certi requisiti per garantire una buona usabilità, i quali sono:
+	\begin{itemize}
+		\item accessibilità da tastiera;
+		\item navigabilità.
+	\end{itemize}
+	Il sito è completamente navigabile usando solamente la tastiera, in particolare si è fatto utilizzo di:
+	\begin{itemize}
+		\item attributo \textit{tabindex} per definire un ordine di navigazione sugli elementi di ogni pagina;
+		\item lo slideshow è utilizzabile tramite il tasto invio;
+		\item nessuna operazione impedisce l'uso della tastiera. 
+	\end{itemize}
+	Inoltre, lo slideshow è totalmente controllabile dall'utente.\\
+	Per rendere ben navigabile il sito si è fatto utilizzo di:
+	\begin{itemize}
+		\item \textit{skipnav}, il quale permette di saltare blocchi di contenuti che si ripetono su più pagine;
+		\item breadcrumb, il quale permette di capire in che pagina ci si trova;
+		\item mappa del sito;
+		\item focus visibile, il quale per la navigazione da tastiera evidenzia l'indicatore del focus.
+	\end{itemize}
+	\subsection{Comprensibilità}
+	Le informazioni del sito devono risultare comprensibili per gli utenti. A tal scopo si è fatto utilizzo di:
+	\begin{itemize}
+		\item \textit{xml:lang=it} per specificare che la lingua del sito è l'italiano;
+		\item \textit{xml:lang=en} per specificare che alcune parole sono inglesi;
+		\item menù quasi uguali per tutte le pagine, in quanto in ognune di esse sono stati tolto link circolari;
+		\item apposite label e istruzioni che aiutano l'utente a inserire dati corretti; 
+		\item script JavaScript e PHP per l'eventuale visualizzazione di errori nell'inserimento da parte dell'utente, dopo ovviamente opportuni controlli.
+	\end{itemize}
+	\subsection{Robustezza}
+	Il gruppo si è prefisso come scopo la più alta compatibilità possibile tra browser, rendendo il sito utilizzabile fino a Internet Explorer 8. Questo è stato reso possibile facendo utilizzo di regole CSS e funzioni JavaScript compatibili con quest'ultimo.
+	\subsection{Separazione contenuto, struttura e presentazione}
+	\subsection{Meta-tag}
 	\section{Struttura}
 	Ogni pagina \textit{.html} è stata successivamente suddivisa in parti per poter essere ricostruita tramite il \textit{php}.\\ Il codice rispetta le impostazioni del validatore W3C.
 	\subsection{Struttura del sito}
@@ -337,16 +384,16 @@
 	\begin{itemize}
 		\item Mozilla Firefox 39.0, 51.0.1;
 		\item Chromium 55.0;
-		\item Google Chrome;
-		\item Internet Explorer;
-		
+		\item Google Chrome 55.0;
+		\item Internet Explorer 8, 9 , 10, 11;
+		\item Microsoft Edge.
 	\end{itemize}
 	e sui seguenti sistemi operativi:
 	\begin{itemize}
 		\item Linux Mint 18.1;
 		\item Ubuntu 14.04;
 		\item Windows 10;
-		\item MAC??
+		\item Mac OSX 10.12.2.
 	\end{itemize}
 	\subsubsection{JavaScript}
 	che succede senza JS?
