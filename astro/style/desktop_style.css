@@ -135,7 +135,7 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
     margin-left: auto;
     margin-right: auto;
     padding-top: 5em;
-    height: 9em;
+    height: 10em;
 }
 
 #header h1 {
@@ -443,6 +443,11 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
 
 /* FINE REGISTRAZIONE */
 
+#testo_about {
+  margin-top: 3em;
+  font-size: 1.2em;
+}
+
 #foto {
     display: block;
     margin: auto;
@@ -603,6 +608,10 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
     width: 95%;
 }
 
+ #content .big_list_element p {
+   line-height: 25px;
+ }
+
 #content .element_content span {
     display: block;
 }
@@ -741,7 +750,6 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
         background-color: #274f8e;
         clear: both;
         padding-top: 0.5em;
-        height: 10em;
         width: 100%;
     }
     #header h1 {

@@ -18,7 +18,7 @@
       echo '<p>Abbiamo riscontrato dei problemi nel visualizzare le foto.</p>';
     }else{
       if($result->num_rows > 0){
-        echo '<h2>Ecco tutte le nostre foto.</h2>';
+        echo '<h2>Ecco tutte le nostre foto</h2>';
         while($row=$result->fetch_array(MYSQLI_ASSOC)){
           echo '<a href="fotoutente.php?idft='.$row['idfoto'].'"  class="list_element not_single_studio">';
           echo '<span class="element_foto"><img src="'.$row['immagine'].'"  alt="'.$row['didascalia'].'" /> </span>';

@@ -68,6 +68,9 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
           </form>
           </div><div id="list_comment">';
         }
+        else {
+          echo '<p><strong>Per votare e commentare devi fare il <a href="login.php"><span xml:lang="en">login</span></a></strong></p>';
+        }
           echo '<h3>Commenti</h3>';
         $commenti_foto_query= "SELECT astrofilo.username,astrofilo.imgprofilo,commentafoto.commento,commentafoto.datainserimento
                        FROM commentafoto JOIN astrofilo ON commentafoto.astrofilo=astrofilo.mail

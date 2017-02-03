@@ -18,7 +18,7 @@
       echo '<p>Abbiamo riscontrato dei problemi nel visualizzare gli studi.</p>';
      }else{
       if($result->num_rows>0){
-        echo '<h2>Ecco tutti i nostri studi.</h2>';
+        echo '<h2>Ecco tutti i nostri studi</h2>';
         while($row=$result->fetch_array(MYSQLI_ASSOC)){
           $imm_query="SELECT * FROM foto WHERE idstudio=".$row['idstudio']." AND idstudio IS NOT NULL LIMIT 1";
           $imm_studio=$connessione->query($imm_query);
