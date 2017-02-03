@@ -59,10 +59,12 @@ $idft=$_REQUEST['idft']; // per i test, dovrà essere passato dalla pagina prece
 
            echo '<div id="box_comment">
           <form method="post" action="backend/commentafoto.php">
+          <fieldset>
               <label for="commento" id="label_com">Inserisci commento:</label>
-              <textarea name="commento"cols="1" rows="1"></textarea>
+              <textarea name="commento" cols="1" rows="1"></textarea>
               <input type="hidden" name="foto" value="'.$idft.'" />
               <button id="comment" name="commenta">Commenta</button>
+              </fieldset>
           </form>
           </div><div id="list_comment">';
         }
