@@ -228,7 +228,14 @@ a img {
 
 
 /* FINE HOME */
+#testo_about {
+  margin-top: 3em;
+  font-size: 1.2em;
+}
 
+#content .big_list_element p {
+  line-height: 25px;
+}
 
 /* PAGINA REGISTRAZIONE */
 
