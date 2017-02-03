@@ -244,27 +244,27 @@
 \section{Presentazione}
 	Per la rappresentazione dell'interfaccia grafica del sito si è rispettato lo standard CSS3. \\
 	I colori usati come tonalità di blu, nero e grigio sono stati scelti per via del tema del nostro sito che è un portale di astronomia. \\
-	L'uso di specifiche proprietà del CSS3 sono state limitate al minimo in modo da essere il più possibile compatibile con versioni di browser meno recenti e permettere un degrado elegante anche in caso di mal funzionamento. \\
-	Il sito non presenta problemi nel ridimensionamento della pagina grazie a dimensioni relative e usando un design fluido per essere visualizzato correttamente con monitor di diverse dimensioni. \\
+	L'uso di specifiche proprietà del CSS3 sono state limitate al minimo in modo da essere il più possibile compatibile con versioni di browser meno recenti e permettere un degrado elegante anche in caso di malfunzionamento. \\
+	Il sito non presenta problemi nel ridimensionamento della pagina grazie a dimensioni relative e tramite l'utilizzo di un design fluido che ne permette la corretta visualizzazione in monitor di diverse dimensioni. \\
 	Per garantire una buona usabilità del sito i colori per la realizzazione del sito sono stati scelti in modo da avere un buon contrasto tra testo e sfondo, in questo modo sono facilmente visibili anche da utenti affetti da particolari difetti visivi come daltonismo. \\
 	Abbiamo prestato attenzione a non avere elementi lampeggianti nel sito per non creare disagi ad utenti affetti da epilessia fotosensibile. \\
 	\subsection{Media Query}
-	E' stato definito un breakpoint a 920px per andare incontro alle esigenze sempre crescenti del Responsive Web, permettendo così di avere un sito usabile anche per dispositivi mobile come smartphone e tablet. \\
-	Le differenze tra versione desktop e mobile sono ristrette al diverso posizionamento di alcuni elementi delle pagine, mantenendo così lo stile grafico del sito pressocché uguale, in questo modo per l'utente abituato ad accedere alla versione desktop non si ritrova confuso da un sito completamente diverso. \\
+	È stato definito un breakpoint a 920px per andare incontro alle esigenze sempre crescenti del Responsive Web, permettendo così di avere un sito usabile anche per dispositivi mobile come smartphone e tablet. \\
+	Le differenze tra versione desktop e mobile sono limitate al diverso posizionamento di alcuni elementi nelle pagine, mantenendo così lo stile grafico del sito pressocché uguale, in questo modo l'utente abituato ad accedere alla versione desktop non si ritrova confuso da un sito completamente diverso. \\
 	Gli elementi responsive sono:
 	\begin{itemize}
-		\item i bottoni del menu per mobile si accostano uno sotto l'altro;
+		\item i pulsanti del menu per mobile si accostano uno sotto l'altro;
 		\item i due contenitori degli eventi non sono più orizzontali ma si posizionano verticalmente;
 		\item i form della registrazione e del pannello di login invece di avere la label con affianco l'area per l'input, l'input finisce sotto la label;
 	\end{itemize}  
 	Questo posizionamento rende facile la navigazione da mobile avendo uno scroll solamente in verticale. \\
-	Inoltre è stato definito un breakpoint a 1400px per la visualizzazione dello slideshow occupando il 100 della larghezza della pagina.
+	Inoltre è stato definito un breakpoint a 1400px per la visualizzazione dello slideshow occupando il 100 \% della larghezza della pagina.
 	\subsection{Divisione file}
 	I file di presentazione sono contenuti nella cartella astro/style, tra cui:
 	\begin{itemize}
-		\item desktopstyle.css contenente lo stile per versione desktop e mobile;
-		\item printstyle.css le proprietà nel caso di stampa;
-		\item images la cartella contenente le immagini di presentazione;
+		\item \textit{desktop\_ style.css} contenente lo stile per versione desktop e mobile;
+		\item \textit{print\_ style.css} le proprietà nel caso di stampa;
+		\item \textit{images} la cartella contenente le immagini di presentazione;
 	\end{itemize}
 	\section{Comportamento}
 	Per gestire la parte relativa al comportamento è stato usato JavaScript. In particolare sono stati fatti i seguenti script:
