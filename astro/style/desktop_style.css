@@ -525,6 +525,11 @@ a:focus #logo_home, #slidebuttonleft:focus, #slidebuttonright:focus {
     margin-right: auto;
 }
 
+#label_com {
+  font-size: 1.3em;
+}
+
+
 #box_comment textarea {
     resize: none;
     width: 100%;
