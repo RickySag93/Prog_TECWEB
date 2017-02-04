@@ -150,7 +150,7 @@
 		
 	\end{itemize}
 	\section{Accessibilità}
-	Per l'accessibilità sono state seguite le linee guida stabilite dallo standard WCAG 2.0 . Essa verrà esposta secondo le quattro sezioni previste dallo standard: percepibilità, comprensibilità, robustezza.
+	Per l'accessibilità sono state seguite le linee guida stabilite dallo standard WCAG 2.0 . Essa verrà esposta secondo le quattro sezioni previste dallo standard: percepibilità, usabilità, comprensibilità, robustezza.
 	\subsection{Percepibilità}
 	La percepibilità consiste in: 
 	\begin{itemize}
@@ -229,7 +229,7 @@
 	\subsection{Separazione struttura, comportamento e presentazione}
 	Per migliorare l’accesso al sito agli utenti con differenti disabilità e ai motori di
 ricerca è stata mantenuta la separazione tra struttura, presentazione e comportamento.
-La prima è stata implementata utilizzando XHTML Strict 1.0 in combinazione a PHP, i quali richiamano fogli di stile esterni CSS e script esterni Javascript. Per garantire il massimo grado di separazione di questi ultimi anche gli eventi che li evocano sono stati dichiarati all'interno degli script stessi.
+La prima è stata implementata utilizzando documenti XHTML Strict 1.0, i quali richiamano fogli di stile esterni CSS e script esterni Javascript. Per garantire il massimo grado di separazione di questi ultimi anche gli eventi che li evocano sono stati dichiarati all'interno degli script stessi.
 	\subsection{Meta-tag}
 	Per ogni pagina sono stati inseriti i meta-tag \textit{Content-type, title, description, keywords, author, viewport} oltre al tag obbligatorio \textit{title} che descriva la pagina corrente dal particolare al generale.
 	\section{Struttura}
@@ -237,11 +237,11 @@ La prima è stata implementata utilizzando XHTML Strict 1.0 in combinazione a PH
 	\subsection{Struttura del sito}
 	Come verrà poi spiegato in maniera dettagliata per ogni pagina, il sito viene suddiviso nelle seguenti aree (sempre raggiungibili tramite il menù):
 	\begin{itemize}
-	\item \textbf{Home:} Qui si ha una panoramica di ciò che offre il sito; si trova una selezione delle migliori foto votate dagli utenti e gli eventi (passati e futuri) che potrebbero venir documentati nel sito.
+	\item \textbf{Home:} Qui si ha una panoramica di ciò che offre il sito; si trova una selezione delle migliori foto votate dagli utenti e degli eventi (passati e futuri) che potrebbero venir documentati nel sito.
 	\item \textbf{Foto:} Qui troviamo una lista delle foto caricate dagli utenti.
-	\item \textbf{Eventi:} In questa sezione troviamo le due liste degli eventi suddivisi in \textit{"passati"} e \textit{"futuri"}.
+	\item \textbf{Eventi:} In questa sezione troviamo le due liste contenenti tutti gli eventi suddivisi in \textit{"passati"} e \textit{"futuri"}.
 	\item \textbf{About:} in questa sezione spieghiamo chi siamo e in cosa consiste il sito.
-	\item \textbf{Registrati:} Qui si troviamo la pagina di registrazione per i nuovi utenti.
+	\item \textbf{Registrati:} qui si trova la pagina di registrazione per i nuovi utenti.
 	\end{itemize}
 	Da ogni pagina è raggiungibile la \textit{"Mappa del sito"} attraverso il link presente nel \textit{footer}.
 	\subsection{Struttura delle pagine}
@@ -281,9 +281,10 @@ La prima è stata implementata utilizzando XHTML Strict 1.0 in combinazione a PH
 	\section{Comportamento}
 	Per gestire la parte relativa al comportamento è stato usato JavaScript. In particolare sono stati fatti i seguenti script:
 	\begin{itemize}
-	\item \textit{controlli.js}: questo script esegue controlli lato client sui dati inseriti durante la registrazione in \textit{registrazione.php}. Tali controlli avvengono ogni volta che l'utente lascia un textfield di inserimento dati tramite l'utilizzo dell'evento \textit{onblur}. Se i dati inseriti non sono validi allora comparirà un messaggio d'errore specifico e ad esso verrà dato il \textit{focus};
+	\item \textit{controlli.js}: questo script esegue controlli lato client sui dati inseriti durante la registrazione in \textit{registrazione.php}. Tali controlli avvengono ogni volta che l'utente lascia un textfield di inserimento dati tramite l'utilizzo dell'evento \textit{onblur}. Se i dati inseriti non sono validi allora comparirà un messaggio d'errore specifico
 	\item \textit{homeslide.js}: questo script permette l'utilizzo dello slideshow presente in \textit{index.php}. È possibile navigare tra le foto dello slideshow utilizzando i pulsanti ai lati, sia con il mouse che con la tastiera, premendo il tasto invio. Per ogni foto dello slideshow è presente inoltre una sua didascalia, la sua posizione rispetto al numero di foto presenti nello slideshow, e un link che porta alla corrispondente foto in \textit{fotoutente.php}. 
 	\end{itemize}
+	Ad ogni cambiamento dinamico della pagina viene dato il focus per permettere agli screenreader di notarlo.
 	\newpage
 	\section{PHP}
 	\subsection{Utilizzo}
