@@ -226,8 +226,12 @@
 	\end{itemize}
 	\subsection{Robustezza}
 	Il gruppo si è prefisso come scopo la più alta compatibilità possibile tra browser, rendendo il sito utilizzabile fino a Internet Explorer 8. Questo è stato reso possibile facendo utilizzo di regole CSS e funzioni JavaScript compatibili con quest'ultimo.
-	\subsection{Separazione contenuto, struttura e presentazione}
+	\subsection{Separazione struttura, comportamento e presentazione}
+	Per migliorare l’accesso al sito agli utenti con differenti disabilità e ai motori di
+ricerca è stata mantenuta la separazione tra struttura, presentazione e comportamento.
+La prima è stata implementata utilizzando XHTML Strict 1.0 in combinazione a PHP, i quali richiamano fogli di stile esterni CSS e script esterni Javascript. Per garantire il massimo grado di separazione di questi ultimi anche gli eventi che li evocano sono stati dichiarati all'interno degli script stessi.
 	\subsection{Meta-tag}
+	Per ogni pagina sono stati inseriti i meta-tag \textit{Content-type, title, description, keywords, author, viewport} oltre al tag obbligatorio \textit{title} che descriva la pagina corrente dal particolare al generale.
 	\section{Struttura}
 	Ogni pagina \textit{.html} è stata successivamente suddivisa in parti per poter essere ricostruita tramite il \textit{php}.\\ Il codice rispetta le impostazioni del validatore W3C.
 	\subsection{Struttura del sito}
@@ -236,7 +240,7 @@
 	\item \textbf{Home:} Qui si ha una panoramica di ciò che offre il sito; si trova una selezione delle migliori foto votate dagli utenti e gli eventi (passati e futuri) che potrebbero venir documentati nel sito.
 	\item \textbf{Foto:} Qui troviamo una lista delle foto caricate dagli utenti.
 	\item \textbf{Eventi:} In questa sezione troviamo le due liste degli eventi suddivisi in \textit{"passati"} e \textit{"futuri"}.
-	\item \textbf{About:} Qui si trova il classico "Lorem ipsum".
+	\item \textbf{About:} in questa sezione spieghiamo chi siamo e in cosa consiste il sito.
 	\item \textbf{Registrati:} Qui si troviamo la pagina di registrazione per i nuovi utenti.
 	\end{itemize}
 	Da ogni pagina è raggiungibile la \textit{"Mappa del sito"} attraverso il link presente nel \textit{footer}.
@@ -404,7 +408,11 @@
 		\item Mac OSX 10.12.2.
 	\end{itemize}
 	\subsubsection{JavaScript}
-	che succede senza JS?
+	Nel caso in cui JavaScript risulti disattivato:
+	\begin{itemize}
+	\item \textit{homeslide.js} viene sostituito dal tag \textit{noscript} che contiene i link alle varie foto contenute nello slideshow;
+	\item \textit{controlli.js} viene sostituito da controlli che avvengono lato server.
+	\end{itemize}
 	\subsubsection{PHP}
 	Sono stati fatti dei test di usabilità nel caso non sia possibile connettersi al DB. Il risultato è che il sito non può offrire le funzionalità che si prefigge, ma resta comunque navigabile.
 	\section{Suddivisione ruoli}
